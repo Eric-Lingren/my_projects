@@ -1,0 +1,622 @@
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(#1CB5E0, #000046);
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+}
+
+#logo {
+    box-shadow: 15px 5px 30px;
+    width: 20%;
+    height:70%;
+    margin-bottom: 50px;
+    border: white solid 5px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#logo2 {
+    width: 10%;
+    height:150%;
+    margin-bottom: 70px;
+}
+
+#bamboo {
+    float: right;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: right;
+    width: 98%; 
+}
+
+.navBar {
+    position: fixed;
+    margin-top: 120px;
+    height: 45px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(#373B44, #4286f4);
+    box-shadow: 10px 10px 20px;
+    border: white solid 4px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 89.5%;
+}
+
+.navLinks {
+    background-image: linear-gradient(#373B44, #4286f4);
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.navLinks:hover {
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;    
+}
+
+#homeLink{
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;  
+}
+
+#aboutLink{
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;  
+}
+
+#menuLink {
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;  
+}
+
+#locationLink {
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;  
+}
+
+#contactLink {
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1.6em;  
+}
+
+@media (max-width: 550px) {
+    .navLinks, #homeLink, #aboutLink, #menuLink, #locationLink, #contactLink  {
+        font-size: .9em;
+    }
+}
+
+h4 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+.pageWrapper{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    height: 100%;
+    margin-top: 50px;
+    position: relative;
+    top: 0px;  
+}
+
+a {
+    color: white;
+}
+
+.pageContent {
+    background-image: url('../css/images/bamboo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 1600px;
+    box-shadow: 7px 7px 20px;
+    border: black solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 250px;
+}
+
+/* CONTACT PAGE */
+
+#contact {
+    width: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 3%;
+    border: 1px solid white;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#email {
+    color: blue;
+}
+
+#instagram {
+    width: 8%;
+}
+
+#facebook {
+    width: 8%;
+}
+
+@media (max-width: 720px) {
+    #contact {
+        width: 86%;
+    }
+}
+
+/* LOCATION PAGE */
+
+#bigCalendar {
+    margin-top: 5%;
+    box-shadow: 10px 10px 15px;
+}
+
+#smallCalendar {
+    margin-top: 5%;
+    box-shadow: 10px 10px 15px;
+}
+
+@media (min-width: 915px) {
+    #smallCalendar {
+        display: none;
+    }
+}
+
+@media (max-width: 915px) {
+    #bigCalendar {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    #logo {
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    #logo {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #logo2 {
+        width: 25%;
+    }
+}
+
+#location {
+    width: 100%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    border: solid black 1px;
+    box-shadow: 10px 10px 15px;
+    width: 600px;
+    height: 500px;
+
+}
+
+/* ABOUT PAGE */
+
+.pageContentAbout {
+    background-image: url('../css/images/bamboo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 1600px;
+    box-shadow: 7px 7px 20px;
+    border: black solid 2px;
+    position: relative;
+    top: 250px; 
+}
+
+#aboutText{
+    margin-left: 10%;
+    margin-right: 13%;
+    border: 1px solid white;
+    padding: 50px;
+    margin-top: 50px;
+    padding-top: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.animationwrapper {
+    height: 50px;
+    width: 80%;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 3%;
+    border: 1px solid white;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+@media (max-width: 1150px) {
+    .animationwrapper {
+        height: 90px;
+    }
+}
+
+#haveyoubeen {
+    margin-left: 5%;
+    font-size: 40px;
+    font-weight: thin;
+    display: inline-block;
+    animation: showup 5s infinite;
+    margin-right: 40px;
+}
+
+#masterEsthetianDiv {
+    font-size: 40px;
+    font-weight: thin;
+    display: inline-block;
+    animation: showup2 20s infinite, 
+               slidein1 20s infinite;
+    position: absolute;
+}
+
+#makeupArtistDiv { 
+    font-size: 40px;
+    font-weight: thin;
+    display: inline-block;
+    animation: showup3 20s infinite, 
+               slidein2 20s infinite;
+    position: absolute;
+}
+
+#medicialAssistantDiv {
+    font-size: 40px;
+    font-weight: thin;
+    display: inline-block;
+    animation: showup4 20s infinite, 
+               slidein3 20s infinite;
+    position: absolute;
+}
+
+#microdermabrasionDiv {
+    font-size: 40px;
+    font-weight: thin;
+    display: inline-block;
+    animation: showup5 20s infinite, 
+               slidein4 20s infinite;
+    position: absolute;
+}
+
+#more1 {
+    width: 5%;
+    position: relative;
+    margin-left: 0px;
+    top: 20px; 
+}
+
+#more2 {
+    width: 5%;
+    position: relative;
+    margin-left: 0px;
+    top: 20px;  
+}
+
+#aboutParagraph1 {
+    display: none;
+}
+
+#aboutParagraph2 {
+    display: none;
+}
+
+@media (max-width: 1150px) {
+    #haveyoubeen {
+        display: block;
+    }
+}
+
+@media (max-width: 1150px) {
+    #masterEsthetianDiv, #makeupArtistDiv, #medicialAssistantDiv, #microdermabrasionDiv  {
+        padding-left: 15%;
+    }
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes showup2 {
+    0% {opacity:0;}
+    5% {opacity:1;}
+    20% {opacity:1;}
+    25% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@keyframes showup3 {
+    0% {opacity:0;}
+    25% {opacity:0;}
+    40% {opacity:1;}
+    45% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@keyframes showup4 {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    55% {opacity:1;}
+    70% {opacity:1;}
+    75% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@keyframes showup5 {
+    0% {opacity:0;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein1 {
+    0% { margin-left:500px; }
+    0% { margin-left:500px; }
+    10% { margin-left:8px; }
+    100% { margin-left:8px; }
+}
+
+@keyframes slidein2 {
+    0% { margin-left:500px; }
+    25% { margin-left:500px; }
+    35% { margin-left:8px; }
+    100% { margin-left:8px; }
+}
+
+@keyframes slidein3 {
+    0% { margin-left:500px; }
+    50% { margin-left:500px; }
+    60% { margin-left:8px; }
+    100% { margin-left:8px; }
+}
+
+@keyframes slidein4 {
+    0% { margin-left:500px; }
+    75% { margin-left:500px; }
+    85% { margin-left:8px; }
+    100% { margin-left:8px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:500px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:500px;}
+}
+
+/* TREATMENTS PAGE  */
+
+.pageContentMenu {
+    background-image: url('../css/images/bamboo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 1600px;
+    box-shadow: 7px 7px 20px;
+    border: black solid 2px;
+    position: relative;
+    top: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+#menuText1 {
+    margin-left: 5%;
+}
+
+.menuText {
+    margin-left: 8%;
+    margin-right: 5%;
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 50px;
+    padding-top: 45px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    height: 750px;
+    width: 30%;
+    display: flex;
+}
+
+.priceImage {
+    margin:0 auto; 
+}
+
+#priceImage1 {
+    width: 90%;
+}
+
+#priceImage2 {
+    padding-bottom: 30%;
+    width: 90%;
+}
+
+@media (max-width: 1250px) {
+    .pageContentMenu {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .menuText {
+        width: 50%;
+        height: 50%;
+        padding-left: 0px;
+    } 
+    #menuText1 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #priceImage1 {
+        height: 80%;
+        width: 70%;
+    } 
+    #priceImage2 {
+        height: 80%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 650px) {
+    .menuText {
+        background: none;
+        border: none;
+        margin-top: 5px;
+        padding-top: 5px;
+        margin-left: 0;
+    }
+    #priceImage1 {
+        height: 100%;
+        width: 150%;
+        margin-left: 0%;
+    } 
+    #priceImage2 {
+        height: 100%;
+        width: 150%;
+        margin-left: 0%;
+    } 
+    .pageContentMenu {
+        justify-content: left;
+    }
+}
+
+/* Footer Signup */
+
+#signup {
+    margin-top: 195px;
+    position: fixed;
+    left: 24%;
+    bottom: 0;
+    height: 30px;
+    background-image: linear-gradient(#4286f4, #373B44);
+    border: white solid 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: 1.3em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#emailInput {
+    margin-left: 20px;
+    width: 25%;  
+}
+
+button{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-left: 20px;
+}
+
+/* MEDIA QUERIES */ 
+
+@media (max-width: 1425px){
+    #signup{
+        font-size: .9em;
+        padding: 2px;
+    }
+    button {
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 825px) {
+    #signup{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .banner {
+        height: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navBar {
+        margin-top: 67px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pageWrapper{ 
+        margin-top: -50px
+    }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' href='./style.css'>
+</head>
+<body>
+    <h1>Mario Pest Control </h1>
+    <h3>Track the enemies Mario has killed and claim his coins!</h3>
+    <img id='marioimg' src='./mario.gif'>
+    <br>
+    
+    <div class='pageWrapper'>
+        <div id='goombaDiv'>
+        <form name='marioForm' >
+            <div class='enemy' id='goombaDiv'>
+                <h2>Goomba</h2>
+                <img id='goombaimg' src='./goomba.gif'>
+                <p1 id='pgoomba'>How many goomba's did he catch?</p1>
+                <input type='number' class='input' name='goombaInput'>
+                <br><br><br>
+                <p>Value: 5 Coins</p>
+
+            </div>
+        </div>
+        
+        
+            <div class='enemy' id='bobombDiv'>
+                <h2>Bob-ombs</h2>
+                <img id='bomimg' src='./bom.gif'>
+                <p1 id='pbom'>How many bob-omb's did he catch?</p1>
+                <input type='number' class='input' name='bomInput'>
+                <br><br><br>
+                <p>Value: 7 Coins</p>
+            </div>
+       
+        
+            <div class='enemy' id='cheepcheepDiv'>
+                <h2>Cheep-cheeps</h2>
+                <img id='cheepimg' src='./cheep.gif'>
+                <p1 id='pcheep'>How many Cheep Cheep's did he catch?</p1>
+                <input type='number' class='input' name='cheepInput'>
+                <br><br><br>
+                <p>Value: 11 Coins</p>
+                
+            </div>
+      
+                <div class='enemy' id='results'>
+                    <button>Caluculate Mario's Reward!</button><br><br>
+                    <h2 id='resultString'>Mario made <span id='result'></span> coins today!</h2>
+                    <div id='coinContainer'>
+                        <img id='coinGifs1' class='coinGif' src='./coin.gif' style='visibility:hidden'/>
+                        <img id='coinGifs2' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs3' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs4' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs5' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs6' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs7' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs8' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs9' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs10' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs11' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs12' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                        <img id='coinGifs13' class='coinGif' src='./coin.gif' style='visibility:hidden'>
+                    </div>
+                    
+                </div>
+            </form>
+          
+        </div>
+        <footer id='footer'>
+                <a href='mailto:marioisbetterthanluigi@snes.com'>marioisbetterthanluigi@snes.com</a>       &nbsp &nbsp &nbsp &nbsp &nbsp
+                1234 Plumbers Way, Nintendo City, Mario World 13579    &nbsp &nbsp &nbsp &nbsp &nbsp
+                <a href='www.mariocanjump.com'>www.mariocanjump.com </a>
+        </footer>
+    <script src='./app.js'></script>
+</body>
+
+</html>
