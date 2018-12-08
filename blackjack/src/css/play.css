@@ -1,0 +1,267 @@
+.playContainer{
+    display: flex;
+    justify-content: center;
+}
+.table{
+    background-image: url('./images/blackjackTable2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+    margin-top: -5%;
+    padding-top: 0;
+    width: 100%;
+}
+.dealerHand{
+    margin-top: 5%;
+    height: 30vh;
+    width: 30vw;
+    margin-left: 40%;
+    margin-right: auto;
+    display: flex;
+}
+.playerHand{
+    height: 30vh;
+    width: 30vw;
+    margin-left: 40%;
+    margin-right: auto;
+    display: flex;
+}
+button{
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 2em;
+}
+.playButtons{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    border: 2px solid black;
+    transition: .3s ease-out;
+    opacity: .7;
+}
+.playButtons:hover{
+    transition: .3s ease-out;
+    opacity: 1;
+}
+.displayCard{
+    height: auto;
+    width: 30%;
+}
+.chipContainer{
+   margin-left: 1%;
+}
+.pokerChip{
+    width: 5vw;
+    height: auto;
+    float: left;
+    margin-top: 8%;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 4px;
+    transition: .1s ease-out;
+}
+.pokerChip:hover{
+    border: 3px solid white;
+    transition: .1s ease-out;
+}
+.playerBankroll{
+    margin-top: -7%;
+    margin-left: 8%;
+}
+.showCountStats{
+    background-color: white;
+    padding: 3%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: absolute;
+    margin-right: 10%;
+    top: 35%;
+    border-radius: 20px;
+    border: 2px solid black;
+    opacity: .6;
+    width: 100%;
+
+}
+.hideCountStats{
+    background-color: cornflowerblue;
+    width: 20%;
+    position: absolute;
+    top: 40%;
+    opacity: 0;
+}
+
+.showAdvice{
+    height: 100px;
+    background-color: white;
+    padding: 3%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: absolute;
+    margin-right: 10%;
+    top: 12%;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid black;
+    opacity: .6;
+}
+.hideAdvice{
+    height: 100px;
+    width: 20%;
+    background-color: lightsalmon;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    opacity: 0;
+}
+.h1TablePlaceholder{
+    opacity: 0;
+    font-size: 3em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.statsContainer{
+    height: 600px;
+    width: 250px;
+    position: absolute;
+    left: 81%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.centerTableOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%
+
+}
+.helpTitle{
+    margin: 0;
+    padding-left: 0px;
+    text-align: center;
+    border-bottom: 3px solid black
+}
+.handTotals{
+    margin: 0;
+    padding: 4px;
+    
+}
+.showHelpButton{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    border: 2px solid black;
+    position: relative;
+    top: 1%;
+    opacity: .8;
+    transition: .3s ease-out;
+}
+.showHelpButton:hover{
+    transition: .3s ease-out;
+    opacity: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.showCountButton{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    border: 2px solid black;
+    position: relative;
+    top: 67%;
+    opacity: .8;
+    transition: .3s ease-out;
+}
+.showCountButton:hover{
+    transition: .3s ease-out;
+    opacity: 1;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.dealHandButton{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 3px;
+    border: 2px solid white;
+    opacity: .8;
+    transition: .3s ease-out;
+}
+.dealHandButton:hover{
+    transition: .3s ease-out;
+    opacity: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.clearBetButton{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    border: 2px solid black;
+    opacity: .8;
+    transition: .3s ease-out;
+    margin-top: 5%;
+}
+.clearBetButton:hover{
+    transition: .3s ease-out;
+    opacity: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bankOptions{
+    height: 500px;
+    width: 240px;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bankStats{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    opacity: .6;
+    width: 90%;
+    margin-top: 90%;
+
+}
+.deckInfo{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    opacity: .6;
+    width: 90%;
+    margin-top: 0%;
+}
+.tableOutcome{
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.cardBackVisible{
+    width: 32%;
+    height: auto;
+    opacity: 1;
+}
+.cardBackHidden{
+    width: 10%;
+    height: auto;
+    opacity: 0;
+}
+

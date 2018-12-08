@@ -1,0 +1,27 @@
+.navContainer{
+    background-color: #000000;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+    opacity: .9;
+    border-bottom: white solid 2px;
+    z-index: -1;
+}
+
+.navLinks{
+    color: #FFF;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    border-bottom: #FFF 3px solid;
+    font-size: 1.2em;
+    transition: .3s ease-out;
+}
+
+.navLinks:hover{
+    font-size: 1.5em;
+    transition: .3s ease-out;
+}

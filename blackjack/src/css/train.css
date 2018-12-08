@@ -1,0 +1,193 @@
+.html, body{
+    height: 100%;
+    
+}
+.trainingWrapper{
+    background-image: linear-gradient( #0f9b0f, #52c234, #52c234, #0f9b0f);
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+}
+.deckDisplay{
+    height: 315px; 
+    width: 225px;
+}
+
+.trainLinksContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 80vh;
+    margin-top: 5%;
+    
+}
+.trainingDrillsHeader{
+    font-size: 5vw;
+    margin-top: 0%;
+    text-shadow: 2px 2px 2px white;
+}
+.trainDrillSubtitle{
+    border-bottom: 3px solid black;
+}
+.trainLinks{
+    color: #FFF;
+    font-size: 3vw;
+    margin: 1vh;
+    transition: .3s ease-out;
+    text-decoration: none;
+    border-bottom: white 3px solid;
+ 
+}
+.drillHeader{
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+.trainLinks:hover{
+    font-size: 2.5em;
+    transition: .3s ease-out;
+    text-shadow: 2px 2px 2px black;
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.showCountDiv{
+    opacity: 1;
+    margin: 0;
+}
+.hideCountDiv{
+    opacity: 0;
+    margin: 0;
+}
+.toggleCount{
+    cursor: pointer;
+}
+.runningCountTrueCountForm{
+    display: flex;
+    flex-direction: column
+}
+.checkButton{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    border: 2px solid black;
+    opacity: .8;
+    transition: .2s ease-in;
+}
+.checkButton:hover{
+    opacity: 1;
+    transition: .2s ease-in;
+}
+.subTitle{
+    margin: 0;
+    padding: 0;
+}
+.betButtonContainer{
+    align-items: center;
+}
+
+.basicStrategyWrapper{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dealerHandBS{
+    width: 100%;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+}
+.playerHandBS{
+    width: 100%;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+}
+.dealBSButton{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    width: 40%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    opacity: .8;
+    transition: .3s ease-out;
+}
+.dealBSButton:hover{
+    opacity: 1;
+    transition: .3s ease-out;
+    width: 50%;
+}
+.handDescription{
+    margin: 0;
+    padding: 0;
+}
+.cardBS{
+    width: 30%;
+    height: auto;
+}
+
+.checkButtonOff {
+    display:none;
+    
+
+}
+#correct {
+    background-color: #05FF00;
+   
+}
+#wrong {
+    background-color: #FF530D;
+    margin-top: -3px;
+}
+.cardsPerSecondSpan{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-left: 15%;
+}
+.cardsPerSecondInput{
+    padding: 3px;
+    font-size: 1.3em;
+    width: 30%;
+    border-radius: 5px;
+    border: black solid 1px;
+}
+
+.runCountTrueCountInput{
+    padding: 3px;
+    font-size: 1.3em;
+    width: 40%;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin-left: 27%;
+}
+
+/* Small Tablet View */
+@media screen and (max-width: 768px ){
+    .trainingDrillsHeader{
+        font-size: 6vw;
+    }
+    .trainLinks{
+        font-size: 4vw;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 430px ){
+    .trainingDrillsHeader{
+        font-size: 10vw;
+    }
+    .trainLinks{
+        font-size: 7vw;
+    }
+}
+
