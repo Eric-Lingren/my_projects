@@ -1,118 +1,68 @@
-
-/*
-
-NEED TO DO:
-DISPLAY FREE SLOTS FOR EQUIPED ITEMS
-MAKE IT SO THEY CAN ONLY EQUIP ONE ITEM IN EACH SLOT
-Check out sleep and emojis
-
-*/
-
 var ask = require('readline-sync');
-
 var player = require('play-sound')(opts = {});
 
-
-
 // Sets variable to play music on game start
-var enterAudio = player.play('./Royal_Entrance.mp3', function(err){
+var enterAudio = player.play('./audio/Royal_Entrance.mp3', function(err){
     if (err && !err.killed) throw err
   })
 
 
-
 //play music for enemy battle
  var battleAudio;
-
  function battleAudioPlay() {
- battleAudio = player.play('./battle.mp3', function(err){
+ battleAudio = player.play('./audio/battle.mp3', function(err){
      if (err && !err.killed) throw err
    });
- 
  }
-
 
 //play music when play action is run
 var runMotionAudio;
-
 function runMotionAudioPlay() {
-    creditsAudio = player.play('./runMotion.wav', function(err){
+    creditsAudio = player.play('./audio/runMotion.wav', function(err){
         if (err && !err.killed) throw err
-        });
-        
+        });    
 }
 
 //Play music when play action is walk
 var walkMotionAudio;
 
 function walkMotionAudioPlay() {
-    creditsAudio = player.play('./walkMotion.wav', function(err){
+    creditsAudio = player.play('./audio/walkMotion.wav', function(err){
         if (err && !err.killed) throw err
-        });
-        
+        });    
 }
-
-
 
 //play music for end credits
 var creditsAudio;
-
 function creditsAudioPlay() {
-creditsAudio = player.play('./endCredits.mp3', function(err){
+creditsAudio = player.play('./audio/endCredits.mp3', function(err){
     if (err && !err.killed) throw err
-    });
-    
+    });   
 }
-
-
-//  //play music for main menu
-//  var menuAudio;
-
-// function menuAudioPlay() {
-// menuAudio = player.play('./menu.mp3', function(err){
-//     if (err && !err.killed) throw err
-//   });
-
-// }
-
-
 
 //play music for checking inventory 
 var inventoryAudio;
-
 function inventoryAudioPlay() {
-inventoryAudio = player.play('./doIt.mp3', function(err){
+inventoryAudio = player.play('./audio/doIt.mp3', function(err){
     if (err && !err.killed) throw err
  });
-   
 }
-
 
 //play music for checking player stats
 var statsAudio;
-
 function statsAudioPlay() {
-    statsAudio = player.play('./stats.mp3', function(err){
+    statsAudio = player.play('./audio/stats.mp3', function(err){
       if (err && !err.killed) throw err
     });
-    
 }
-
 
  //play music for achievement
  var achievementAudio;
-
 function achievementAudio() {
 battleAudio = player.play('./achievement.mp3', function(err){
     if (err && !err.killed) throw err
   });
-
 }
-
-// battleAudio()
-  //battleAudio.kill();
-
-
 
 /////////////////////////////////////////////////////////////
 //  PLAYERS AND ENEMIES CONSTRUCTIORS
@@ -122,8 +72,6 @@ battleAudio = player.play('./achievement.mp3', function(err){
 function Player(hp, score){
     this.hp = hp;
     this.score = score;
-    // Attack for a random amount
-   // this.attack = attack();
     this.inventory = [ {
             name:  'Sword',
             attackBonus: 1,
@@ -172,7 +120,6 @@ function Enemy(name, hp, isAlive){
 }
 
 //////////////////////////////////////////////
-/////////////////////////////////////////////
 
 //  GLOBAL VARIABLES
 var player1 = new Player(100,0);
@@ -368,10 +315,7 @@ function checkStats(){
     });
     
     bonus();
-
     attackBonus();
-
-    //menuAudio.kill();
 
     //  Ends intro music if that was their previous menu
     enterAudio.kill();
