@@ -17,8 +17,8 @@ const linkedinTitle = document.getElementById('linkedinTitle')
 const gitTitle = document.getElementById('gitTitle')
 
 
-const sound1 = new Audio('./audio1.wav');
-const audio1 = new Audio('./sound1.wav');
+const sound1 = new Audio('./css/audio/audio1.wav');
+const audio1 = new Audio('./css/audio/sound1.wav');
 
 const winH = window.innerHeight;
 const winW = window.innerWidth;
