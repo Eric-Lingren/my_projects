@@ -14,18 +14,13 @@
 }
 .dealerHand{
     margin-top: 5%;
-    height: 30vh;
-    width: 30vw;
-    margin-left: 40%;
-    margin-right: auto;
     display: flex;
+    justify-content: center;
 }
 .playerHand{
-    height: 30vh;
-    width: 30vw;
-    margin-left: 40%;
     margin-right: auto;
     display: flex;
+    justify-content: center;
 }
 button{
     border-radius: 50%;
@@ -39,26 +34,27 @@ button{
     border: 2px solid black;
     transition: .3s ease-out;
     opacity: .7;
+    font-size: 2.5vw;
 }
 .playButtons:hover{
     transition: .3s ease-out;
     opacity: 1;
 }
 .displayCard{
-    height: auto;
-    width: 30%;
+    width: auto;
+    height: 30vh;
 }
 .chipContainer{
-   margin-left: 1%;
+   display: flex;
+   justify-content: center;
+
 }
 .pokerChip{
-    width: 5vw;
-    height: auto;
-    float: left;
-    margin-top: 8%;
+    width: auto;
+    height: 10vh;
     border: 1px solid white;
     border-radius: 50%;
-    margin-left: 4px;
+    margin: 1vw;
     transition: .1s ease-out;
 }
 .pokerChip:hover{
@@ -74,13 +70,13 @@ button{
     padding: 3%;
     padding-bottom: 0;
     margin-bottom: 0;
-    position: absolute;
-    margin-right: 10%;
-    top: 35%;
+    top: 40%;
     border-radius: 20px;
     border: 2px solid black;
     opacity: .6;
-    width: 100%;
+    width: 90%;
+    height: auto;
+    
 
 }
 .hideCountStats{
@@ -97,18 +93,17 @@ button{
     padding: 3%;
     padding-bottom: 0;
     margin-bottom: 0;
-    position: absolute;
-    margin-right: 10%;
     top: 12%;
-    width: 100%;
+    width: 90%;
+    height: auto;
     border-radius: 20px;
     border: 2px solid black;
     opacity: .6;
+    margin-bottom: 5vh;
 }
 .hideAdvice{
     height: 100px;
     width: 20%;
-    background-color: lightsalmon;
     position: absolute;
     right: 0;
     top: 10%;
@@ -122,14 +117,15 @@ button{
 }
 
 .statsContainer{
-    height: 600px;
-    width: 250px;
+    height: 100vh;
+    width: 18vw;
     position: absolute;
-    left: 81%;
-    top: 10%;
+    left: 82%;
+    top: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 
 }
 .centerTableOptions{
@@ -144,11 +140,13 @@ button{
     margin: 0;
     padding-left: 0px;
     text-align: center;
-    border-bottom: 3px solid black
+    border-bottom: 3px solid black;
+    font-size: 1.5vw;
 }
 .handTotals{
     margin: 0;
     padding: 4px;
+    font-size: 1.2vw;
     
 }
 .showHelpButton{
@@ -160,28 +158,31 @@ button{
     top: 1%;
     opacity: .8;
     transition: .3s ease-out;
+    font-size: 2vw;
+    margin-bottom: 3vh;
 }
 .showHelpButton:hover{
     transition: .3s ease-out;
     opacity: 1;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .showCountButton{
     border-radius: 5px;
     padding: 3px;
     margin: 3px;
     border: 2px solid black;
-    position: relative;
-    top: 67%;
     opacity: .8;
     transition: .3s ease-out;
+    font-size: 2vw;
+    margin-top: 3vh;
+    height: auto;
 }
 .showCountButton:hover{
     transition: .3s ease-out;
     opacity: 1;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .dealHandButton{
     background-color: black;
@@ -194,6 +195,7 @@ button{
     border: 2px solid white;
     opacity: .8;
     transition: .3s ease-out;
+    font-size: 2.5vw;
 }
 .dealHandButton:hover{
     transition: .3s ease-out;
@@ -211,20 +213,21 @@ button{
     opacity: .8;
     transition: .3s ease-out;
     margin-top: 5%;
+    font-size: 2vw;
 }
 .clearBetButton:hover{
     transition: .3s ease-out;
     opacity: 1;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .bankOptions{
-    height: 500px;
-    width: 240px;
+    height: 75vh;
+    width: 18vw;
     position: absolute;
     left: 0%;
-    top: 10%;
+    top: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,7 +247,7 @@ button{
     border: 2px solid black;
     opacity: .6;
     width: 90%;
-    margin-top: 0%;
+    margin-top: 2%;
 }
 .tableOutcome{
     color: white;
@@ -255,13 +258,19 @@ button{
     padding-bottom: 0;
 }
 .cardBackVisible{
-    width: 32%;
-    height: auto;
+    width: auto;
+    height: 30.5vh;
     opacity: 1;
 }
 .cardBackHidden{
-    width: 10%;
-    height: auto;
+    width: auto;
+    height: 30vh;
     opacity: 0;
+}
+.centerPlayButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
