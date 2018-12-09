@@ -484,19 +484,19 @@ checkButton = (e) => {
     render() {
         return ( 
             <div className='trainingWrapper'>
-                <div className='basicStrategyWrapper'>
+                <div className='container'>
                 <h1 className='trainDrillSubtitle'>Basic Strategy Drill</h1>
                 <h3 className='handDescription'>Dealer Hand</h3>
-                    <div className='dealerHandBS'>
-                        
-                       <img className='cardBS' src={this.state.dealerImages}></img>
 
+                    <div className='dealerHandBS'>
+                       <img className='cardBS' src={this.state.dealerImages}></img>
                     </div>
+
                     <div className='playerHandBS'>
-                    
                       <img  className='cardBS' src={this.state.playerImage1}></img>
                       <img  className='cardBS' src={this.state.playerImage2}></img>
                     </div>
+
                     <h3 className='handDescription'>Player Hand</h3>
                     <div className='basicStrategyButtonWrapper'>
                         <h2 style={{marginBottom: this.state.bottomMargin}}>Choose the correct play:</h2>

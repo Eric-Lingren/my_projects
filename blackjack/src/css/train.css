@@ -46,7 +46,7 @@
     
 }
 .trainLinks:hover{
-    font-size: 2.5em;
+    font-size: 3.5vw;
     transition: .3s ease-out;
     text-shadow: 2px 2px 2px black;
    
@@ -55,8 +55,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    
 }
 .showCountDiv{
     opacity: 1;
@@ -93,7 +91,7 @@
     align-items: center;
 }
 
-.basicStrategyWrapper{
+.basicStrategyButtonWrapper{
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -102,13 +100,13 @@
 .dealerHandBS{
     width: 100%;
     display: flex;
-    height: 200px;
+    height: auto;
     justify-content: center;
 }
 .playerHandBS{
     width: 100%;
     display: flex;
-    height: 200px;
+    height: auto;
     justify-content: center;
 }
 .dealBSButton{
@@ -132,18 +130,15 @@
     padding: 0;
 }
 .cardBS{
-    width: 30%;
-    height: auto;
+    width: auto;
+    height: 30vh;
 }
 
 .checkButtonOff {
     display:none;
-    
-
 }
 #correct {
     background-color: #05FF00;
-   
 }
 #wrong {
     background-color: #FF530D;
@@ -185,9 +180,22 @@
 @media screen and (max-width: 430px ){
     .trainingDrillsHeader{
         font-size: 10vw;
-    }
-    .trainLinks{
+    } .trainLinks{
         font-size: 7vw;
+    } .checkButton {
+        font-size: 1.1em;
+    }.dealBSButton {
+        font-size: 1.3em;
     }
+}
+
+
+/* Small Mobile View */
+@media screen and (max-width: 325px ){
+   .trainDrillSubtitle{
+       font-size: 1.9em;
+   } .toggleCount{
+       font-size: 1.3em;
+   }
 }
 

@@ -74,9 +74,9 @@ dealCard = () => {
 
   hideShowCountDiv = () => {
       if (this.state.runningCountVisible) {
-          return <span>Show Running Count</span>
+          return <span>Click To Show Running Count</span>
       } else {
-          return <span>Hide Running Count</span>
+          return <span>Click To Hide Running Count</span>
       }
   }
   
@@ -92,7 +92,7 @@ dealCard = () => {
                     </div>
                     <button className='checkButton' onClick={this.dealCard}>Deal Card</button>
                     <h2 onClick={this.hideShowRunningCount} className='toggleCount'>{this.hideShowCountDiv()} </h2>
-                    <h2 className={this.state.runningCountVisible ? 'hideCountDiv' : 'showCountDiv' }> The Running Count is: {this.state.count} </h2>
+                    <h2 className={this.state.runningCountVisible ? 'hideCountDiv' : 'showCountDiv' }> Running Count: {this.state.count} </h2>
                     
                 </div>
             </div>
