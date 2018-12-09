@@ -1,14 +1,15 @@
 .playContainer{
     display: flex;
     justify-content: center;
+    height: auto;
 }
 .table{
     background-image: url('./images/blackjackTable2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 150vh;
-    margin-top: -5%;
+    height: 100vh;
+    margin-top: 0%;
     padding-top: 0;
     width: 100%;
 }
@@ -117,7 +118,7 @@ button{
 }
 
 .statsContainer{
-    height: 100vh;
+    height: 90vh;
     width: 18vw;
     position: absolute;
     left: 82%;
@@ -273,4 +274,3 @@ button{
     align-items: center;
     align-content: center;
 }
-
