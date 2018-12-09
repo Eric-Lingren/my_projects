@@ -67,15 +67,15 @@ class TrainBetSizing extends Component {
                 <div className='container'>
                     <h1 className='trainDrillSubtitle'>Proper Bet Sizing Drill</h1>
                     <h2 className='subTitle'>Your minumum bet size is 1 unit.</h2>
-                    <h2 className='subTitle'>Select the correct betting unit size based on the true count:</h2>
-                    <h2>True count is: {this.state.randomCount} </h2>
-                    <h2>Your bet should be: </h2>
+                    <h2 className='subTitleMargin'>Select the correct betting unit size based on the true count:</h2>
+                    <h2 className='subTitle'>True count is: {this.state.randomCount} </h2>
+                    <h2 className='subTitleMargin'>Your bet should be: </h2>
                     <div className = 'betButtonContainer'>
                         <button onClick={this.checkAnswer} value='1' className='checkButton'>1x</button>
                         <button onClick={this.checkAnswer} value='2' className='checkButton'>2x</button>
                         <button onClick={this.checkAnswer} value='4' className='checkButton'>4x</button>
                         <button onClick={this.checkAnswer} value='8' className='checkButton'>8x</button> <br></br>
-                        <button onClick={this.checkAnswer} value='16' className='checkButton'>2 hands of 8x</button>
+                        <button onClick={this.checkAnswer} value='16' className='checkButtonBig'>2 hands of 8x</button>
                     </div>
                     <h2> {this.state.output} </h2>
                 </div>

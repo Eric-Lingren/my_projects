@@ -99,7 +99,7 @@ class TrainSpeedCount extends Component {
             <div className='trainingWrapper'>
                 <div className='container'>
                     <h1 className='trainDrillSubtitle'>Speed Count Drill</h1>
-                    <form>
+                    <form className='speedCountForm'>
                         <span className='cardsPerSecondSpan'>Cards Per Second:</span> <input className='cardsPerSecondInput' name='cardsPerSecond' type='number' value={this.state.cardsPerSecond} placeholder='Cards Per Second' onChange={this.handleChange}></input>
                     </form>
                     <div className='deckDisplay'>

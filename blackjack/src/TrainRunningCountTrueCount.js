@@ -73,10 +73,10 @@ class TrainRunningCountSpeedCount extends Component {
         return ( 
             <div className='trainingWrapper'>
                 <div className='container'>
-                    <h1 className='trainDrillSubtitle'>Running Count to True Count Drill</h1>
+                    <h1 className='trainDrillSubtitle'>Convert to True Count Drill</h1>
                     <h2 className='subTitle'>Running Count is: {this.state.randomCount} </h2>
                     <h2 className='subTitle'>Decks Left: {this.state.randomDeck}</h2>
-                    <h2>What's the true count? (round) </h2>
+                    <h2 className='subTitleMargin'>What's the true count? (round) </h2>
                     <form className='runningCountTrueCountForm'>
                         <input className='runCountTrueCountInput' type='number' name='guess' value={this.state.guess} onChange={this.handleChange} placeholder='Enter True Count' ></input><br></br>
                        
