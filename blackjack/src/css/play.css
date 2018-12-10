@@ -274,3 +274,32 @@ button{
     align-items: center;
     align-content: center;
 }
+
+
+/* Mobile View */
+@media screen and (max-width: 430px ){
+    
+    .table{
+        transform: rotateZ(90deg);
+        width: 100vw;
+        height: 100vh;
+        background-size: auto; 
+        margin-right: 63%;
+    }
+    body, html, .playContainer{
+        width: 425px;
+        height: 100vh;
+    }
+    .pokerChip{
+        width: 10vw;
+        height: 10vw;
+    }.displayCard{
+        width: auto;
+        height: 25vw;
+    }.cardBackVisible{
+        width: auto;
+        height: 25vw;
+    }.dealerHand{
+        margin-top: 10%;
+    }
+}
