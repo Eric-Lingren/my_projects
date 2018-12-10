@@ -126,8 +126,6 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-
 }
 .centerTableOptions{
     display: flex;
@@ -278,21 +276,10 @@ button{
 
 /* Mobile View */
 @media screen and (max-width: 430px ){
-    
-    .table{
-        transform: rotateZ(90deg);
-        width: 100vw;
-        height: 100vh;
-        background-size: auto; 
-        margin-right: 63%;
-    }
-    body, html, .playContainer{
-        width: 425px;
-        height: 100vh;
-    }
+  
     .pokerChip{
-        width: 10vw;
-        height: 10vw;
+        width: 13vw;
+        height: 13vw;
     }.displayCard{
         width: auto;
         height: 25vw;
@@ -300,6 +287,39 @@ button{
         width: auto;
         height: 25vw;
     }.dealerHand{
-        margin-top: 10%;
+        margin-top: 5%;
+    }.tableOutcome{
+        font-size: 4vh;
+    }.bankOptions{
+        height: 95vw;
+        width: 15vh;
+        top: 5%;
+    }.statsContainer{
+        height: 90vh;
+        width: 25vw;
+        position: absolute;
+        left: 74%;
+        top: 4%;
+    }.clearBetButton{
+        font-size: 4vw;
+    }
+    .showCountButton{
+        font-size: 3.5vw;
+        margin-top: 1vh;
+    }.showHelpButton{
+        font-size: 3.5vw;
+        margin-bottom: 1.5vh;
+    }.playButtons{
+        font-size: 4vw;
+    }.dealHandButton{
+        font-size: 4vw;
+    }.helpTitle{
+        font-size: 3.2vw;
+    }
+    .handTotals{
+        font-size: 2.5vw;
+        
+    }.showAdvice{
+        margin-bottom: 2vh;
     }
 }

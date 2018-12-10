@@ -47,8 +47,10 @@ const { dealHand, dealOneCard, dealerHandImages, playerHandImages, playerHandIma
     }
 
     function splitHands(){
+        
         if(playerClickedSplit){
-        return <h2>Player Total Hand 2: {playerHand2Total} </h2>
+         alert('The split feature is currently broken and not functioning...')
+        // return <h2>Player Total Hand 2: {playerHand2Total} </h2>
         }
     }
 
