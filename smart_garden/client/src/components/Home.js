@@ -12,6 +12,7 @@ class Home extends Component {
     render(){
         return (
             <div>
+                test
                 <ItemList currentItems={this.props.currentItems}/>
             </div>
         )

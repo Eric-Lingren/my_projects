@@ -10,11 +10,11 @@ app.use(morgan('dev'))  // Helpful console logs on server requests
 
 
 //Routes
-app.use('/items', require('./routes/item'))
+app.use('/plants', require('./routes/plant'))
 
 
 // Mongoose Connect
-mongoose.connect('mongodb://localhost:27017/crud-store', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/plantlist', {useNewUrlParser: true}, () => {
     console.log('connect to the db captain!')
 })
 
