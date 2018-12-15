@@ -4,6 +4,7 @@ const Plant = require('../models/plant')
 
 //  Get All
 plantRouter.get('/', (req, res, next) => {
+    console.log('test')
     Plant.find((err, plants) => {
         if (err){
             res.status(500)

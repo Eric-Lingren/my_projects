@@ -1,5 +1,5 @@
 {
-  "name": "smart_garden_fullStack",
+  "name": "smart_garden_fullstack",
   "version": "1.0.0",
   "description": "Implement if there is time: Arduino, User login, Journal, My Gardens,",
   "main": "server.js",
