@@ -19,7 +19,7 @@ clientFolder:
             garden.js
             plant.js
             PlantList.js -- to map through plant database and dispay in a dropdown
-            MyGardensList.js -- To map through garden database and display in a dropdown
+            GardensList.js -- To map through garden database and display in a dropdown
             Journal.js  -- Calendar functionality for notes
             Arduino.js  --  Add input to database from arduino systems
             
@@ -34,14 +34,16 @@ clientFolder:
         authentication.js --  Outlines schema for login credentials
     Routes:
         plant.js -- Provides pathways to datbase for adding plants
+        garden.js
         user.js -- Provides pathways to datbase for users
         authenticaton.js -- Provides pathways to datbase for user authentication
 server.js
 
 //  How to organize the databases?
         We will need:
-        one to one???? 
+        think if we need one to one, one to many, or many to many???? 
             plant list / My Gardens Database / plants
+            
             Plants database
             Ardunio Database
             Previous Years Database
