@@ -1,12 +1,12 @@
 const express = require('express')
 const plantRouter = express.Router()
-const Plant = require('../models/plant')
+const plantSchema = require('../models/plant')
 
 //  Get All
 plantRouter.get('/', (req, res, next) => {
-    console.log('test')
-    Plant.find((err, plants) => {
+    plantSchema.find((err, plants) => {
         if (err){
+            console.log("Got error")
             res.status(500)
             return next(err)
         }
@@ -14,12 +14,9 @@ plantRouter.get('/', (req, res, next) => {
     })
 })
 
-//  Get One
-
-
 //  Post 
 plantRouter.post('/', (req, res, next) => {
-    const newPlant = new Plant(req.body)
+    const newPlant = new plantSchema(req.body)
     newPlant.save((err, plant) => {
         if (err){
             res.status(500)
@@ -29,11 +26,6 @@ plantRouter.post('/', (req, res, next) => {
     })
 })
 
-
-//  Put
-
-
-//  Delete
 
 
 module.exports = plantRouter

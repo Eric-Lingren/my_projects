@@ -12,18 +12,19 @@ app.use(morgan('dev'))
 // Routes
 app.use('/plants', require('./routes/plant'))
 
+
+app.use((err, req, res, next) => {
+    return res.send({errMsg: err.message})
+})
+
 //  Mongoose Connect
-mongoose.connect('mongose.db://localhost/27017/plant-list', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/plant-list', {useNewUrlParser: true}, () => {
     console.log('[O] -- We have connection to the database, friend!')
 })
 
 // Global server error handler
-app.use((err, req, res, next) => {
-    return res.send({errMsg: err.message})
-})
 
 // Listen
 app.listen(PORT, () => {
     console.log(`[+] -- Server is listening on port ${PORT}, buddy!`)
 })
-

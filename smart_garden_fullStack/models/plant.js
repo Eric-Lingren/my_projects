@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+console.log('Schema Test Log')
 
 const plantSchema = new Schema({
 
