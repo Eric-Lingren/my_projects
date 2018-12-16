@@ -1,0 +1,13 @@
+.navbar{
+    background-color: slategrey;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.navLinkContainer{
+    display: flex;
+}
+.navLink{
+    padding-left: 3vw;
+    color: white;
+}

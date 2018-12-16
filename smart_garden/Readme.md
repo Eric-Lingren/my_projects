@@ -9,7 +9,6 @@ clientFolder:
         App.js
         index.js
         styles.css
-        package.json
 
         componentsFolder:
             Home.js
