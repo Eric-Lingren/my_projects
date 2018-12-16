@@ -12,7 +12,7 @@ class ItemProvider extends Component {
     }
 
     getItems = () => {
-        axios.get('/items').then(response => {
+        axios.get('/plants').then(response => {
             this.setState({
                 currentItems: response.data
             })
