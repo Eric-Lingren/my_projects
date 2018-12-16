@@ -8,9 +8,9 @@ const AddPlantForm = () => {
             <form className='addPlantForm'>
             <fieldset className='fieldSet'>
                 <legend>Add New Plant</legend>
-                Type: <input type='text' placeholder='Pumpkin' required/>
-                Varitey: <input type='text' placeholder='Jackolantern' />
-                Plot Color: <input type='color' />
+                Type: <input className='newPlantInput' type='text' placeholder='Pumpkin' required/>
+                Varitey: <input className='newPlantInput' type='text' placeholder='Jackolantern' />
+                Plot Color: <input className='newPlantInput' type='color' />
                 <button>Add</button>
                 </fieldset>
             </form>

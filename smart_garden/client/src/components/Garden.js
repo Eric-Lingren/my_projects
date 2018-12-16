@@ -22,17 +22,19 @@ class Garden extends Component {
        const height = this.state.plotHeight;
        const width = this.state.plotWidth;
  
-       let table = '';
+       let table = "<table class='table'>";
 
-        for(let y = 1;y <= height;y++){
-         table += `<tr className='tableRow'>`;
+        for(let y = 1;y <= height; y++){
+         table += '<tr>';
          for(let x = 1; x <= width; x++){
-            table += '<td>' + x + '</td>';
+            table += "<td className='cell'>" + x + '</td>';
          }
          table += '</tr>';
         }
+        table += '</table>';
 
-        let gardenPlot = document.write('<table>' + table + '</table>');
+        let gardenPlot = document.write(table);
+
         this.setState({
             gardenPlot: gardenPlot,
         })
@@ -42,16 +44,30 @@ class Garden extends Component {
     render() {
         return(
             <div>
-                <form>
-                    Garden Height <input type='number' placeholder='10' name='plotHeight' value={this.state.plotHeight} onChange={this.handleChange} ></input>
-                    Garden Width <input type='number' placeholder='20' name='plotWidth' value={this.state.plotWidth} onChange={this.handleChange}></input>
-                    <button onClick={this.handleSubmit}>Create Garden Plot</button>
+                <form className='gardenGenerateForm'>
+                <fieldset className='fieldSetNewGarden'>
+                <legend>Create New Garden</legend>
+                    Height: <input 
+                                type='number' 
+                                className='gardenSizeInput'
+                                placeholder='10' 
+                                name='plotHeight' 
+                                value={this.state.plotHeight} 
+                                onChange={this.handleChange} >
+                            </input>
+                    Width:  <input 
+                                type='number' 
+                                className='gardenSizeInput'
+                                placeholder='20' 
+                                name='plotWidth' 
+                                value={this.state.plotWidth} 
+                                onChange={this.handleChange}>
+                            </input><br></br>
+                    <button onClick={this.handleSubmit}>Generate Garden Plot</button>
+                    </fieldset>
                 </form>
-                This is the Garden Component
-               <div> {this.state.gardenPlot} </div>
-                    
-                
-                
+
+               <div> {this.state.gardenPlot} </div>   
                 
             </div>
         )
