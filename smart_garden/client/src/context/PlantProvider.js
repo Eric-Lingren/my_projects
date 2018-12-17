@@ -40,6 +40,7 @@ class PlantProvider extends Component {
 
     render(){
         console.log(this.state.plotColor)
+        console.log(this.state.plantType)
         //console.log(this.state.plantType)
         return (
             <PlantContext.Provider 

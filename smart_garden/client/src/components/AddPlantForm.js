@@ -1,12 +1,13 @@
 import React, { Component} from 'react';
 import '../css/addPlantForm.css';
 import axios from 'axios';
+import PlantList from './PlantList';
 
  class AddPlantForm extends Component {
      constructor(){
          super()
          this.state = {
-            type: '',
+            plantType: '',
             varitey: '',
             plotColor: ''
          }
@@ -25,6 +26,12 @@ import axios from 'axios';
         axios.post('/plants', this.state ).then(res => {
         })
     }
+    handleDelete = (e) => {
+        e.preventDefault()
+        console.log(this.state)
+        // axios.post('/plants', this.state ).then(res => {
+        // })
+    }
 
     render(){
         return(
@@ -33,7 +40,7 @@ import axios from 'axios';
                 <fieldset className='fieldSet'>
                     <legend>Add New Plant</legend>
                     Type: <input 
-                                name='type' 
+                                name='plantType' 
                                 className='newPlantInput' 
                                 type='text' 
                                 placeholder='Pumpkin' 
@@ -50,8 +57,12 @@ import axios from 'axios';
                                 type='color' 
                                 onChange={this.handleChange}/>
                     <button onClick={this.handleSubmit}>Add</button>
+                    <PlantList />
+                    <button onClick={this.handleDelete}>Delete From List</button>
                     </fieldset>
+                    
                 </form>
+                
             </div>
         )
     }

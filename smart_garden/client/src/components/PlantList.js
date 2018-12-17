@@ -1,5 +1,6 @@
 import React from 'react';
-import {withPlants} from '../context/PlantProvider'
+import {withPlants} from '../context/PlantProvider';
+import axios from 'axios'
 
 const PlantList = (props) => {
     //console.log(props)
@@ -11,11 +12,16 @@ const PlantList = (props) => {
     const mappedPlants = currentPlants.map(plant => {
         return <option value={plant.plotColor} plotcolor={plant.plantType} key={plant.plantType}> {plant.plantType} - {plant.varitey } - {plant.plotColor}</option>
     })
-   
+
+    // handleDelete = (e) => {
+    //     e.preventDefault()
+    //     console.log(this.state)
+    //     axios.post('/plants', this.state ).then(res => {
+    //     })
+    // }
     return(
         
         <div>
-            Plant list component - to map through available plants in the database: <br></br>
             <select name = "plotColor" onChange = {props.changePlotColor}>
                 <optgroup label = "Add Plant to Garden">
                 </optgroup>
