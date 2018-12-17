@@ -9,6 +9,7 @@ class Garden extends Component {
         this.state = {
             plotHeight: 0,
             plotWidth: 0,   
+            gardenName: '',
         }
         this.gardenPlot = []
 
@@ -74,8 +75,10 @@ class Garden extends Component {
                     Garden Name: 
                             <input
                                 name='gardenName' 
+                                value={this.state.gardenName} 
                                 type='text' 
-                                placeholder='My First Garden'>
+                                placeholder='My First Garden'
+                                onChange={this.handleChange}>
                             </input>
                             {/* <input name = "gardenPlot" value = {gardenBox} style ={{display: "none"}} onChange = {this.handleChange}/>  */}
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>

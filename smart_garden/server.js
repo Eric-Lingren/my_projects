@@ -12,6 +12,7 @@ app.use(morgan('dev'))
 
 //Routes
 app.use('/plants', require('./routes/plant'))
+app.use('/gardens', require('./routes/garden'))
 
 
 // Mongoose Connect
