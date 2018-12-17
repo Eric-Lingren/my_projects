@@ -37,7 +37,10 @@ table {
   }
   
   .cell{
-    background-color: blue;
+    background-color: lightgreen;
     height: 50px;
-    width: 50px;
+    width: 500px;
+  }
+  .gardenTable{
+    width: 80%;
   }
