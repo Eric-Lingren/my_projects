@@ -19,7 +19,9 @@ import axios from 'axios';
         })
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(this.state)
         axios.post('/plants', this.state ).then(res => {
         })
     }

@@ -29,7 +29,9 @@ plantRouter.get('/:id', (req, res, next) => {
 
 // Add One
 plantRouter.post('/', (req, res, next) => {
+    console.log('post request got hit')
     const newPlant = new Plant(req.body)
+    console.log(newPlant)
     newPlant.save((err, plant) => {
         if (err) {
             res.status(500)

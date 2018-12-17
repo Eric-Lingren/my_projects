@@ -8,12 +8,14 @@ class PlantProvider extends Component {
         super()
         this.state = {
             currentPlants: [],
-            plotColor: ''
+            plotColor: '',
+            plantType: ''
         }
     }
 
-    changePlotColor = color => {
-        this.setState({plotColor: color})
+    changePlotColor = e => {
+        const {name , value} = e.target
+        this.setState({[name]: value})
     }
 
     getPlants = () => {
@@ -37,12 +39,17 @@ class PlantProvider extends Component {
     }
 
     render(){
+        console.log(this.state.plotColor)
+        //console.log(this.state.plantType)
         return (
             <PlantContext.Provider 
                 value={{
                     currentPlants: this.state.currentPlants,
                     getPlants:     this.getPlants,
-                    addPlant:      this.addPlant
+                    addPlant:      this.addPlant,
+                    changePlotColor: this.changePlotColor,
+                    plotColor: this.state.plotColor,
+                    plantType: this.state.plantType,
                 }}>
                 { this.props.children }
             </PlantContext.Provider>

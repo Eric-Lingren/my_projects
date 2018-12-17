@@ -3,6 +3,7 @@ import '../css/gardenStyle.css'
 import {withPlants} from '../context/PlantProvider'
 
 class Garden extends Component {
+    
     constructor(props){
         super(props)
         this.state = {
@@ -10,7 +11,7 @@ class Garden extends Component {
             plotWidth: 0,
             gardenPlot: '',
             gardenOption: { value: '', color: ''},
-            color: props.plotColor,
+            color: this.props.plotColor,
         }
 
     }
@@ -37,7 +38,9 @@ class Garden extends Component {
 
     cellClick = (e) => {
         console.log('cell was clicked')
-        e.target.style.backgroundColor=`${this.state.color}`
+        console.log(this.state.color)
+        console.log(this.props.plotColor)
+        e.target.style.backgroundColor=`${this.props.plotColor}`
     }
 
     render() {
