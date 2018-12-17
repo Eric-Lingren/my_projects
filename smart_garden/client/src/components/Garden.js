@@ -67,7 +67,7 @@ class Garden extends Component {
                     </fieldset>
                 </form>
 
-               <div> {this.state.gardenPlot} </div>   
+               <div> some text here.  This is where the garden grid goes. {this.state.gardenPlot} </div>   
                 
             </div>
         )

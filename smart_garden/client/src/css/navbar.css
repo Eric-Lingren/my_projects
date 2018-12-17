@@ -1,5 +1,5 @@
 .navbar{
-    background-color: slategrey;
+    background-color: #597334;
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -10,4 +10,22 @@
 .navLink{
     padding-left: 3vw;
     color: white;
+}
+.navbarDropdown{
+    padding: 1px;
+    height: 25px;
+    margin-right: 15px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.registrationButtons{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
 }
