@@ -6,13 +6,13 @@ const Navbar = () => {
     return(
         <div className='navbar'>
             <div className='navLinkContainer'>
-                <span>My Gardens: </span>
+                <span className='navbarText'>My Gardens: </span>
                 <select className='navbarDropdown'>
                     <option value="Garden 2">Garden 1</option>
                     <option value="Garden 1">Garden 2</option>
                     <option value="Test Garden">Test Garden</option>
                 </select>
-                <span>Year: </span>
+                <span className='navbarText'>Year: </span>
                 <select className='navbarDropdown'>
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
@@ -24,8 +24,10 @@ const Navbar = () => {
             </div>
             
             <form className='loginForm'>
-                User Name: <input className='newPlantInput' type='text' placeholder='User Name'/> 
-                Password: <input className='newPlantInput' type='text' placeholder='Password'/> 
+                <span className='navbarText'> User Name: </span> 
+                    <input className='newPlantInput' type='text' placeholder='User Name'/> 
+                <span className='navbarText'> Password: </span> 
+                    <input className='newPlantInput' type='text' placeholder='Password'/> 
                 <button className='registrationButtons' >Sign In</button>
                 <button className='registrationButtons'>Register</button>
             </form>

@@ -47,19 +47,19 @@ class Garden extends Component {
                 <form className='gardenGenerateForm'>
                 <fieldset className='fieldSetNewGarden'>
                 <legend>Create New Garden</legend>
-                    Height: <input 
+                    Height: <input  
+                                name='plotHeight' 
                                 type='number' 
                                 className='gardenSizeInput'
-                                placeholder='10' 
-                                name='plotHeight' 
+                                placeholder='10'
                                 value={this.state.plotHeight} 
                                 onChange={this.handleChange} >
                             </input>
                     Width:  <input 
+                                name='plotWidth' 
                                 type='number' 
                                 className='gardenSizeInput'
                                 placeholder='20' 
-                                name='plotWidth' 
                                 value={this.state.plotWidth} 
                                 onChange={this.handleChange}>
                             </input><br></br>

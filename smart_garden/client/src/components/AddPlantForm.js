@@ -1,21 +1,58 @@
-import React from 'react';
+import React, { Component} from 'react';
 import '../css/addPlantForm.css';
+import axios from 'axios';
 
-const AddPlantForm = () => {
+ class AddPlantForm extends Component {
+     constructor(){
+         super()
+         this.state = {
+            type: '',
+            varitey: '',
+            plotColor: ''
+         }
+     }
 
-    return(
-        <div>
-            <form className='addPlantForm'>
-            <fieldset className='fieldSet'>
-                <legend>Add New Plant</legend>
-                Type: <input className='newPlantInput' type='text' placeholder='Pumpkin' required/>
-                Varitey: <input className='newPlantInput' type='text' placeholder='Jackolantern' />
-                Plot Color: <input className='newPlantColorInput' type='color' />
-                <button>Add</button>
-                </fieldset>
-            </form>
-        </div>
-    )
+     handleChange = (e) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        })
+    }
+
+    handleSubmit = () => {
+        axios.post('/plants', this.state ).then(res => {
+        })
+    }
+
+    render(){
+        return(
+            <div>
+                <form className='addPlantForm'>
+                <fieldset className='fieldSet'>
+                    <legend>Add New Plant</legend>
+                    Type: <input 
+                                name='type' 
+                                className='newPlantInput' 
+                                type='text' 
+                                placeholder='Pumpkin' 
+                                onChange={this.handleChange}
+                                required/>
+                    Varitey: <input 
+                                name='varitey' 
+                                className='newPlantInput' 
+                                type='text' placeholder='Jackolantern' 
+                                onChange={this.handleChange}/>
+                    Plot Color: <input 
+                                name='plotColor' 
+                                className='newPlantColorInput' 
+                                type='color' 
+                                onChange={this.handleChange}/>
+                    <button onClick={this.handleSubmit}>Add</button>
+                    </fieldset>
+                </form>
+            </div>
+        )
+    }
     
 }
 

@@ -3,8 +3,6 @@ import axios from 'axios'
 
 const PlantContext = React.createContext()
 
-
-
 class PlantProvider extends Component {
     constructor(){
         super()
@@ -33,11 +31,8 @@ class PlantProvider extends Component {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
-
     render(){
-        
         return (
-            
             <PlantContext.Provider 
                 value={{
                     currentPlants: this.state.currentPlants,

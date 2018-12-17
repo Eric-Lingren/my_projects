@@ -11,7 +11,12 @@ const plantSchema = new Schema({
         type: String,
         required: false,
         lowercase: true
+    },
+    plotColor:{
+        type: String,
+        required: true
     }
+
 })
 
 module.exports = mongoose.model("Plant", plantSchema)

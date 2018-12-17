@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlantList = (props) => {
     console.log(props)
-    const { plantType, varitey } = props
+    //const { plantType, varitey } = props
     // console.log(plantType)
     // console.log(varitey)
     
