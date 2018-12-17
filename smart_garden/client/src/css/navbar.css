@@ -25,9 +25,7 @@
     align-items: center;
 }
 .registrationButtons{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 5px;
+    margin: auto 3px auto 3px;
 }
 .navbarText{
     color: white;
