@@ -18,13 +18,16 @@ class Home extends Component {
         return(
             <div>
                 <Navbar />
-                <div className='myForms'>
-                    <Garden />
-                    <AddPlantForm />
-                </div>
-                
-                <PlantList currentPlants={this.props.currentPlants}/>
-                <Plant />
+                    <div className='pageWrapper'>
+                        <div className='leftColumn'>
+                            <AddPlantForm />
+                            <PlantList currentPlants={this.props.currentPlants}/>
+                        </div>
+                        <div className='mainColumn'>
+                            <Garden />
+                            <Plant />
+                        </div>
+                    </div>
             </div>
         )
     }

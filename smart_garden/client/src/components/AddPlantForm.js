@@ -41,7 +41,7 @@ import axios from 'axios';
                                 name='varitey' 
                                 className='newPlantInput' 
                                 type='text' placeholder='Jackolantern' 
-                                onChange={this.handleChange}/>
+                                onChange={this.handleChange}/><br></br>
                     Plot Color: <input 
                                 name='plotColor' 
                                 className='newPlantColorInput' 

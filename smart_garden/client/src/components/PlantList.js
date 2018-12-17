@@ -1,21 +1,33 @@
 import React from 'react';
 
 const PlantList = (props) => {
-    console.log(props)
-    //const { plantType, varitey } = props
+    //console.log(props)
+    const { currentPlants } = props
     // console.log(plantType)
-    // console.log(varitey)
-    
+    //console.log(varitey)
+    //console.log(currentPlants)
+
+    const sendColor = color => {
+        props.changePlotColor(color)
+        console.log('running')
+    }
+
+    const changeTest = () => {
+        console.log('change test ran')
+    }
+    // () => sendColor(plant.plotColor)
+
+    const mappedPlants = currentPlants.map(plant => {
+        return <option value={plant.plantType} plotcolor={plant.plotColor} onChange={console.log('you changed bro')} key={plant.plantType}> {plant.plantType} - {plant.varitey } </option>
+    })
+   
     return(
         
         <div>
             Plant list component - to map through available plants in the database: <br></br>
-            <select>
+            <select onChange={changeTest()}>
                 <optgroup label = "Add Plant to Garden">
-                <option value="plant1">plant 1</option>
-                <option value="plant2">plant 2</option>
-                <option value="plant3">plant 3</option>
-                <option value="plant4">plant 4</option>
+                {mappedPlants}
                 </optgroup>
             </select>
         </div>

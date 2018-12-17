@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import '../css/gardenStyle.css'
+import {withPlants} from '../context/PlantProvider'
 
 class Garden extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             plotHeight: 0,
             plotWidth: 0,
             gardenPlot: '',
+            gardenOption: { value: '', color: ''},
+            color: props.plotColor,
         }
 
     }
+
+    // this.setState(prevState => ({
+    //     gardenOption: {
+    //         value: '',
+    //         color: ''
+    //     }
+    // }))
 
     handleChange = (e) => {
         const {name, value} = e.target;
@@ -20,28 +30,14 @@ class Garden extends Component {
     }
 
     handleSubmit = () => {
-       const height = this.state.plotHeight;
-       const width = this.state.plotWidth;
+    //    const height = this.state.plotHeight;
+    //    const width = this.state.plotWidth;
 
+    }
 
- 
-    //    let table = "<table class='table'>";
-
-    //     for(let y = 1;y <= height; y++){
-    //      table += '<tr>';
-    //      for(let x = 1; x <= width; x++){
-    //         table += "<td className='cell'>" + x + '</td>';
-    //      }
-    //      table += '</tr>';
-    //     }
-    //     table += '</table>';
-
-    //     let gardenPlot = document.getElementById('gardenbox').innerHTML(table)
-
-    //     this.setState({
-    //         gardenPlot: gardenPlot,
-    //     })
-
+    cellClick = (e) => {
+        console.log('cell was clicked')
+        e.target.style.backgroundColor=`${this.state.color}`
     }
 
     render() {
@@ -53,10 +49,8 @@ class Garden extends Component {
         for(let x = 0; x < this.state.plotWidth; x++){
             width.push(x)
          }
-        console.log(height)
-        console.log(width)
         const gardenColumns = width.map(index => {
-            return <td className='cell'>1</td>
+            return <td className='cell' onClick={this.cellClick} >1</td>
         })
         const gardenBox = height.map(ind => {
             return <tr>{gardenColumns}</tr>
@@ -82,12 +76,12 @@ class Garden extends Component {
                                 placeholder='20' 
                                 value={this.state.plotWidth} 
                                 onChange={this.handleChange}>
-                            </input><br></br>
+                            </input>
                     <button onClick={this.handleSubmit}>Generate Garden Plot</button>
                     </fieldset>
                 </form>
 
-               <div id='gardenbox'> some text here.  This is where the garden grid goes. <table className='gardenTable'>{gardenBox}</table> </div>   
+               <div id='gardenbox'> <table className='gardenTable'>{gardenBox}</table> </div>   
                 
             </div>
         )
@@ -96,4 +90,4 @@ class Garden extends Component {
     
 }
 
-export default Garden
+export default withPlants(Garden)

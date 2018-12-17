@@ -1,4 +1,11 @@
-.myForms{
+.pageWrapper{
     display: flex;
-    width: 100%;
+}
+.leftColumn{
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+}
+.mainColumn{
+    width: 84%;
 }

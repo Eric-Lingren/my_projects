@@ -7,13 +7,18 @@ class PlantProvider extends Component {
     constructor(){
         super()
         this.state = {
-            currentPlants: []
+            currentPlants: [],
+            plotColor: ''
         }
+    }
+
+    changePlotColor = color => {
+        this.setState({plotColor: color})
     }
 
     getPlants = () => {
         axios.get('/plants').then(response => {
-            console.log(response.data)
+            //console.log(response.data)
             this.setState({
                 currentPlants: response.data
             })
