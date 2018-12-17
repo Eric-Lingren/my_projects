@@ -8,20 +8,11 @@ class Garden extends Component {
         super(props)
         this.state = {
             plotHeight: 0,
-            plotWidth: 0,
-            gardenPlot: [],    
+            plotWidth: 0,   
         }
         this.gardenPlot = []
 
     }
-
-    // this.setState(prevState => ({
-    //     gardenOption: {
-    //         value: '',
-    //         color: ''
-    //     }
-    // }))
-
     handleChange = (e) => {
         const {name, value} = e.target;
         this.setState({

@@ -1,6 +1,6 @@
 import React from 'react';
 import {withPlants} from '../context/PlantProvider';
-import axios from 'axios'
+
 
 class PlantList extends React.Component {
     constructor(props) {
@@ -39,6 +39,7 @@ class PlantList extends React.Component {
                     </optgroup>
                     {mappedPlants}
                 </select>
+                <button onClick={this.props.deletePlant}>Delete Plant</button>
             </div>
         )    
     }

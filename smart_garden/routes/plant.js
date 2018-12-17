@@ -31,7 +31,6 @@ plantRouter.get('/:id', (req, res, next) => {
 plantRouter.post('/', (req, res, next) => {
     console.log('post request got hit')
     const newPlant = new Plant(req.body)
-    console.log(newPlant)
     newPlant.save((err, plant) => {
         if (err) {
             res.status(500)
@@ -60,12 +59,13 @@ plantRouter.put('/:id', (req, res, next) => {
 
 // Delete One
 plantRouter.delete('/:id', (req, res, next) => {
+    console.log('delete route was hit')
     Plant.findOneAndDelete({_id: req.params.id}, (err, deletedPlant) => {
         if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(202).send(`${deletedPlant.name} was succesfully deleted!`)
+        return res.status(202).send(`succesfully deleted!`)
     })
 })
 

@@ -42,6 +42,14 @@ class PlantProvider extends Component {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
+    deletePlant = () => {
+        const plantID = this.state.selectedPlantID
+        console.log(plantID)
+        axios.delete(`/plants/${plantID}`).then(response => {
+
+        }).catch(err => console.log(err.response.data.errMsg))
+    }
+
     render(){
         // console.log('Selected PLOT COLOR is: ' + this.state.selectedPlotColor)
         // console.log('Selected PLANT TYPE is: ' + this.state.selectedPlantType)
@@ -52,9 +60,11 @@ class PlantProvider extends Component {
                     currentPlants: this.state.currentPlants,
                     getPlants:     this.getPlants,
                     addPlant:      this.addPlant,
+                    deletePlant:    this.deletePlant,
                     changePlotColor: this.changePlotColor,
                     selectedPlotColor: this.state.selectedPlotColor,
                     selectedPlantType: this.state.selectedPlantType,
+                    selectedPlantID: this.state.selectedPlantID,
                 }}>
                 { this.props.children }
             </PlantContext.Provider>
