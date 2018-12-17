@@ -57,8 +57,8 @@ import PlantList from './PlantList';
                                 type='color' 
                                 onChange={this.handleChange}/>
                     <button onClick={this.handleSubmit}>Add</button>
-                    <PlantList />
-                    <button onClick={this.handleDelete}>Delete From List</button>
+                    {/* <PlantList />
+                    <button onClick={this.handleDelete}>Delete From List</button> */}
                     </fieldset>
                     
                 </form>

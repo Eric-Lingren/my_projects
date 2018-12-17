@@ -2,39 +2,46 @@ import React from 'react';
 import {withPlants} from '../context/PlantProvider';
 import axios from 'axios'
 
-const PlantList = (props) => {
-    //console.log(props)
-    //console.log(props)
-    const { currentPlants } = props
-
-    // () => sendColor(plant.plotColor)
-
-    const mappedPlants = currentPlants.map(plant => {
-        return <option 
-                    value={plant.plotColor} 
-                    plotcolor={plant.plantType} 
-                    key={plant._id} > 
-                        {plant.plantType} - {plant.varitey } - {plant.plotColor}
-                </option>
-    })
-
-    // handleDelete = (e) => {
-    //     e.preventDefault()
-    //     console.log(this.state)
-    //     axios.post('/plants', this.state ).then(res => {
-    //     })
-    // }
-    return(
+class PlantList extends React.Component {
+    constructor(props) {
+        super(props)
         
-        <div>
-            <select name = "selectedPlotColor" onChange = {props.changePlotColor}>
-                <optgroup label = "Add Plant to Garden">
-                </optgroup>
-                {mappedPlants}
-            </select>
-        </div>
-    )
+        this.state = {
+            plant: {}
+        }
+    }
+
+    handleChange = e => {
+        this.setState({plant: this.props.currentPlants[e.target.value]}, () => {
+            this.props.changePlotColor(this.state.plant)
+        })
+    }
     
+    render(){
+        const { currentPlants } = this.props
+
+    
+        const mappedPlants = currentPlants.map((plant, index) => {
+            return <option 
+                        value={index} 
+                        plotcolor={plant.plantType} 
+                        key={index} 
+                        > 
+                            {plant.plantType} - {plant.varitey } - {plant.plotColor}
+                    </option>
+        })
+
+        return(
+        
+            <div>
+                <select name = "selectedPlotColor" onChange = {this.handleChange}>
+                    <optgroup label = "Add Plant to Garden">
+                    </optgroup>
+                    {mappedPlants}
+                </select>
+            </div>
+        )    
+    }
 }
 
 export default withPlants(PlantList)

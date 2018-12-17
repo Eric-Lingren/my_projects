@@ -14,9 +14,13 @@ class PlantProvider extends Component {
         }
     }
 
-    changePlotColor = e => {
-        const {name , value} = e.target
-        this.setState({[name]: value})
+    changePlotColor = plant => {
+       console.log(plant)
+       this.setState({
+        selectedPlotColor: plant.plotColor,
+        selectedPlantType: plant.plantType,
+        selectedPlantID: plant._id,
+       })
     }
 
     getPlants = () => {
