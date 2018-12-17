@@ -21,26 +21,18 @@ button{
   margin-left: 20%;
 }
 
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+}
 
-table {
-    border-collapse: collapse;
-  }
-  
-  table, th, td {
-    border: 1px solid black;
-    height: 30px;
-    width: 70px;
-  }
-
- tr{
-    border: 1px solid black;
-  }
-  
-  .cell{
-    background-color: lightgreen;
-    height: 50px;
-    width: 500px;
-  }
-  .gardenTable{
-    width: 100%;
-  }
+.cell{
+  background-color: lightgreen;
+  height: 50px;
+  width: 50px;
+}
+.gardenTable{
+  width: 100%;
+}

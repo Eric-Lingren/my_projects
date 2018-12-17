@@ -9,9 +9,9 @@ class Garden extends Component {
         this.state = {
             plotHeight: 0,
             plotWidth: 0,
-            gardenPlot: '',
-            
+            gardenPlot: [],    
         }
+        this.gardenPlot = []
 
     }
 
@@ -29,9 +29,12 @@ class Garden extends Component {
         })
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        //console.log(this.gardenPlot)
+        e.preventDefault()
     //    const height = this.state.plotHeight;
     //    const width = this.state.plotWidth;
+    console.log(this.gardenPlot)
 
     }
 
@@ -50,12 +53,12 @@ class Garden extends Component {
             width.push(x)
          }
         const gardenColumns = width.map(index => {
-            return <td className='cell' onClick={this.cellClick} >1</td>
+            return <td className='cell' onClick={this.cellClick} > </td>
         })
-        const gardenBox = height.map(ind => {
+        this.gardenPlot = height.map(ind => {
             return <tr>{gardenColumns}</tr>
-                   
         })
+        
         return(
             <div>
                 <form className='gardenGenerateForm'>
@@ -77,11 +80,18 @@ class Garden extends Component {
                                 value={this.state.plotWidth} 
                                 onChange={this.handleChange}>
                             </input>
-                    <button onClick={this.handleSubmit}>Generate Garden Plot</button>
+                    Garden Name: 
+                            <input
+                                name='gardenName' 
+                                type='text' 
+                                placeholder='My First Garden'>
+                            </input>
+                            {/* <input name = "gardenPlot" value = {gardenBox} style ={{display: "none"}} onChange = {this.handleChange}/>  */}
+                    <button onClick={this.handleSubmit}>Save to My Gardens</button>
                     </fieldset>
                 </form>
 
-               <div id='gardenbox'> <table className='gardenTable'>{gardenBox}</table> </div>   
+               <div id='gardenbox'> <table className='gardenTable'>{this.gardenPlot}</table> </div>   
                 
             </div>
         )
