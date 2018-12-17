@@ -15,7 +15,6 @@ class PlantProvider extends Component {
     }
 
     changePlotColor = plant => {
-       console.log(plant)
        this.setState({
         selectedPlotColor: plant.plotColor,
         selectedPlantType: plant.plantType,
@@ -44,10 +43,9 @@ class PlantProvider extends Component {
     }
 
     render(){
-        console.log('Selected PLOT COLOR is: ' + this.state.selectedPlotColor)
-        console.log('Selected PLANT TYPE is: ' + this.state.selectedPlantType)
-        console.log('Selected PLANT ID is: ' + this.state.selectedPlantID)
-        //console.log(this.state.plantType)
+        // console.log('Selected PLOT COLOR is: ' + this.state.selectedPlotColor)
+        // console.log('Selected PLANT TYPE is: ' + this.state.selectedPlantType)
+        // console.log('Selected PLANT ID is: ' + this.state.selectedPlantID)
         return (
             <PlantContext.Provider 
                 value={{
@@ -56,7 +54,7 @@ class PlantProvider extends Component {
                     addPlant:      this.addPlant,
                     changePlotColor: this.changePlotColor,
                     selectedPlotColor: this.state.selectedPlotColor,
-                    plantType: this.state.plantType,
+                    selectedPlantType: this.state.selectedPlantType,
                 }}>
                 { this.props.children }
             </PlantContext.Provider>
