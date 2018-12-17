@@ -15,9 +15,11 @@ class PlantProvider extends Component {
 
     getPlants = () => {
         axios.get('/plants').then(response => {
+            console.log(response.data)
             this.setState({
                 currentPlants: response.data
             })
+            
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -33,7 +35,9 @@ class PlantProvider extends Component {
 
 
     render(){
+        
         return (
+            
             <PlantContext.Provider 
                 value={{
                     currentPlants: this.state.currentPlants,

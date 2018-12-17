@@ -1,8 +1,13 @@
 import React from 'react';
 
-const PlantList = () => {
-
+const PlantList = (props) => {
+    console.log(props)
+    const { plantType, varitey } = props
+    // console.log(plantType)
+    // console.log(varitey)
+    
     return(
+        
         <div>
             Plant list component - to map through available plants in the database: <br></br>
             <select>

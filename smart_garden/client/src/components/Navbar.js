@@ -19,8 +19,8 @@ const Navbar = () => {
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                 </select>
-                <a class='navLink' href='none'>Journal</a>
-                <a class='navLink' href='none'>Adruino</a>
+                <a className='navLink' href='none'>Journal</a>
+                <a className='navLink' href='none'>Adruino</a>
             </div>
             
             <form className='loginForm'>
