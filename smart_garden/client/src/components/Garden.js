@@ -10,8 +10,7 @@ class Garden extends Component {
             plotHeight: 0,
             plotWidth: 0,
             gardenPlot: '',
-            gardenOption: { value: '', color: ''},
-            color: this.props.plotColor,
+            color: this.props.selectedPlotColor,
             plantType: this.props.plantType,
         }
 
@@ -39,8 +38,8 @@ class Garden extends Component {
 
     cellClick = (e) => {
         console.log('cell was clicked')
-        console.log(this.props.plotColor)
-        e.target.style.backgroundColor=`${this.props.plotColor}`
+        console.log(this.props.selectedPlotColor)
+        e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
     }
 
     render() {

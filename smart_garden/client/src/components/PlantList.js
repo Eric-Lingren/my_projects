@@ -10,7 +10,12 @@ const PlantList = (props) => {
     // () => sendColor(plant.plotColor)
 
     const mappedPlants = currentPlants.map(plant => {
-        return <option value={plant.plotColor} plotcolor={plant.plantType} key={plant.plantType}> {plant.plantType} - {plant.varitey } - {plant.plotColor}</option>
+        return <option 
+                    value={plant.plotColor} 
+                    plotcolor={plant.plantType} 
+                    key={plant._id} > 
+                        {plant.plantType} - {plant.varitey } - {plant.plotColor}
+                </option>
     })
 
     // handleDelete = (e) => {
@@ -22,7 +27,7 @@ const PlantList = (props) => {
     return(
         
         <div>
-            <select name = "plotColor" onChange = {props.changePlotColor}>
+            <select name = "selectedPlotColor" onChange = {props.changePlotColor}>
                 <optgroup label = "Add Plant to Garden">
                 </optgroup>
                 {mappedPlants}

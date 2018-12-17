@@ -8,8 +8,9 @@ class PlantProvider extends Component {
         super()
         this.state = {
             currentPlants: [],
-            plotColor: '',
-            plantType: ''
+            selectedPlotColor: '',
+            selectedPlantType: '',
+            selectedPlantID: '',
         }
     }
 
@@ -39,8 +40,9 @@ class PlantProvider extends Component {
     }
 
     render(){
-        console.log(this.state.plotColor)
-        console.log(this.state.plantType)
+        console.log('Selected PLOT COLOR is: ' + this.state.selectedPlotColor)
+        console.log('Selected PLANT TYPE is: ' + this.state.selectedPlantType)
+        console.log('Selected PLANT ID is: ' + this.state.selectedPlantID)
         //console.log(this.state.plantType)
         return (
             <PlantContext.Provider 
@@ -49,7 +51,7 @@ class PlantProvider extends Component {
                     getPlants:     this.getPlants,
                     addPlant:      this.addPlant,
                     changePlotColor: this.changePlotColor,
-                    plotColor: this.state.plotColor,
+                    selectedPlotColor: this.state.selectedPlotColor,
                     plantType: this.state.plantType,
                 }}>
                 { this.props.children }
@@ -66,5 +68,3 @@ export const withPlants = C => props => (
         {value => <C {...props} {...value}/>}
     </PlantContext.Consumer>
 )
-
-
