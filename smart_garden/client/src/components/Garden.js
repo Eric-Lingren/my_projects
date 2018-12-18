@@ -14,8 +14,8 @@ class Garden extends Component {
             gardenName: '',
             gardenData: []
         }
-        this.gardenData = []
         this.gardenPlot = ''
+        this.gardenData = []
 
     }
     handleChange = (e) => {
@@ -27,8 +27,6 @@ class Garden extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-
-        // console.log(this.state.gardenName)
         console.log(this.gardenPlot)
 
         const postGarden = {
@@ -36,21 +34,6 @@ class Garden extends Component {
             plot: this.gardenPlot
         }
         
-        const rows = this.gardenPlot.length
-        console.log('garden has ' + rows + ' rows')
-
-        const cols = this.gardenPlot[0].props.children.length
-        console.log('this garden has ' + cols + ' columns')
-        
-        const plots = this.gardenPlot[0].props.children
-
-        console.log('garden plots are : ' + plots)
-        console.log(this.state.plotHeight)
-        console.log(this.state.plotWidth)
-        //console.log(postGarden)
-        this.setState({
-            gardenData: []
-        })
 
         axios.post('/gardens', postGarden ).then(res => {
         })
@@ -81,25 +64,17 @@ class Garden extends Component {
             width.push(x)
          }
 
-        // const gardenArray = []
-        // for(let i = 1; i <= height.length; i++){
-        //     gardenArray.push([i])
-        //     for (let j = 1; j<= width.length; j++){
-        //         gardenArray.push({cell: j, plotContains: ''})
-        //     }
-        // }
-        // console.log(gardenArray)
-         let gardenData = []
-        let index = 0;
+        this.gardenData = []
+        let index = -1;
         this.gardenPlot = height.map(ind => {
             const gardenColumns = width.map(myInd => { 
                 index++
-                gardenData.push({cell: index})
+                this.gardenData.push({cell: index, contents: ''})
                 return <div className='cell' onClick={this.cellClick} id={index}>  {`my index is ${index}`}</div>
             })
             return <div className='rows'>{gardenColumns}</div>
         })
-        console.log(gardenData)
+        console.log(this.gardenData)
        
         
         return(
