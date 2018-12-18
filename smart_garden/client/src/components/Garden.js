@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../css/gardenStyle.css'
 import {withPlants} from '../context/PlantProvider'
+import {withGardens} from '../context/GardenProvider'
+import axios from 'axios'
 
 class Garden extends Component {
     
@@ -11,7 +13,7 @@ class Garden extends Component {
             plotWidth: 0,   
             gardenName: '',
         }
-        this.gardenPlot = []
+        this.gardenPlot = ''
 
     }
     handleChange = (e) => {
@@ -22,11 +24,19 @@ class Garden extends Component {
     }
 
     handleSubmit = (e) => {
-        //console.log(this.gardenPlot)
         e.preventDefault()
-    //    const height = this.state.plotHeight;
-    //    const width = this.state.plotWidth;
-    console.log(this.gardenPlot)
+
+        console.log(this.state.gardenName)
+        console.log(this.gardenPlot)
+
+        const postGarden = {
+            gardenName: this.state.gardenName,
+            plot: this.gardenPlot
+        }
+        console.log(postGarden)
+        axios.post('/gardens', postGarden ).then(res => {
+        })
+    
 
     }
 
@@ -94,4 +104,4 @@ class Garden extends Component {
     
 }
 
-export default withPlants(Garden)
+export default withGardens(withPlants(Garden))

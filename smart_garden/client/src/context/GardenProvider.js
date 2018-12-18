@@ -21,14 +21,14 @@ class GardenProvider extends Component {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
-    // addGarden = newPlant => {
-    //     axios.post('/plants', newPlant).then(response => {
-    //         this.setState(prevState => ({
-    //             currentPlants: [...prevState.currentPlants, response.data]
-    //         }))
-    //     })
-    //     .catch(err => console.log(err.response.data.errMsg))
-    // }
+    addGarden = newGarden => {
+        axios.post('/gardens', newGarden).then(response => {
+            this.setState(prevState => ({
+                currentGardens: [...prevState.currentGardens, response.data]
+            }))
+        })
+        .catch(err => console.log(err.response.data.errMsg))
+    }
 
     // deleteGarden = () => {
     //     const plantID = this.state.selectedPlantID
@@ -44,6 +44,7 @@ class GardenProvider extends Component {
                 value={{
                     currentGardens: this.state.currentGardens,
                     getGardens:     this.getGardens,  
+                    addGarden:      this.addGarden,
                 }}>
                 { this.props.children }
             </GardenContext.Provider>
