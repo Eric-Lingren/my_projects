@@ -5,6 +5,7 @@ const Garden = require("../models/garden")
 
 // Get all
 gardenRouter.get('/', (req, res, next) => {
+    
     Garden.find((err, garden) => {
         if (err) {
             res.status(500)

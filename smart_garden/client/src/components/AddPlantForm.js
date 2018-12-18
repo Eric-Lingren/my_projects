@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import '../css/addPlantForm.css';
 import axios from 'axios';
-import PlantList from './PlantList';
+//import PlantList from './PlantList';
 
  class AddPlantForm extends Component {
      constructor(){

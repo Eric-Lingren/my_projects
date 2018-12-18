@@ -44,7 +44,6 @@ class PlantProvider extends Component {
 
     deletePlant = () => {
         const plantID = this.state.selectedPlantID
-        console.log(plantID)
         axios.delete(`/plants/${plantID}`).then(response => {
 
         }).catch(err => console.log(err.response.data.errMsg))
