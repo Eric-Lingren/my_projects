@@ -48,7 +48,19 @@ class Garden extends Component {
         console.dir(e.target)
         e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
         e.target.textContent=`${this.props.selectedPlantType}`
+        console.log(e.target.id)
         console.log(e.target.innerHTML)
+        console.log(this.gardenData)
+
+        const clickedCell = e.target.id
+
+        for (let i = 0; i < this.gardenData.length; i++){
+            console.log('this iteration cell #  is  ' +  this.gardenData[i].cell)
+            console.log('the clicked cell was ' +  Number(clickedCell))
+            if(this.gardenData[i].cell === Number(clickedCell)){
+                console.log('We have a match!')
+            }
+        }
     }
 
     render() {
