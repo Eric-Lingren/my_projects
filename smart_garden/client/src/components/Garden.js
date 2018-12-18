@@ -64,27 +64,21 @@ class Garden extends Component {
     }
 
     render() {
-        // const height = []
-        // const width = []
-        // for(let y = 0; y < this.state.plotHeight; y++){
-        //     height.push(y)
-        // }
-        // for(let x = 0; x < this.state.plotWidth; x++){
-        //     width.push(x)
-        //  }
-        // const gardenColumns = width.map(index => {
-        //     return <td className='cell' onClick={this.cellClick} > </td>
-        // })
-        // this.gardenPlot = height.map(ind => {
-        //     return <tr >{gardenColumns}</tr>
-        // })
-
-        
-        for (let y = 0; y < this.state.plotHeight; y++ ){
-            for(let x = 0; x < this.state.plotWidth; x++){
-                return <div>{x}</div>
-            }
+        const height = []
+        const width = []
+        for(let y = 0; y < this.state.plotHeight; y++){
+            height.push(y)
         }
+        for(let x = 0; x < this.state.plotWidth; x++){
+            width.push(x)
+         }
+        const gardenColumns = width.map(index => {
+            return <div className='cell' onClick={this.cellClick} > {index} </div>
+        })
+        this.gardenPlot = height.map(ind => {
+            return <div className='columns'>{gardenColumns}</div>
+        })
+
         
         return(
             <div>
@@ -122,6 +116,7 @@ class Garden extends Component {
 
                <div id='gardenbox'> 
                    {/* <table className='gardenTable'>{this.gardenPlot}</table>  */}
+                   {this.gardenPlot}
                 </div>   
                 
             </div>
