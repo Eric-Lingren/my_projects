@@ -12,6 +12,7 @@ class Garden extends Component {
             plotHeight: 0,
             plotWidth: 0,   
             gardenName: '',
+            gardenData: [],
         }
         this.gardenPlot = ''
 
@@ -26,40 +27,64 @@ class Garden extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
 
-        console.log(this.state.gardenName)
+        // console.log(this.state.gardenName)
         console.log(this.gardenPlot)
 
         const postGarden = {
             gardenName: this.state.gardenName,
             plot: this.gardenPlot
         }
-        console.log(postGarden)
+        
+        const rows = this.gardenPlot.length
+        console.log('garden has ' + rows + ' rows')
+
+        const cols = this.gardenPlot[0].props.children.length
+        console.log('this garden has ' + cols + ' columns')
+        
+        const plots = this.gardenPlot[0].props.children
+
+        console.log('garden plots are : ' + plots)
+        console.log(this.state.plotHeight)
+        console.log(this.state.plotWidth)
+        //console.log(postGarden)
         axios.post('/gardens', postGarden ).then(res => {
         })
-    
-
     }
 
+    //////  Data needed to save garden:
+        // this.gardenplot.length === the number of rows
+        // this.gardenplot.[index(for the row number)].props.children[index(for the cell number)]
+        // this.gardenplot.[index(for the row number)].props.owner.memorizedProps.getPlants.selectedPlantID
+
     cellClick = (e) => {
+        console.dir(e.target)
         e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
         e.target.textContent=`${this.props.selectedPlantType}`
+        console.log(e.target.innerHTML)
     }
 
     render() {
-        const height = []
-        const width = []
-        for(let y = 0; y < this.state.plotHeight; y++){
-            height.push(y)
+        // const height = []
+        // const width = []
+        // for(let y = 0; y < this.state.plotHeight; y++){
+        //     height.push(y)
+        // }
+        // for(let x = 0; x < this.state.plotWidth; x++){
+        //     width.push(x)
+        //  }
+        // const gardenColumns = width.map(index => {
+        //     return <td className='cell' onClick={this.cellClick} > </td>
+        // })
+        // this.gardenPlot = height.map(ind => {
+        //     return <tr >{gardenColumns}</tr>
+        // })
+
+        
+        for (let y = 0; y < this.state.plotHeight; y++ ){
+            for(let x = 0; x < this.state.plotWidth; x++){
+                return <div>{x}</div>
+            }
         }
-        for(let x = 0; x < this.state.plotWidth; x++){
-            width.push(x)
-         }
-        const gardenColumns = width.map(index => {
-            return <td className='cell' onClick={this.cellClick} > </td>
-        })
-        this.gardenPlot = height.map(ind => {
-            return <tr>{gardenColumns}</tr>
-        })
         
         return(
             <div>
@@ -95,7 +120,9 @@ class Garden extends Component {
                     </fieldset>
                 </form>
 
-               <div id='gardenbox'> <table className='gardenTable'>{this.gardenPlot}</table> </div>   
+               <div id='gardenbox'> 
+                   {/* <table className='gardenTable'>{this.gardenPlot}</table>  */}
+                </div>   
                 
             </div>
         )
