@@ -28,29 +28,22 @@ class Garden extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.gardenPlot)
+        
+        console.log(this.state.gardenData)
 
         const postGarden = {
             gardenName: this.state.gardenName,
             plot: this.gardenPlot
         }
         
-        console.log(this.gardenData)
         axios.post('/gardens', postGarden ).then(res => {
         })
     }
-
-    //////  Data needed to save garden:
-        // this.gardenplot.length === the number of rows
-        // this.gardenplot.[index(for the row number)].props.children[index(for the cell number)]
-        // this.gardenplot.[index(for the row number)].props.owner.memorizedProps.getPlants.selectedPlantID
 
     createGarden = (e) => {
         e.preventDefault()
         const height = []
         const width = []
-        const totalCells = (this.state.plotHeight * this.state.plotWidth)
-        //console.log('total cells are '+ totalCells)
 
         for(let y = 1; y <= this.state.plotHeight; y++){
             height.push(y)
@@ -65,30 +58,23 @@ class Garden extends Component {
             const gardenColumns = width.map(myInd => { 
                 index++
                 this.gardenData.push({cell:index, contents: ''})
-                return <div className='cell' onClick={this.cellClick} id={index}>  {`my index is ${index}`}</div>
+                return <div className='cell' onClick={this.cellClick} id={index}> {index} </div>
             })
             return <div className='rows'>{gardenColumns}</div>
         })
-        this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
+        this.setState({gardenData: this.gardenData,gardenPlot: this.gardenPlot})
     }
 
 
     cellClick = (e) => {
-        console.dir(e.target)
         e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
         e.target.textContent=`${this.props.selectedPlantType}`
-        // console.log(e.target.id)
-        // console.log(e.target.innerHTML)
-        // console.log(this.gardenData)
 
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
 
         for (let i = 0; i < this.state.gardenData.length; i++){
-            // console.log('this iteration cell #  is  ' +  this.gardenData[i].cell)
-            // console.log('the clicked cell was ' +  Number(clickedCell))
             if(this.state.gardenData[i].cell === Number(clickedCell)){
-                console.log('We have a match!')
                 this.gardenData[i].contents = cellData
                 let newPlot = this.gardenData[i]
                 this.setState(prevState => {
@@ -98,33 +84,9 @@ class Garden extends Component {
                 })
             }
         }
-        
     }
     
     render() {
-        // const height = []
-        // const width = []
-        // const totalCells = (this.state.plotHeight * this.state.plotWidth)
-        // //console.log('total cells are '+ totalCells)
-
-        // for(let y = 1; y <= this.state.plotHeight; y++){
-        //     height.push(y)
-        // }
-        // for(let x = 1; x <= this.state.plotWidth; x++){
-        //     width.push(x)
-        //  }
-
-        // this.gardenData = []
-        // let index = -1;
-        // this.gardenPlot = height.map(ind => {
-        //     const gardenColumns = width.map(myInd => { 
-        //         index++
-        //         this.gardenData.push({cell:index, contents: ''})
-        //         return <div className='cell' onClick={this.cellClick} id={index}>  {`my index is ${index}`}</div>
-        //     })
-        //     return <div className='rows'>{gardenColumns}</div>
-        // })
-       
         
         return(
             <div>
@@ -155,15 +117,14 @@ class Garden extends Component {
                                 placeholder='My First Garden'
                                 onChange={this.handleChange}>
                             </input>
-                            {/* <input name = "gardenPlot" value = {gardenBox} style ={{display: "none"}} onChange = {this.handleChange}/>  */}
+                            
                     <button onClick={this.createGarden}>Create Garden</button>
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>
                     </fieldset>
                 </form>
 
                <div id='gardenbox'> 
-                   {/* <table className='gardenTable'>{this.gardenPlot}</table>  */}
-                   {this.state.gardenPlot}
+                   {this.gardenPlot}
                 </div>   
                 
             </div>
