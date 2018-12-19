@@ -6,6 +6,7 @@
 }
 .navLinkContainer{
     display: flex;
+    width: 300px;
 }
 .navLink{
     padding-left: 3vw;
@@ -29,4 +30,7 @@
 }
 .navbarText{
     color: white;
+}
+.searchButton{
+    margin: 0;
 }

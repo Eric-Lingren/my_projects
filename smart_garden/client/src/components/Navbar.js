@@ -15,6 +15,7 @@ const Navbar = () => {
                         placeholder='2018'
                         className='newPlantInput'>
                 </input>
+                <button className='searchButton'> Search </button>
                 <a className='navLink' href='none'>Journal</a>
                 <a className='navLink' href='none'>Adruino</a>
             </div>

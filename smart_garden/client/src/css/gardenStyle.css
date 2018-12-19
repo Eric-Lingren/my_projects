@@ -1,5 +1,6 @@
 .gardenGenerateForm{
   margin: 0px;
+  display: flex; 
 }
 .fieldSetNewGarden{
   border: 2px solid green;
@@ -31,7 +32,7 @@ table, th, td {
 .cell{
   background-color: lightgreen;
   height: 75px;
-  width: 150px;
+  width: 75px;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
@@ -44,6 +45,7 @@ table, th, td {
 }
 .gardenTable{
   width: 100%;
+  
 }
 .rows{
   display: flex;

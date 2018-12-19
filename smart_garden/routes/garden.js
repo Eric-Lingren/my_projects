@@ -1,9 +1,10 @@
 const express = require('express')
 const gardenRouter = express.Router()
 const Garden = require("../models/garden")
+const Year = require('../models/year')
 
 
-// Get all
+// Get all Gardens
 gardenRouter.get('/', (req, res, next) => {
     
     Garden.find((err, garden) => {
@@ -16,7 +17,7 @@ gardenRouter.get('/', (req, res, next) => {
 })
 
 
-// Get one
+// Get one Garden
 gardenRouter.get('/:id', (req, res, next) => {
     Garden.findOne({_id: req.params.id} , (err, garden) => {
         if (err) {
@@ -28,7 +29,7 @@ gardenRouter.get('/:id', (req, res, next) => {
 })
 
 
-// Add One
+// Add One Garden
 gardenRouter.post('/', (req, res, next) => {
     console.log('post request got hit')
     const newGarden = new Garden(req.body)
@@ -38,6 +39,18 @@ gardenRouter.post('/', (req, res, next) => {
             return next(err)
         }
         return res.status(201).send(garden)
+    })
+})
+
+//  Get one garden with a specific year
+
+gardenRouter.get('/:id', (req, res, next) => {
+    Garden.findOne({_id: req.params.id} , (err, garden) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(garden)
     })
 })
 

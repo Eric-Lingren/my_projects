@@ -22,8 +22,12 @@ const gardenSchema = new Schema({
     gardenPlot: {
         type: Array,
         required: true
+    },
+    gardenYear: {
+        type: String
     }
-    
+    //  $in
+    //  $push
 
 })
 

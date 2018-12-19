@@ -13,7 +13,8 @@ class Garden extends Component {
             plotHeight: 0,
             plotWidth: 0,   
             gardenData: [],
-            gardenPlot: []
+            gardenPlot: [],
+            gardenYear: '',
         }
         this.gardenPlot = ''
         this.gardenData = []
@@ -30,11 +31,12 @@ class Garden extends Component {
         e.preventDefault()
         
         //console.log(this.state.gardenData)
-        console.log(this.gardenPlot)
-        console.log(this.state.gardenPlot)
+        // console.log(this.gardenPlot)
+        // console.log(this.state.gardenPlot)
+        // console.log(this.state.gardenYear)
 
-        if(this.state.gardenName === ''){
-            alert('You must give a name before submitting')
+        if(this.state.gardenName === '' || this.state.gardenYear === 0 ){
+            alert('You must give a name and a year before submitting')
         } else {
             // console.log('Name: ' + this.state.gardenName)
             // console.log('Rows: ' + this.state.plotHeight)
@@ -45,7 +47,8 @@ class Garden extends Component {
                 plotHeight: this.state.plotHeight,
                 plotWidth: this.state.plotWidth,
                 gardenData: this.state.gardenData,
-                gardenPlot: this.state.gardenPlot
+                gardenPlot: this.state.gardenPlot,
+                gardenYear: this.state.gardenYear,
             }
             console.log(saveGarden)
             axios.post('/gardens', saveGarden ).then(res => {
@@ -132,6 +135,15 @@ class Garden extends Component {
                                 value={this.state.gardenName} 
                                 type='text' 
                                 placeholder='My First Garden'
+                                onChange={this.handleChange}
+                                required
+                                />
+                    Garden Year: 
+                            <input
+                                name='gardenYear'
+                                value={this.state.gardenYear} 
+                                type='text' 
+                                placeholder='2018'
                                 onChange={this.handleChange}
                                 required
                                 />

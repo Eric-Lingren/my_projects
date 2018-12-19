@@ -12,9 +12,11 @@ class PlantList extends React.Component {
     }
 
     handleChange = e => {
+        
         this.setState({plant: this.props.currentPlants[e.target.value]}, () => {
             this.props.changePlotColor(this.state.plant)
         })
+        
     }
     
     render(){
@@ -26,8 +28,9 @@ class PlantList extends React.Component {
                         value={index} 
                         plotcolor={plant.plantType} 
                         key={index} 
+                        plantVaritey={plant.plantVaritey}
                         > 
-                            {plant.plantType} - {plant.varitey } - {plant.plotColor}
+                            {plant.plantType}: {plant.varitey }
                     </option>
         })
 

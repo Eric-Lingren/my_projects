@@ -10,6 +10,7 @@ class PlantProvider extends Component {
             currentPlants: [],
             selectedPlotColor: '',
             selectedPlantType: '',
+            selectedPlantVaritey: '',
             selectedPlantID: '',
         }
     }
@@ -18,6 +19,7 @@ class PlantProvider extends Component {
        this.setState({
         selectedPlotColor: plant.plotColor,
         selectedPlantType: plant.plantType,
+        selectedPlantVaritey: plant.plantVaritey,
         selectedPlantID: plant._id,
        })
     }
@@ -63,6 +65,7 @@ class PlantProvider extends Component {
                     changePlotColor: this.changePlotColor,
                     selectedPlotColor: this.state.selectedPlotColor,
                     selectedPlantType: this.state.selectedPlantType,
+                    selectedPlantVaritey: this.state.selectedPlantVaritey,
                     selectedPlantID: this.state.selectedPlantID,
                 }}>
                 { this.props.children }
