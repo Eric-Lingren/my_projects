@@ -6,7 +6,6 @@ const Year = require('../models/year')
 
 // Get all Gardens
 gardenRouter.get('/', (req, res, next) => {
-    
     Garden.find((err, garden) => {
         if (err) {
             res.status(500)
@@ -16,6 +15,17 @@ gardenRouter.get('/', (req, res, next) => {
     })
 })
 
+//  Get one garden with a specific year
+// gardenRouter.get('/year', (req, res, next) => {
+//     console.log(req.query)
+//     Garden.findOne({gardenName: req.query.name, gardenYear: req.query.year} , (err, garden) => {
+//         if (err) {
+//             res.status(500)
+//             return next(err)
+//         }
+//         return res.status(200).send(garden)
+//     })
+// })
 
 // Get one Garden
 gardenRouter.get('/:id', (req, res, next) => {
@@ -42,17 +52,8 @@ gardenRouter.post('/', (req, res, next) => {
     })
 })
 
-//  Get one garden with a specific year
 
-gardenRouter.get('/:id', (req, res, next) => {
-    Garden.findOne({_id: req.params.id} , (err, garden) => {
-        if (err) {
-            res.status(500)
-            return next(err)
-        }
-        return res.status(200).send(garden)
-    })
-})
+
 
 
 // Update One

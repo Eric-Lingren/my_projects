@@ -8,8 +8,11 @@ class GardenProvider extends Component {
         super()
         this.state = {
             currentGardens: [],
+            selectedGarden: '',
+            selectedGardenPlot: '',
         }
     }
+
 
     getGardens = () => {
         axios.get('/gardens').then(response => {
@@ -21,6 +24,13 @@ class GardenProvider extends Component {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
+    // changeSelectedGarden = garden => {
+    //     console.log('change selected garden ran')
+    //     console.log(garden)
+    //     this.setState({
+    //      selectedgarden: garden
+    //     })
+    // }
     addGarden = newGarden => {
         axios.post('/gardens', newGarden).then(response => {
             this.setState(prevState => ({
@@ -30,13 +40,20 @@ class GardenProvider extends Component {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
-    // deleteGarden = () => {
-    //     const plantID = this.state.selectedPlantID
-    //     console.log(plantID)
-    //     axios.delete(`/plants/${plantID}`).then(response => {
+    getOneGarden = (id) => {
+        axios.get(`/gardens/${id}`).then(response => {
+            this.setState({
+                selectedGardenPlot: response.data.gardenPlot
+            })
+        }).catch(err => console.log(err.response.data.errMsg))
+    }
 
-    //     }).catch(err => console.log(err.response.data.errMsg))
-    // }
+    
+    deleteGarden = (id) => {
+        axios.delete(`/gardens/${id}`).then(response => {
+
+        }).catch(err => console.log(err.response.data.errMsg))
+    }
 
     render(){
         return (
@@ -45,6 +62,9 @@ class GardenProvider extends Component {
                     currentGardens: this.state.currentGardens,
                     getGardens:     this.getGardens,  
                     addGarden:      this.addGarden,
+                    changeSelectedGarden: this.changeSelectedGarden,
+                    getOneGarden: this.getOneGarden,
+                    deleteGarden: this.deleteGarden
                 }}>
                 { this.props.children }
             </GardenContext.Provider>

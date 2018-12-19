@@ -1,21 +1,42 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../css/navbar.css';
-import GardenList from './GardenList'
+import GardenList from './GardenList';
+import {withGardens} from '../context/GardenProvider'
 
-const Navbar = () => {
+class Navbar extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            selectedGarden: '',
+            selectedYear: ''
+        }
+    }
+    
+    handleChange = (e) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        })
+    }
+
+   
+    render() {
 
     return(
         <div className='navbar'>
             <div className='navLinkContainer'>
                 <span className='navbarText'>My Gardens: </span>
                 <GardenList />
-
+{/* 
                 <span className='navbarText'>Year: </span>
-                <input  type='number'
-                        placeholder='2018'
-                        className='newPlantInput'>
-                </input>
-                <button className='searchButton'> Search </button>
+                <input  name = 'selectedYear'
+                        type ='number'
+                        value = {this.state.selectedYear}
+                        placeholder ='2018'
+                        className ='newPlantInput'
+                        onChange = {this.handleChange}>
+                </input> */}
+                
                 <a className='navLink' href='none'>Journal</a>
                 <a className='navLink' href='none'>Adruino</a>
             </div>
@@ -31,7 +52,7 @@ const Navbar = () => {
             
         </div>
     )
-    
+}
 }
 
-export default Navbar
+export default withGardens(Navbar)

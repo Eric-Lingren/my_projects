@@ -29,12 +29,6 @@ class Garden extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        
-        //console.log(this.state.gardenData)
-        // console.log(this.gardenPlot)
-        // console.log(this.state.gardenPlot)
-        // console.log(this.state.gardenYear)
-
         if(this.state.gardenName === '' || this.state.gardenYear === 0 ){
             alert('You must give a name and a year before submitting')
         } else {
