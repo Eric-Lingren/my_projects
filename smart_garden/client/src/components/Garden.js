@@ -4,6 +4,7 @@ import {withPlants} from '../context/PlantProvider'
 import {withGardens} from '../context/GardenProvider'
 import axios from 'axios'
 
+
 class Garden extends Component {
     
     constructor(props){
@@ -14,13 +15,14 @@ class Garden extends Component {
             plotWidth: 0,   
             gardenData: [],
             gardenPlot: [],
-            gardenYear: '',
+            gardenYear: ''
         }
         this.gardenPlot = ''
         this.gardenData = []
 
     }
     handleChange = (e) => {
+        //console.log(this.props.selectedGardenPlot)
         const {name, value} = e.target;
         this.setState({
             [name]: value
@@ -101,7 +103,6 @@ class Garden extends Component {
     }
     
     render() {
-        
         return(
             <div>
                 <form className='gardenGenerateForm'>
@@ -148,7 +149,10 @@ class Garden extends Component {
                 </form>
 
                <div id='gardenbox'> 
-                   {this.gardenPlot}
+                   {this.gardenPlot} 
+
+                   {/* {this.props.selectedGardenPlot} */}
+
                 </div>   
                 
             </div>

@@ -28,7 +28,7 @@ class PlantList extends React.Component {
                         value={index} 
                         plotcolor={plant.plantType} 
                         key={index} 
-                        plantVaritey={plant.plantVaritey}
+                        plantvaritey={plant.plantVaritey}
                         > 
                             {plant.plantType}: {plant.varitey }
                     </option>

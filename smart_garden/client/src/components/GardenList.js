@@ -1,6 +1,5 @@
 import React from 'react';
 import {withGardens} from '../context/GardenProvider';
-import axios from 'axios'
 
 
 class GardenList extends React.Component {
