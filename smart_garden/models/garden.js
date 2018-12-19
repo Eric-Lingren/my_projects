@@ -7,16 +7,23 @@ const gardenSchema = new Schema({
         required: true,
         lowercase: true
     },
-    gardenData: [{
-        rows: {
-            type: Number,
-            default: 0
-        },
-        cols: Number,
-        plots: [{
-
-        }]
-    }]
+    plotHeight: {
+        type: Number,
+        required: true
+    },
+    plotWidth: {
+        type: Number,
+        required: true
+    },
+    gardenData: {
+        type: Array,
+        required: true
+    },
+    gardenPlot: {
+        type: Array,
+        required: true
+    }
+    
 
 })
 

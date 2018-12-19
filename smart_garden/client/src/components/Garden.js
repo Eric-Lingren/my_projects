@@ -9,9 +9,9 @@ class Garden extends Component {
     constructor(props){
         super(props)
         this.state = {
+            gardenName: '',
             plotHeight: 0,
             plotWidth: 0,   
-            gardenName: '',
             gardenData: [],
             gardenPlot: []
         }
@@ -29,15 +29,32 @@ class Garden extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         
-        console.log(this.state.gardenData)
+        //console.log(this.state.gardenData)
+        console.log(this.gardenPlot)
+        console.log(this.state.gardenPlot)
 
-        const postGarden = {
-            gardenName: this.state.gardenName,
-            plot: this.gardenPlot
+        if(this.state.gardenName === ''){
+            alert('You must give a name before submitting')
+        } else {
+            // console.log('Name: ' + this.state.gardenName)
+            // console.log('Rows: ' + this.state.plotHeight)
+            // console.log('Columns: ' + this.state.plotWidth)
+            // console.log(this.state.gardenData)
+            const saveGarden = {
+                gardenName: this.state.gardenName,
+                plotHeight: this.state.plotHeight,
+                plotWidth: this.state.plotWidth,
+                gardenData: this.state.gardenData,
+                gardenPlot: this.state.gardenPlot
+            }
+            console.log(saveGarden)
+            axios.post('/gardens', saveGarden ).then(res => {
+            })
         }
+
         
-        axios.post('/gardens', postGarden ).then(res => {
-        })
+        
+        
     }
 
     createGarden = (e) => {
@@ -62,7 +79,7 @@ class Garden extends Component {
             })
             return <div className='rows'>{gardenColumns}</div>
         })
-        this.setState({gardenData: this.gardenData,gardenPlot: this.gardenPlot})
+        this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
     }
 
 
@@ -99,24 +116,25 @@ class Garden extends Component {
                                 className='gardenSizeInput'
                                 placeholder='10'
                                 value={this.state.plotHeight} 
-                                onChange={this.handleChange} >
-                            </input>
+                                onChange={this.handleChange}  
+                                />
                     Width:  <input 
                                 name='plotWidth' 
                                 type='number' 
                                 className='gardenSizeInput'
                                 placeholder='20' 
                                 value={this.state.plotWidth} 
-                                onChange={this.handleChange}>
-                            </input>
+                                onChange={this.handleChange}
+                                />
                     Garden Name: 
                             <input
-                                name='gardenName' 
+                                name='gardenName'
                                 value={this.state.gardenName} 
                                 type='text' 
                                 placeholder='My First Garden'
-                                onChange={this.handleChange}>
-                            </input>
+                                onChange={this.handleChange}
+                                required
+                                />
                             
                     <button onClick={this.createGarden}>Create Garden</button>
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>

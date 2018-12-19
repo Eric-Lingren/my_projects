@@ -39,6 +39,8 @@ table, th, td {
 }
 .gardenBox{
   display: flex;
+  margin: 10px;
+  padding: 10px;
 }
 .gardenTable{
   width: 100%;
