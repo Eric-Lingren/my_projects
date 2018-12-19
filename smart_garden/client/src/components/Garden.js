@@ -19,6 +19,7 @@ class Garden extends Component {
         }
         this.gardenPlot = ''
         this.gardenData = []
+        this.testDiv = []
 
     }
     handleChange = (e) => {
@@ -38,6 +39,7 @@ class Garden extends Component {
             // console.log('Rows: ' + this.state.plotHeight)
             // console.log('Columns: ' + this.state.plotWidth)
             // console.log(this.state.gardenData)
+            // this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
             const saveGarden = {
                 gardenName: this.state.gardenName,
                 plotHeight: this.state.plotHeight,
@@ -78,9 +80,24 @@ class Garden extends Component {
             })
             return <div className='rows'>{gardenColumns}</div>
         })
+        // console.log(this.gardenPlot)
         this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
     }
 
+    loadSavedGarden = () => {
+        const height = this.props.selectedGardenPlotHeight
+        const width = this.props.selectedGardenPlotWidth
+        console.log(height)
+        console.log(width)
+        this.testDiv = this.props.selectedGardenData.map(plot => {
+            // console.log(plot)
+            // console.log(plot.cell)
+            // console.log(plot.contents)
+            return (
+                <div className='cell' id={plot.cell}> {plot.contents} </div>
+            )
+        })
+    }
 
     cellClick = (e) => {
         e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
@@ -147,11 +164,12 @@ class Garden extends Component {
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>
                     </fieldset>
                 </form>
+            <button onClick={this.loadSavedGarden}>Test</button>
 
                <div id='gardenbox'> 
                    {this.gardenPlot} 
-
-                   {/* {this.props.selectedGardenPlot} */}
+                    {this.testDiv}
+                   {/* {this.props.selectedGardenData} */}
 
                 </div>   
                 

@@ -9,7 +9,9 @@ class GardenProvider extends Component {
         this.state = {
             currentGardens: [],
             selectedGarden: '',
-            selectedGardenPlot: '',
+            selectedGardenData: '',
+            selectedGardenPlotHeight: '',
+            selectedGardenPlotWidth: '',
         }
     }
 
@@ -34,11 +36,13 @@ class GardenProvider extends Component {
     }
 
     getOneGarden = (id) => {
-        console.log('get one garden function ran')
         axios.get(`/gardens/${id}`).then(response => {
+            console.log(response.data)
             this.setState({
-                selectedGardenPlot: response.data.gardenPlot
-            }, () => console.log(this.state.selectedGardenPlot))
+                selectedGardenData: response.data.gardenData,
+                selectedGardenPlotHeight: response.data.plotHeight,
+                selectedGardenPlotWidth: response.data.plotWidth,
+            }, () => console.log(this.state.selectedGardenData))
         }).catch(err => console.log(err.response.data.errMsg))
     }
 
@@ -59,7 +63,9 @@ class GardenProvider extends Component {
                     changeSelectedGarden: this.changeSelectedGarden,
                     getOneGarden: this.getOneGarden,
                     deleteGarden: this.deleteGarden,
-                    selectedGardenPlot: this.state.selectedGardenPlot
+                    selectedGardenData: this.state.selectedGardenData,
+                    selectedGardenPlotHeight: this.state.selectedGardenPlotHeight,
+                    selectedGardenPlotWidth: this.state.selectedGardenPlotWidth,
                 }}>
                 { this.props.children }
             </GardenContext.Provider>
