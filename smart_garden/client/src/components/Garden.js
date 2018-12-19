@@ -12,7 +12,8 @@ class Garden extends Component {
             plotHeight: 0,
             plotWidth: 0,   
             gardenName: '',
-            gardenData: []
+            gardenData: [],
+            gardenPlot: []
         }
         this.gardenPlot = ''
         this.gardenData = []
@@ -34,7 +35,7 @@ class Garden extends Component {
             plot: this.gardenPlot
         }
         
-
+        console.log(this.gardenData)
         axios.post('/gardens', postGarden ).then(res => {
         })
     }
@@ -44,26 +45,8 @@ class Garden extends Component {
         // this.gardenplot.[index(for the row number)].props.children[index(for the cell number)]
         // this.gardenplot.[index(for the row number)].props.owner.memorizedProps.getPlants.selectedPlantID
 
-    cellClick = (e) => {
-        console.dir(e.target)
-        e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
-        e.target.textContent=`${this.props.selectedPlantType}`
-        console.log(e.target.id)
-        console.log(e.target.innerHTML)
-        console.log(this.gardenData)
-
-        const clickedCell = e.target.id
-
-        for (let i = 0; i < this.gardenData.length; i++){
-            console.log('this iteration cell #  is  ' +  this.gardenData[i].cell)
-            console.log('the clicked cell was ' +  Number(clickedCell))
-            if(this.gardenData[i].cell === Number(clickedCell)){
-                console.log('We have a match!')
-            }
-        }
-    }
-
-    render() {
+    createGarden = (e) => {
+        e.preventDefault()
         const height = []
         const width = []
         const totalCells = (this.state.plotHeight * this.state.plotWidth)
@@ -81,12 +64,66 @@ class Garden extends Component {
         this.gardenPlot = height.map(ind => {
             const gardenColumns = width.map(myInd => { 
                 index++
-                this.gardenData.push({cell: index, contents: ''})
+                this.gardenData.push({cell:index, contents: ''})
                 return <div className='cell' onClick={this.cellClick} id={index}>  {`my index is ${index}`}</div>
             })
             return <div className='rows'>{gardenColumns}</div>
         })
-        console.log(this.gardenData)
+        this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
+    }
+
+
+    cellClick = (e) => {
+        console.dir(e.target)
+        e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
+        e.target.textContent=`${this.props.selectedPlantType}`
+        // console.log(e.target.id)
+        // console.log(e.target.innerHTML)
+        // console.log(this.gardenData)
+
+        const clickedCell = e.target.id
+        const cellData = e.target.innerHTML
+
+        for (let i = 0; i < this.state.gardenData.length; i++){
+            // console.log('this iteration cell #  is  ' +  this.gardenData[i].cell)
+            // console.log('the clicked cell was ' +  Number(clickedCell))
+            if(this.state.gardenData[i].cell === Number(clickedCell)){
+                console.log('We have a match!')
+                this.gardenData[i].contents = cellData
+                let newPlot = this.gardenData[i]
+                this.setState(prevState => {
+                    return {
+                        gardenData: prevState.gardenData.map(garden => Number(clickedCell) === garden.cell ? newPlot : garden)
+                    }
+                })
+            }
+        }
+        
+    }
+    
+    render() {
+        // const height = []
+        // const width = []
+        // const totalCells = (this.state.plotHeight * this.state.plotWidth)
+        // //console.log('total cells are '+ totalCells)
+
+        // for(let y = 1; y <= this.state.plotHeight; y++){
+        //     height.push(y)
+        // }
+        // for(let x = 1; x <= this.state.plotWidth; x++){
+        //     width.push(x)
+        //  }
+
+        // this.gardenData = []
+        // let index = -1;
+        // this.gardenPlot = height.map(ind => {
+        //     const gardenColumns = width.map(myInd => { 
+        //         index++
+        //         this.gardenData.push({cell:index, contents: ''})
+        //         return <div className='cell' onClick={this.cellClick} id={index}>  {`my index is ${index}`}</div>
+        //     })
+        //     return <div className='rows'>{gardenColumns}</div>
+        // })
        
         
         return(
@@ -119,13 +156,14 @@ class Garden extends Component {
                                 onChange={this.handleChange}>
                             </input>
                             {/* <input name = "gardenPlot" value = {gardenBox} style ={{display: "none"}} onChange = {this.handleChange}/>  */}
+                    <button onClick={this.createGarden}>Create Garden</button>
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>
                     </fieldset>
                 </form>
 
                <div id='gardenbox'> 
                    {/* <table className='gardenTable'>{this.gardenPlot}</table>  */}
-                   {this.gardenPlot}
+                   {this.state.gardenPlot}
                 </div>   
                 
             </div>
