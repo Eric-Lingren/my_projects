@@ -53,6 +53,11 @@ table, th, td {
 #gardenbox2{
   width: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 75px 75px 75px; */
 
 }
+
+
+
+
+

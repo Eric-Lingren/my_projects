@@ -85,21 +85,25 @@ class Garden extends Component {
     }
 
     loadSavedGarden = () => {
-        const height = this.props.selectedGardenPlotHeight
-        const width = this.props.selectedGardenPlotWidth
-        console.log('height should be: ' + height)
-        console.log('width should be: ' + width)
-
         this.testDiv = this.props.selectedGardenData.map(plot => {
             const rgbColor = plot.backgroundColor
             
             return (
                 <div className='cell' id={plot.cell} style={{ backgroundColor: rgbColor }} onClick={this.cellClick}> {plot.contents} </div>
             )
-            
         })
     }
-    // style={`background-color: ${rgbColor}`}
+
+    loadedGardenColumns = () => {
+        const width = this.props.selectedGardenPlotWidth; 
+        let loadedColumns = ''
+        for (let i = 0; i < width; i++){
+            loadedColumns += '75px '
+        }
+        console.log(loadedColumns)
+        return loadedColumns
+    }
+    
     cellClick = (e) => {
 
         e.target.style.backgroundColor = this.props.selectedPlotColor
@@ -174,7 +178,7 @@ class Garden extends Component {
                    {this.gardenPlot} 
                 </div>   
 
-                <div id='gardenbox2'>
+                <div id='gardenbox2' style={{ gridTemplateColumns: this.loadedGardenColumns() }}>
                     {this.testDiv}
                 </div>
                 
@@ -182,7 +186,7 @@ class Garden extends Component {
         )
     }
      
-    // style={{ gridTemplateColumns: '1fr 1fr' }}
+    // style={{ gridTemplateColumns: '75px 75px 75px' }}
     
 }
 
