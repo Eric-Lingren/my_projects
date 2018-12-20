@@ -103,7 +103,7 @@ class Garden extends Component {
             const rgbColor = plot.backgroundColor
             
             return (
-                <div className='cell' id={plot.cell}  onClick={this.cellClick}> {plot.contents} </div>
+                <div className='cell' id={plot.cell} style={{ backgroundColor: rgbColor }} onClick={this.cellClick}> {plot.contents} </div>
             )
         })
     }
