@@ -98,6 +98,7 @@ class Garden extends Component {
     }
     
     cellClick = (e) => {
+        console.log(e.target)
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         
@@ -182,6 +183,33 @@ class Garden extends Component {
         console.log('topRightCell is ' + topRightCell)
         console.log('bottomLeftCell is ' + bottomLeftCell)
         console.log('bottomRightCell is ' + bottomRightCell)
+
+        if (cellAbove !== 0) {
+            document.getElementById(cellAbove).innerHTML = 'CellAbove'
+        }
+        if (cellBelow !== 0) {
+            document.getElementById(cellBelow).innerHTML = 'cellBelow'
+        }
+        if (cellToLeft !== 0) {
+            document.getElementById(cellToLeft).innerHTML = 'cellToLeft'
+        }
+        if (cellToRight !== 0) {
+            document.getElementById(cellToRight).innerHTML = 'cellToRight'
+        }
+        if (topLeftCell !== 0) {
+            document.getElementById(topLeftCell).innerHTML = 'topLeftCell'
+        }
+        if (topRightCell !== 0) {
+            document.getElementById(topRightCell).innerHTML = 'topRightCell'
+        }
+        if (bottomLeftCell !== 0) {
+            document.getElementById(bottomLeftCell).innerHTML = 'bottomLeftCell'
+        }
+        if (bottomRightCell !== 0) {
+            document.getElementById(bottomRightCell).innerHTML = 'bottomRightCell'
+        }
+        
+     
     }
     
     render() {
