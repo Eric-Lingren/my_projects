@@ -52,10 +52,6 @@ class Garden extends Component {
             axios.post('/gardens', saveGarden ).then(res => {
             })
         }
-
-        
-        
-        
     }
 
     createGarden = (e) => {
@@ -68,10 +64,10 @@ class Garden extends Component {
         }
         for(let x = 1; x <= this.state.plotWidth; x++){
             width.push(x)
-         }
+        }
 
         this.gardenData = []
-        let index = -1;
+        let index = 0;
         this.gardenPlot = height.map(ind => {
             const gardenColumns = width.map(myInd => { 
                 index++
@@ -80,14 +76,12 @@ class Garden extends Component {
             })
             return <div className='rows'>{gardenColumns}</div>
         })
-        // console.log(this.gardenPlot)
         this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
     }
 
     loadSavedGarden = () => {
         this.testDiv = this.props.selectedGardenData.map(plot => {
             const rgbColor = plot.backgroundColor
-            
             return (
                 <div className='cell' id={plot.cell} style={{ backgroundColor: rgbColor }} onClick={this.cellClick}> {plot.contents} </div>
             )
@@ -100,19 +94,17 @@ class Garden extends Component {
         for (let i = 0; i < width; i++){
             loadedColumns += '75px '
         }
-        console.log(loadedColumns)
         return loadedColumns
     }
     
     cellClick = (e) => {
-
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
-
+        console.log(clickedCell)
         for (let i = 0; i < this.state.gardenData.length; i++){
             if(this.state.gardenData[i].cell === Number(clickedCell)){
                 this.gardenData[i].contents = cellData
@@ -125,6 +117,40 @@ class Garden extends Component {
                 })
             }
         }
+
+        const height = this.state.plotHeight
+        const width = this.state.plotWidth
+        console.log('width ' + width)
+        console.log('height ' + height)
+
+        let cellToRight = 0 
+        if (clickedCell % width !== 0) {
+            cellToRight = parseInt(clickedCell) + parseInt(1)
+        }
+        console.log('cell to right is: ' + cellToRight)
+
+        let cellToLeft = 0 
+        if ( (parseInt(clickedCell) - parseInt(1)) % width > 0) {
+            cellToLeft = parseInt(clickedCell) - parseInt(1)
+        }
+        console.log('cell to left is: ' + cellToLeft)
+
+        let cellAbove = 0
+        if ( parseInt(clickedCell) - width > 0) {
+            cellAbove = parseInt(clickedCell) - parseInt(width)
+        }
+        console.log('cell above is: ' + cellAbove)
+
+        const totalCells = width * height
+        console.log(totalCells)
+        let cellBelow = 0
+        if ( parseInt(clickedCell) + parseInt(width) < totalCells + 1 ){
+            cellBelow = parseInt(clickedCell) + parseInt(width)
+        }
+        console.log('cell below is: ' + cellBelow)
+        // top is cell - width
+        // bottom is cell + width
+
     }
     
     render() {
