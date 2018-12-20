@@ -123,34 +123,65 @@ class Garden extends Component {
         console.log('width ' + width)
         console.log('height ' + height)
 
+        const totalCells = width * height
         let cellToRight = 0 
+        let cellToLeft = 0 
+        let cellAbove = 0
+        let cellBelow = 0
+        
+
         if (clickedCell % width !== 0) {
             cellToRight = parseInt(clickedCell) + parseInt(1)
         }
-        console.log('cell to right is: ' + cellToRight)
+        //console.log('cell to right is: ' + cellToRight)
 
-        let cellToLeft = 0 
         if ( (parseInt(clickedCell) - parseInt(1)) % width > 0) {
             cellToLeft = parseInt(clickedCell) - parseInt(1)
         }
-        console.log('cell to left is: ' + cellToLeft)
+        //console.log('cell to left is: ' + cellToLeft)
 
-        let cellAbove = 0
         if ( parseInt(clickedCell) - width > 0) {
             cellAbove = parseInt(clickedCell) - parseInt(width)
         }
-        console.log('cell above is: ' + cellAbove)
-
-        const totalCells = width * height
-        console.log(totalCells)
-        let cellBelow = 0
+        //console.log('cell above is: ' + cellAbove)
+        
         if ( parseInt(clickedCell) + parseInt(width) < totalCells + 1 ){
             cellBelow = parseInt(clickedCell) + parseInt(width)
         }
-        console.log('cell below is: ' + cellBelow)
-        // top is cell - width
-        // bottom is cell + width
+        //console.log('cell below is: ' + cellBelow)
+        let topLeftCell = (cellAbove - 1)
+        let topRightCell = (cellAbove + 1)
+        let bottomLeftCell = (cellBelow - 1)
+        let bottomRightCell = (cellBelow + 1)
 
+        if (cellAbove === 0) {
+            topLeftCell = 0
+            topRightCell = 0
+        } else if (clickedCell % width === 0){
+            topRightCell = 0
+        } else if ((clickedCell - 1) % width === 0 ){
+            topLeftCell = 0
+        }
+        else {
+            topLeftCell = (cellAbove - 1)
+            topRightCell = (cellAbove + 1)
+        }
+        if (cellBelow === 0) {
+            bottomLeftCell = 0
+            bottomRightCell = 0
+        } else if (clickedCell % width === 0){
+            bottomRightCell = 0
+        } else if ((clickedCell - 1) % width === 0 ){
+            bottomLeftCell = 0
+        }
+        else {
+            bottomLeftCell = (cellBelow - 1)
+            bottomRightCell = (cellBelow + 1)
+        }
+        console.log('topLeftCell is ' + topLeftCell)
+        console.log('topRightCell is ' + topRightCell)
+        console.log('bottomLeftCell is ' + bottomLeftCell)
+        console.log('bottomRightCell is ' + bottomRightCell)
     }
     
     render() {
