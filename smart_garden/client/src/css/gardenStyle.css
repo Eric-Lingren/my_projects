@@ -50,3 +50,9 @@ table, th, td {
 .rows{
   display: flex;
 }
+#gardenbox2{
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}

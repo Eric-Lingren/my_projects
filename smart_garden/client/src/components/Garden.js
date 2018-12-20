@@ -87,17 +87,8 @@ class Garden extends Component {
     loadSavedGarden = () => {
         const height = this.props.selectedGardenPlotHeight
         const width = this.props.selectedGardenPlotWidth
-        console.log(height)
-        console.log(width)
-        // this.gardenPlot = height.map(ind => {
-        //     for (let y = 0; y< height; y++) {
-        //         for (let x = 0; x < width; x++){
-
-        //         return <div className='cell' onClick={this.cellClick} > 1 </div>
-        //     }
-        //     return <div className='rows'></div>
-        // }
-        // })
+        console.log('height should be: ' + height)
+        console.log('width should be: ' + width)
 
         this.testDiv = this.props.selectedGardenData.map(plot => {
             const rgbColor = plot.backgroundColor
@@ -105,17 +96,15 @@ class Garden extends Component {
             return (
                 <div className='cell' id={plot.cell} style={{ backgroundColor: rgbColor }} onClick={this.cellClick}> {plot.contents} </div>
             )
+            
         })
     }
     // style={`background-color: ${rgbColor}`}
     cellClick = (e) => {
-        console.log(e.target)
-        console.log(this.props.selectedPlotColor)
 
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         
-        console.log(e.target.style.backgroundColor)
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
@@ -183,15 +172,17 @@ class Garden extends Component {
 
                <div id='gardenbox'> 
                    {this.gardenPlot} 
-                    {this.testDiv}
-                   {/* {this.props.selectedGardenData} */}
-
                 </div>   
+
+                <div id='gardenbox2'>
+                    {this.testDiv}
+                </div>
                 
             </div>
         )
     }
-    
+     
+    // style={{ gridTemplateColumns: '1fr 1fr' }}
     
 }
 
