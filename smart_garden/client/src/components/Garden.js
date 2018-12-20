@@ -3,6 +3,8 @@ import '../css/gardenStyle.css'
 import {withPlants} from '../context/PlantProvider'
 import {withGardens} from '../context/GardenProvider'
 import axios from 'axios'
+import {Route, Link} from 'react-router-dom'
+import CompanionPlants from './CompanionPlants'
 
 
 class Garden extends Component {
@@ -72,12 +74,16 @@ class Garden extends Component {
             const gardenColumns = width.map(myInd => { 
                 index++
                 this.gardenData.push({cell:index, contents: '', backgroundColor: 0})
-                return <div className='cell' onClick={this.cellClick} id={index}> {index} </div>
+                return <div className='cell' onClick={this.cellClick} id={index}> 
+                            {index} 
+                            {/* <span className='suggest'>Suggest</span> */}
+                        </div>
             })
             return <div className='rows'>{gardenColumns}</div>
         })
         this.setState({gardenData: this.gardenData, gardenPlot: this.gardenPlot})
     }
+
 
     loadSavedGarden = () => {
         this.testDiv = this.props.selectedGardenData.map(plot => {
@@ -98,14 +104,15 @@ class Garden extends Component {
     }
     
     cellClick = (e) => {
-        console.log(e.target)
+        // console.log(e.target)
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
-        console.log(clickedCell)
+        // console.log(clickedCell)
+        // console.log(cellColor)
         for (let i = 0; i < this.state.gardenData.length; i++){
             if(this.state.gardenData[i].cell === Number(clickedCell)){
                 this.gardenData[i].contents = cellData
@@ -121,8 +128,8 @@ class Garden extends Component {
 
         const height = this.state.plotHeight
         const width = this.state.plotWidth
-        console.log('width ' + width)
-        console.log('height ' + height)
+        // console.log('width ' + width)
+        // console.log('height ' + height)
 
         const totalCells = width * height
         let cellToRight = 0 
@@ -179,33 +186,33 @@ class Garden extends Component {
             bottomLeftCell = (cellBelow - 1)
             bottomRightCell = (cellBelow + 1)
         }
-        console.log('topLeftCell is ' + topLeftCell)
-        console.log('topRightCell is ' + topRightCell)
-        console.log('bottomLeftCell is ' + bottomLeftCell)
-        console.log('bottomRightCell is ' + bottomRightCell)
+        // console.log('topLeftCell is ' + topLeftCell)
+        // console.log('topRightCell is ' + topRightCell)
+        // console.log('bottomLeftCell is ' + bottomLeftCell)
+        // console.log('bottomRightCell is ' + bottomRightCell)
 
-        if (cellAbove !== 0) {
+        if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
             document.getElementById(cellAbove).innerHTML = 'CellAbove'
         }
-        if (cellBelow !== 0) {
+        if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
             document.getElementById(cellBelow).innerHTML = 'cellBelow'
         }
-        if (cellToLeft !== 0) {
+        if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
             document.getElementById(cellToLeft).innerHTML = 'cellToLeft'
         }
-        if (cellToRight !== 0) {
+        if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
             document.getElementById(cellToRight).innerHTML = 'cellToRight'
         }
-        if (topLeftCell !== 0) {
+        if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
             document.getElementById(topLeftCell).innerHTML = 'topLeftCell'
         }
-        if (topRightCell !== 0) {
+        if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
             document.getElementById(topRightCell).innerHTML = 'topRightCell'
         }
-        if (bottomLeftCell !== 0) {
+        if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
             document.getElementById(bottomLeftCell).innerHTML = 'bottomLeftCell'
         }
-        if (bottomRightCell !== 0) {
+        if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
             document.getElementById(bottomRightCell).innerHTML = 'bottomRightCell'
         }
         
@@ -259,7 +266,7 @@ class Garden extends Component {
                 </form>
             <button onClick={this.loadSavedGarden}>Test</button>
 
-               <div id='gardenbox'> 
+                <div id='gardenbox'> 
                    {this.gardenPlot} 
                 </div>   
 
@@ -267,7 +274,10 @@ class Garden extends Component {
                     {this.testDiv}
                 </div>
                 
+                <CompanionPlants />
+
             </div>
+            
         )
     }
      

@@ -12,6 +12,7 @@ class GardenProvider extends Component {
             selectedGardenData: '',
             selectedGardenPlotHeight: '',
             selectedGardenPlotWidth: '',
+            isToggled: false,
         }
     }
 
@@ -73,6 +74,17 @@ class GardenProvider extends Component {
         }).catch(err => console.log(err.response.data.errMsg))
     }
 
+    toggleModals = () => {
+        this.setState({
+            isToggled: true
+        })
+        if(this.state.isToggled){
+            // Show Companion Plants Modal
+        } else {
+            // Hide companion Plants modal
+        }
+    }
+
     render(){
         return (
             <GardenContext.Provider 
@@ -100,10 +112,6 @@ export const withGardens = C => props => (
         {value => <C {...props} {...value}/>}
     </GardenContext.Consumer>
 )
-
-
-
-
 
 
 
