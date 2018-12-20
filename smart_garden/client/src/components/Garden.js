@@ -75,7 +75,7 @@ class Garden extends Component {
         this.gardenPlot = height.map(ind => {
             const gardenColumns = width.map(myInd => { 
                 index++
-                this.gardenData.push({cell:index, contents: ''})
+                this.gardenData.push({cell:index, contents: '', backgroundColor: 0})
                 return <div className='cell' onClick={this.cellClick} id={index}> {index} </div>
             })
             return <div className='rows'>{gardenColumns}</div>
@@ -89,26 +89,41 @@ class Garden extends Component {
         const width = this.props.selectedGardenPlotWidth
         console.log(height)
         console.log(width)
+        // this.gardenPlot = height.map(ind => {
+        //     for (let y = 0; y< height; y++) {
+        //         for (let x = 0; x < width; x++){
+
+        //         return <div className='cell' onClick={this.cellClick} > 1 </div>
+        //     }
+        //     return <div className='rows'></div>
+        // }
+        // })
+
         this.testDiv = this.props.selectedGardenData.map(plot => {
-            // console.log(plot)
-            // console.log(plot.cell)
-            // console.log(plot.contents)
+            const rgbColor = plot.backgroundColor
+            
             return (
-                <div className='cell' id={plot.cell}> {plot.contents} </div>
+                <div className='cell' id={plot.cell}  onClick={this.cellClick}> {plot.contents} </div>
             )
         })
     }
-
+    // style={`background-color: ${rgbColor}`}
     cellClick = (e) => {
-        e.target.style.backgroundColor=`${this.props.selectedPlotColor}`
-        e.target.textContent=`${this.props.selectedPlantType}`
+        console.log(e.target)
+        console.log(this.props.selectedPlotColor)
 
+        e.target.style.backgroundColor = this.props.selectedPlotColor
+        e.target.textContent=`${this.props.selectedPlantType}`
+        
+        console.log(e.target.style.backgroundColor)
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
+        const cellColor = e.target.style.backgroundColor
 
         for (let i = 0; i < this.state.gardenData.length; i++){
             if(this.state.gardenData[i].cell === Number(clickedCell)){
                 this.gardenData[i].contents = cellData
+                this.gardenData[i].backgroundColor = cellColor
                 let newPlot = this.gardenData[i]
                 this.setState(prevState => {
                     return {

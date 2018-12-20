@@ -42,10 +42,30 @@ class GardenProvider extends Component {
                 selectedGardenData: response.data.gardenData,
                 selectedGardenPlotHeight: response.data.plotHeight,
                 selectedGardenPlotWidth: response.data.plotWidth,
-            }, () => console.log(this.state.selectedGardenData))
+            })
         }).catch(err => console.log(err.response.data.errMsg))
     }
+    // loadSavedGarden = () => {
+    //     const height = this.state.selectedGardenPlotHeight
+    //     const width = this.props.selectedGardenPlotWidth
+    //     console.log(height)
+    //     console.log(width)
+    //     // this.gardenPlot = height.map(ind => {
+    //     //     for (let y = 0; y< height; y++) {
+    //     //         for (let x = 0; x < width; x++){
 
+    //     //         return <div className='cell' onClick={this.cellClick} > 1 </div>
+    //     //     }
+    //     //     return <div className='rows'></div>
+    //     // }
+    //     // })
+
+    //     this.testDiv = this.props.selectedGardenData.map(plot => {
+    //         return (
+    //             <div className='cell' id={plot.cell}> {plot.contents} </div>
+    //         )
+    //     })
+    // }
     
     deleteGarden = (id) => {
         axios.delete(`/gardens/${id}`).then(response => {
