@@ -190,31 +190,36 @@ class Garden extends Component {
         // console.log('topRightCell is ' + topRightCell)
         // console.log('bottomLeftCell is ' + bottomLeftCell)
         // console.log('bottomRightCell is ' + bottomRightCell)
+        console.log('clicked cell is ' + cellData)
+        if (cellData === 'eggplant'){
+            if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
+                document.getElementById(cellAbove).innerHTML = `<span className='recomended'> bean pepper tomato </span><span> Dont Plant This </span>`
 
-        if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-            document.getElementById(cellAbove).innerHTML = 'CellAbove'
+                console.dir(document.getElementById(cellAbove))
+            }
+            if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
+                document.getElementById(cellBelow).innerHTML = 'Below'
+            }
+            if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
+                document.getElementById(cellToLeft).innerHTML = 'Left'
+            }
+            if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
+                document.getElementById(cellToRight).innerHTML = 'Right'
+            }
+            if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
+                document.getElementById(topLeftCell).innerHTML = 'topLeft'
+            }
+            if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
+                document.getElementById(topRightCell).innerHTML = 'topRight'
+            }
+            if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
+                document.getElementById(bottomLeftCell).innerHTML = 'bottomLeft'
+            }
+            if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
+                document.getElementById(bottomRightCell).innerHTML = 'bottomRight'
+            }
         }
-        if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-            document.getElementById(cellBelow).innerHTML = 'cellBelow'
-        }
-        if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-            document.getElementById(cellToLeft).innerHTML = 'cellToLeft'
-        }
-        if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-            document.getElementById(cellToRight).innerHTML = 'cellToRight'
-        }
-        if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-            document.getElementById(topLeftCell).innerHTML = 'topLeftCell'
-        }
-        if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-            document.getElementById(topRightCell).innerHTML = 'topRightCell'
-        }
-        if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-            document.getElementById(bottomLeftCell).innerHTML = 'bottomLeftCell'
-        }
-        if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-            document.getElementById(bottomRightCell).innerHTML = 'bottomRightCell'
-        }
+        
         
      
     }
