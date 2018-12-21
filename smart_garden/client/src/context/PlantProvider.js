@@ -26,7 +26,6 @@ class PlantProvider extends Component {
 
     getPlants = () => {
         axios.get('/plants').then(response => {
-            //console.log(response.data)
             this.setState({
                 currentPlants: response.data
             })
@@ -51,9 +50,6 @@ class PlantProvider extends Component {
     }
 
     render(){
-        // console.log('Selected PLOT COLOR is: ' + this.state.selectedPlotColor)
-        // console.log('Selected PLANT TYPE is: ' + this.state.selectedPlantType)
-        // console.log('Selected PLANT ID is: ' + this.state.selectedPlantID)
         return (
             <PlantContext.Provider 
                 value={{

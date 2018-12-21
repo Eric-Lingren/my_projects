@@ -1,7 +1,6 @@
 import React from 'react';
 import {withPlants} from '../context/PlantProvider';
 
-
 class PlantList extends React.Component {
     constructor(props) {
         super(props)

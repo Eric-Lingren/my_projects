@@ -11,27 +11,22 @@ class Home extends Component {
         this.props.getPlants()
     }
 
-    
-
     render(){
         return(
             <div>
                 <Navbar />
-                    <div className='pageWrapper'>
-                        <div className='leftColumn'>
-                            <AddPlantForm />
-                            <PlantList currentPlants={this.props.currentPlants}/>
-                        </div>
-                        <div className='mainColumn'>
-                            <Garden />
-                            
-                        </div>
+                <div className='pageWrapper'>
+                    <div className='leftColumn'>
+                        <AddPlantForm />
+                        <PlantList currentPlants={this.props.currentPlants}/>
                     </div>
+                    <div className='mainColumn'>
+                        <Garden />
+                    </div>
+                </div>
             </div>
         )
-    }
-    
-    
+    }    
 }
 
 export default withPlants(Home)

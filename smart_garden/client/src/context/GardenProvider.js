@@ -17,13 +17,11 @@ class GardenProvider extends Component {
         }
     }
 
-
     getGardens = () => {
         axios.get('/gardens').then(response => {
             this.setState({
                 currentGardens: response.data
             })
-            
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -47,8 +45,6 @@ class GardenProvider extends Component {
         }).catch(err => console.log(err.response.data.errMsg))
     }
 
-        //  , () => this.loadSavedGarden()
-
     loadSavedGarden = () => {
         this.setState(prevState => {
             return {
@@ -65,8 +61,6 @@ class GardenProvider extends Component {
                 })
             }
         })
-        // this.loadedGardenData = this.state
-        // console.log('loaded Garden Data ' + this.state.loadedGardenData)
     }
     
     deleteGarden = (id) => {
@@ -80,9 +74,7 @@ class GardenProvider extends Component {
             isToggled: true
         })
         if(this.state.isToggled){
-            // Show Companion Plants Modal
         } else {
-            // Hide companion Plants modal
         }
     }
 

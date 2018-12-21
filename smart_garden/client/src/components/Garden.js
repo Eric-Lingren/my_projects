@@ -5,9 +5,7 @@ import { withGardens } from '../context/GardenProvider'
 import axios from 'axios'
 import { withCompanion } from '../context/CompanionProvider'
 
-
 class Garden extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -21,9 +19,7 @@ class Garden extends Component {
         this.gardenPlot = ''
         this.gardenData = []
         this.testDiv = []
-
-    }
-    
+    } 
     
     handleChange = (e) => {
         const { name, value } = e.target;
@@ -80,7 +76,6 @@ class Garden extends Component {
             gardenData: this.gardenData,
             gardenPlot: this.gardenPlot
         }, () =>  this.props.handleAddGardenData(this.state.gardenData, this.state.gardenPlot, this.gardenData))
-        
     }
 
     loadedGardenColumns = () => {
@@ -131,13 +126,11 @@ class Garden extends Component {
                             placeholder='2018'
                             onChange={this.handleChange}
                             required
-                        />
-
-                        
+                        />   
                     </fieldset>
                 </form>
                 <button onClick={this.createGarden}>Create Garden</button>
-                        <button onClick={this.handleSubmit}>Save to My Gardens</button>
+                <button onClick={this.handleSubmit}>Save to My Gardens</button>
 
                 <div id='gardenbox'>
                     {this.gardenPlot}
@@ -147,13 +140,9 @@ class Garden extends Component {
                     {this.props.loadedGardenData}
                 </div>
 
-
-
             </div>
-
         )
     }
-
 }
 
 export default withCompanion(withGardens(withPlants(Garden)))

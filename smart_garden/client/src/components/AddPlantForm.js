@@ -4,16 +4,16 @@ import axios from 'axios';
 import {withPlants} from '../context/PlantProvider';
 
  class AddPlantForm extends Component {
-     constructor(){
-         super()
-         this.state = {
+    constructor(){
+        super()
+        this.state = {
             plantType: '',
             varitey: '',
             plotColor: ''
-         }
-     }
+        }
+    }
 
-     handleChange = (e) => {
+    handleChange = (e) => {
         const {name, value} = e.target;
         this.setState({
             [name]: value
@@ -31,8 +31,6 @@ import {withPlants} from '../context/PlantProvider';
     handleDelete = (e) => {
         e.preventDefault()
         console.log(this.state)
-        // axios.post('/plants', this.state ).then(res => {
-        // })
     }
 
     render(){
@@ -59,16 +57,11 @@ import {withPlants} from '../context/PlantProvider';
                                 type='color' 
                                 onChange={this.handleChange}/>
                     <button onClick={this.handleSubmit}>Add</button>
-                    {/* <PlantList />
-                    <button onClick={this.handleDelete}>Delete From List</button> */}
                     </fieldset>
-                    
                 </form>
-                
             </div>
         )
-    }
-    
+    }  
 }
 
 export default withPlants(AddPlantForm)

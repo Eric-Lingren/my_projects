@@ -1,7 +1,6 @@
 import React from 'react';
 import {withGardens} from '../context/GardenProvider';
 
-
 class GardenList extends React.Component {
     constructor(props) {
         super(props)
@@ -9,24 +8,18 @@ class GardenList extends React.Component {
             gardenID: {}
         }
     }
-
     componentDidMount(){
         this.props.getGardens()
     }
     
     handleChange = e => {
         this.setState({gardenID: e.target.value}, () => {
-            
         })
     }
 
-
     render(){
         const { currentGardens } = this.props
-        //console.log(this.props.currentGardens)
-    
         const mappedGardens = currentGardens.map((garden, index) => {
-            // console.log(garden._id)
             return <option 
                         onChange={this.handleChange}
                         value={garden._id} 
