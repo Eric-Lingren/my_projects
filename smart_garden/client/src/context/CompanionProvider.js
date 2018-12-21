@@ -7,31 +7,49 @@ class CompanionProvider extends Component {
     constructor(){
         super()
         this.state = {
-            getGardenData: []
+            getGardenData: [],
+            getGardenPlot: [],
+            plotHeight: 0,
+            plotWidth: 0,
+            
         }
+        this.otherGardenData = []
+    }
+    
+
+    handleAddGardenData = (data, plot, otherGardenDataVAR) => {
+        this.setState({
+            getGardenData: data,
+            getGardenPlot: plot,
+        })
+        this.otherGardenData = otherGardenDataVAR
     }
 
-    handleAddGardenData = (data) => {
+    handleAddGardenDimensions = (height, width) => {
         this.setState({
-            getGardenData: data
+            plotHeight: height,
+            plotWidth: width,
         })
     }
 
     cellClick = (e) => {
-        console.log(e.target)
+        console.log('clicked cell')
+        console.log(this.state)
+        console.log(this.otherGardenData)
+        // console.log(e.target)
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
-        
+
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
         // console.log(clickedCell)
         // console.log(cellColor)
-        for (let i = 0; i < this.state.gardenData.length; i++){
-            if(this.state.gardenData[i].cell === Number(clickedCell)){
-                this.gardenData[i].contents = cellData
-                this.gardenData[i].backgroundColor = cellColor
-                let newPlot = this.gardenData[i]
+        for (let i = 0; i < this.state.getGardenData.length; i++){
+            if(this.state.getGardenData[i].cell === Number(clickedCell)){
+                this.otherGardenData[i].contents = cellData
+                this.otherGardenData[i].backgroundColor = cellColor
+                let newPlot = this.otherGardenData[i]
                 this.setState(prevState => {
                     return {
                         gardenData: prevState.gardenData.map(garden => Number(clickedCell) === garden.cell ? newPlot : garden)
@@ -144,7 +162,8 @@ class CompanionProvider extends Component {
                 value={{
                     cellClick: this.cellClick,
                     handleAddGardenData: this.handleAddGardenData,
-                    tryingToGetGardenData: this.tryingToGetGardenData
+                    tryingToGetGardenData: this.tryingToGetGardenData,
+                    handleAddGardenDimensions: this.handleAddGardenDimensions
                 }}>
                 { this.props.children }
             </CompanionContext.Provider>

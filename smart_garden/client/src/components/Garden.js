@@ -24,12 +24,13 @@ class Garden extends Component {
 
     }
     
+    
     handleChange = (e) => {
         //console.log(this.props.selectedGardenPlot)
         const { name, value } = e.target;
         this.setState({
             [name]: value
-        })
+        }, () =>  this.props.handleAddGardenDimensions(this.state.plotHeight, this.state.plotWidth))
     }
 
     handleSubmit = (e) => {
@@ -85,7 +86,7 @@ class Garden extends Component {
         this.setState({
             gardenData: this.gardenData,
             gardenPlot: this.gardenPlot
-        }, () =>  this.props.handleAddGardenData(this.state.gardenData))
+        }, () =>  this.props.handleAddGardenData(this.state.gardenData, this.state.gardenPlot, this.gardenData))
         
     }
 
@@ -230,7 +231,7 @@ class Garden extends Component {
     // }
 
     render() {
-
+    // console.log(this.props)
         return (
             <div>
                 <form className='gardenGenerateForm' >
