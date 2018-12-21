@@ -46,7 +46,9 @@ class GardenProvider extends Component {
     }
 
     loadSavedGarden = (callback) => {
-        console.log(callback)
+        console.log(this.state.selectedGardenPlotHeight)
+        console.log(this.state.selectedGardenPlotWidth)
+
         this.setState(prevState => {
             return {
                 loadedGardenData: prevState.selectedGardenData.map(plot => {
@@ -63,6 +65,7 @@ class GardenProvider extends Component {
             }
         })
     }
+
     
     clearLoadedGardenData = () => {
         this.setState({

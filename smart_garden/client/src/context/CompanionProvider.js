@@ -108,9 +108,12 @@ class CompanionProvider extends Component {
             bottomRightCell = (cellBelow + 1)
         }
 
+        const beanSpan = `<span class='recommend'> B </span>`
+        const cornSpan = `<span class='recommend'> C </span>`
+
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(cellAbove).innerHTML = `<div> ${beanSpan} ${cornSpan} <span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> </div> <div> <span class='notRecommend'> G, O, PE, SU </span><div>`
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
                 document.getElementById(cellBelow).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`

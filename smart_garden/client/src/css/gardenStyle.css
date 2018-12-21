@@ -68,11 +68,18 @@ table, th, td {
 .recommend{
   color: green;
   font-size: 13px;
+  text-align: center;
+  letter-spacing: .1em
+}
+.recommend:hover{
+  font-weight: bold;
+  cursor: help
 }
 
 .notRecommend{
   color: red;
   font-size: 13px;
+  text-align: center
 }
 
 
