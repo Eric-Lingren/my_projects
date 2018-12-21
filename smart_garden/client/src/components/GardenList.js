@@ -15,8 +15,6 @@ class GardenList extends React.Component {
     }
     
     handleChange = e => {
-        // console.log(this.state)
-        // console.log(e.target.value)
         this.setState({gardenID: e.target.value}, () => {
             
         })

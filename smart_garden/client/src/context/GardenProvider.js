@@ -70,7 +70,7 @@ class GardenProvider extends Component {
     
     deleteGarden = (id) => {
         axios.delete(`/gardens/${id}`).then(response => {
-
+            this.getGardens()
         }).catch(err => console.log(err.response.data.errMsg))
     }
 

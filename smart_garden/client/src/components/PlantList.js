@@ -5,24 +5,19 @@ import {withPlants} from '../context/PlantProvider';
 class PlantList extends React.Component {
     constructor(props) {
         super(props)
-        
         this.state = {
             plant: {}
         }
     }
 
     handleChange = e => {
-        
         this.setState({plant: this.props.currentPlants[e.target.value]}, () => {
             this.props.changePlotColor(this.state.plant)
         })
-        
     }
     
     render(){
         const { currentPlants } = this.props
-
-    
         const mappedPlants = currentPlants.map((plant, index) => {
             return <option 
                         value={index} 

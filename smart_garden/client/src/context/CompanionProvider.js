@@ -533,28 +533,28 @@ cellClick = (e) => {
 
     if (cellData === 'tomato' || cellData === 'tomatoes' ){
         if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-            document.getElementById(cellAbove).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(cellAbove).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-            document.getElementById(cellBelow).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(cellBelow).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-            document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-            document.getElementById(cellToRight).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(cellToRight).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-            document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-            document.getElementById(topRightCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(topRightCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-            document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
         if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-            document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> B, BR, BS, C, CB, CF, K, PO, R </span>`
+            document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> A, B, BA, CA, CE, D, L, M, O, PE, RA, SP, TH  </span> <span class='notRecommend'> BE, BR, BS, C, CB, CF, K, PO, R </span>`
         }
     }
 }

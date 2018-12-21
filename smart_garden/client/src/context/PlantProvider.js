@@ -30,7 +30,6 @@ class PlantProvider extends Component {
             this.setState({
                 currentPlants: response.data
             })
-            
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -47,7 +46,7 @@ class PlantProvider extends Component {
     deletePlant = () => {
         const plantID = this.state.selectedPlantID
         axios.delete(`/plants/${plantID}`).then(response => {
-
+            this.getPlants()
         }).catch(err => console.log(err.response.data.errMsg))
     }
 

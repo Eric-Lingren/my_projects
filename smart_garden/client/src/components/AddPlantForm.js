@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import '../css/addPlantForm.css';
 import axios from 'axios';
-//import PlantList from './PlantList';
+import {withPlants} from '../context/PlantProvider';
 
  class AddPlantForm extends Component {
      constructor(){
@@ -24,8 +24,10 @@ import axios from 'axios';
         e.preventDefault()
         console.log(this.state)
         axios.post('/plants', this.state ).then(res => {
+            this.props.getPlants()
         })
     }
+
     handleDelete = (e) => {
         e.preventDefault()
         console.log(this.state)
@@ -69,4 +71,4 @@ import axios from 'axios';
     
 }
 
-export default AddPlantForm
+export default withPlants(AddPlantForm)
