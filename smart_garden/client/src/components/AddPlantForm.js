@@ -56,6 +56,7 @@ import {withPlants} from '../context/PlantProvider';
                                 className='newPlantColorInput' 
                                 type='color' 
                                 onChange={this.handleChange}/>
+                    Image:      
                     <button onClick={this.handleSubmit}>Add</button>
                     </fieldset>
                 </form>

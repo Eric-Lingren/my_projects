@@ -75,14 +75,15 @@ class Garden extends Component {
         this.setState({
             gardenData: this.gardenData,
             gardenPlot: this.gardenPlot
-        }, () =>  this.props.handleAddGardenData(this.state.gardenData, this.state.gardenPlot, this.gardenData))
+        }, () =>  this.props.handleAddGardenData(this.state.gardenData, this.state.gardenPlot, this.gardenData) )
+        this.props.clearLoadedGardenData()
     }
 
     loadedGardenColumns = () => {
         const width = this.props.selectedGardenPlotWidth;
         let loadedColumns = ''
         for (let i = 0; i < width; i++) {
-            loadedColumns += '75px '
+            loadedColumns += '100px '
         }
         return loadedColumns
     }
@@ -131,14 +132,23 @@ class Garden extends Component {
                 </form>
                 <button onClick={this.createGarden}>Create Garden</button>
                 <button onClick={this.handleSubmit}>Save to My Gardens</button>
+            
+            
 
-                <div id='gardenbox'>
-                    {this.gardenPlot}
-                </div>
+            {
+                this.props.loadedGardenData.length === 0 ?
+                    <div id='gardenbox'>
+                        {this.gardenPlot}
+                    </div>
+                :
+                    <div id='gardenbox2' style={{ gridTemplateColumns: this.loadedGardenColumns() }}>
+                        {this.props.loadedGardenData}
+                    </div>
+            }
+            
+                
 
-                <div id='gardenbox2' style={{ gridTemplateColumns: this.loadedGardenColumns() }}>
-                    {this.props.loadedGardenData}
-                </div>
+                
 
             </div>
         )

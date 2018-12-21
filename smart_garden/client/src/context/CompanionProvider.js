@@ -32,7 +32,7 @@ class CompanionProvider extends Component {
         })
     }
 
-    cellClick = (e) => {
+    cellClick = (e, callBack) => {
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
 

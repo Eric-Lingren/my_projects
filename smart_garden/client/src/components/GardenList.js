@@ -1,5 +1,6 @@
 import React from 'react';
 import {withGardens} from '../context/GardenProvider';
+import {withCompanion} from '../context/CompanionProvider';
 
 class GardenList extends React.Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class GardenList extends React.Component {
     }
 
     render(){
+        // console.log(this.props.cellClick)
         const { currentGardens } = this.props
         const mappedGardens = currentGardens.map((garden, index) => {
             return <option 
@@ -36,11 +38,11 @@ class GardenList extends React.Component {
                 <select name = "selectedGarden" onChange = {this.handleChange}>
                     {mappedGardens}
                 </select>
-                <button className='searchButton' onClick = {() => this.props.getOneGarden(this.state.gardenID)}> Get Garden </button>
+                <button className='searchButton' onClick = {() => this.props.getOneGarden(this.state.gardenID, this.props.cellClick)}> Get Garden </button>
                 <button className='searchButton' onClick = {() => this.props.deleteGarden(this.state.gardenID)}> Delete Garden </button>
             </div>
         )    
     }
 }
 
-export default withGardens(GardenList)
+export default withCompanion(withGardens(GardenList))
