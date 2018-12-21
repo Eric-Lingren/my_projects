@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import PlantList from './PlantList';
 import AddPlantForm from './AddPlantForm';
 import Garden from './Garden';
-import Plant from './Plant';
 import '../css/homeStyle.css'
 import { withPlants } from '../context/PlantProvider'
 
@@ -25,7 +24,7 @@ class Home extends Component {
                         </div>
                         <div className='mainColumn'>
                             <Garden />
-                            <Plant />
+                            
                         </div>
                     </div>
             </div>

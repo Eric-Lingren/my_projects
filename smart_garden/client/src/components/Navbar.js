@@ -26,16 +26,8 @@ class Navbar extends Component {
         <div className='navbar'>
             <div className='navLinkContainer'>
                 <span className='navbarText'>My Gardens: </span>
+                
                 <GardenList />
-{/* 
-                <span className='navbarText'>Year: </span>
-                <input  name = 'selectedYear'
-                        type ='number'
-                        value = {this.state.selectedYear}
-                        placeholder ='2018'
-                        className ='newPlantInput'
-                        onChange = {this.handleChange}>
-                </input> */}
                 
                 <a className='navLink' href='none'>Journal</a>
                 <a className='navLink' href='none'>Adruino</a>

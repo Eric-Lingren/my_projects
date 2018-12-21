@@ -12,6 +12,7 @@ class GardenProvider extends Component {
             selectedGardenData: '',
             selectedGardenPlotHeight: '',
             selectedGardenPlotWidth: '',
+            loadedGardenData: [],
             isToggled: false,
         }
     }
@@ -38,35 +39,35 @@ class GardenProvider extends Component {
 
     getOneGarden = (id) => {
         axios.get(`/gardens/${id}`).then(response => {
-            console.log(response.data)
             this.setState({
                 selectedGardenData: response.data.gardenData,
                 selectedGardenPlotHeight: response.data.plotHeight,
                 selectedGardenPlotWidth: response.data.plotWidth,
-            })
+            }, () => this.loadSavedGarden())
         }).catch(err => console.log(err.response.data.errMsg))
     }
-    // loadSavedGarden = () => {
-    //     const height = this.state.selectedGardenPlotHeight
-    //     const width = this.props.selectedGardenPlotWidth
-    //     console.log(height)
-    //     console.log(width)
-    //     // this.gardenPlot = height.map(ind => {
-    //     //     for (let y = 0; y< height; y++) {
-    //     //         for (let x = 0; x < width; x++){
 
-    //     //         return <div className='cell' onClick={this.cellClick} > 1 </div>
-    //     //     }
-    //     //     return <div className='rows'></div>
-    //     // }
-    //     // })
+        //  , () => this.loadSavedGarden()
 
-    //     this.testDiv = this.props.selectedGardenData.map(plot => {
-    //         return (
-    //             <div className='cell' id={plot.cell}> {plot.contents} </div>
-    //         )
-    //     })
-    // }
+    loadSavedGarden = () => {
+        this.setState(prevState => {
+            return {
+                loadedGardenData: prevState.selectedGardenData.map(plot => {
+                    const rgbColor = plot.backgroundColor
+                    return (
+                        <div    className='cell' 
+                                id={plot.cell} 
+                                style={{ backgroundColor: rgbColor }} 
+                                onClick={this.props.cellClick} > 
+                                    {plot.contents} 
+                        </div>
+                    )
+                })
+            }
+        })
+        // this.loadedGardenData = this.state
+        // console.log('loaded Garden Data ' + this.state.loadedGardenData)
+    }
     
     deleteGarden = (id) => {
         axios.delete(`/gardens/${id}`).then(response => {
@@ -98,6 +99,7 @@ class GardenProvider extends Component {
                     selectedGardenData: this.state.selectedGardenData,
                     selectedGardenPlotHeight: this.state.selectedGardenPlotHeight,
                     selectedGardenPlotWidth: this.state.selectedGardenPlotWidth,
+                    loadedGardenData: this.state.loadedGardenData
                 }}>
                 { this.props.children }
             </GardenContext.Provider>
