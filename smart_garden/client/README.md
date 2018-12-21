@@ -1,54 +1,96 @@
-bean = beets broccoli cabbage carrots cauliflower celery corn cucumber eggplant peas potato raddish squash strawberry tomato
-bean != garlic onion pepper sunflower
+A asparagus = 
 
-cabbage = beans celery cucumber dill kale lettuce onion potato sage spinich thyme
-cabbage != broccoli cauliflower strawberry tomato
+B bean = beets broccoli cabbage carrots cauliflower celery corn cucumber eggplant peas potato raddish squash                            strawberry tomato
+B bean != garlic onion pepper sunflower
 
-carrot = bean lettuce onion peas raddish rosemary sage tomato
-carrot != dill parsley
+BA basil = 
 
-corn = beans cucumber lettuce melon peas potato squash sunflower
-corn != tomato
+BE beats = 
 
+BR broccoli = 
 
-cucumber = beans lettuce peas raddish corn cauliflower sunflower
-cucumber != potato herbs melons
+BS brussle sprouts = 
 
-eggplant = bean pepper tomato
+CB cabbage = beans celery cucumber dill kale lettuce onion potato sage spinich thyme
+CB cabbage != broccoli cauliflower strawberry tomato
 
-leek = carrot celery onion tomato
-leek != swiss chard
+CA carrot = bean lettuce onion peas raddish rosemary sage tomato
+CA carrot != dill parsley
 
-lettuce = asparagus beats brussle sprouts beans okra onions radish carrots eggplant peas spinich
-lettuce != celery broccoli
+CF Cauliflower = 
 
-onion = beats cabbage broccoli cabbage carrots lettuce cucumbers peppers strawberies potato spinich
-onion != peas beans sage
+CE celery = 
 
-peas = turnip cauliflower garlic mint
+C corn = beans cucumber lettuce melon peas potato squash sunflower
+C corn != tomato
 
-pepper = okra tomato onions basil cilantro spinich
-pepper != beans kale brussle sprouts
+CL cilantro = 
 
-potato = beans corn peas cabbage cauliflower broccoli turnip
-potato != carrot cucumber pumpkin squash tomato
+CU cucumber = beans lettuce peas raddish corn cauliflower sunflower
+CU cucumber != potato herbs melons
 
-pumpkin = corn beans radish oregano
-pumpkin != potato
+D dill = 
 
-radish = squash eggplant cucumber lettuce peas beans basil cilantro onion spinich tomato
-radish != grapes
+E eggplant = bean pepper tomato
 
-spinich = cabbage cauliflower broccoli turnip strawberries peas beans
+G garlic = 
 
-squash = corn beans okra radish
+GR grapes 
 
-sweet potato = okra
+H any herbs = 
 
-tomato =  celery peppers asparagus basil beans oregano parsley carrots dill lettuce melons onion raddish spinich thyme
-tomato != corn potato beet rosemary kale cauliflower cabbage broccoli brussle sprouts
+K kale = 
 
-turnip = peas broccoli
+L lettuce = asparagus beats brussle sprouts beans okra onions radish carrots eggplant peas spinich
+L lettuce != celery broccoli
+
+M melon = 
+
+MT mint = 
+
+O onion = beats cabbage broccoli cabbage carrots lettuce cucumbers peppers strawberies potato spinich
+O onion != peas beans sage
+
+OK okra = 
+
+OR oregano = 
+
+P peas = turnip cauliflower garlic mint
+
+PA parsley = 
+
+PE pepper = okra tomato onions basil cilantro spinich
+PE pepper != beans kale brussle sprouts
+
+PO potato = beans corn peas cabbage cauliflower broccoli turnip
+PO potato != carrot cucumber pumpkin squash tomato
+
+PU pumpkin = corn beans radish oregano
+PU pumpkin != potato
+
+R rosemary = 
+
+RA radish = squash eggplant cucumber lettuce peas beans basil cilantro onion spinich tomato
+RA radish != grapes
+
+S strawberry = 
+
+SA sage = 
+
+SP spinich = cabbage cauliflower broccoli turnip strawberries peas beans
+
+SQ squash = beans corn okra radish
+
+SP sweet potato = okra
+
+SU sunflower = 
+
+TH thyme = 
+
+TO tomato =  asparagus basil beans carrots celery dill lettuce melons onion oregano parsley peppers raddish spinich                         thyme
+TO tomato != beet broccoli brusslesprouts corn cauliflower cabbage kale potato rosemary 
+
+TU turnip = peas broccoli
 
 
 
