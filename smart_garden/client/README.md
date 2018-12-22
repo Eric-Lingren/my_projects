@@ -81,7 +81,7 @@ SP spinich = cabbage cauliflower broccoli turnip strawberries peas beans
 
 SQ squash = beans corn okra radish
 
-SP sweet potato = okra
+<!-- SP sweet potato = okra -->
 
 SU sunflower = 
 

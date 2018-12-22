@@ -32,6 +32,9 @@ class CompanionProvider extends Component {
         })
     }
 
+    testAlert = () => {
+        alert('test')
+    }
     cellClick = (e, callBack) => {
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
@@ -52,7 +55,7 @@ class CompanionProvider extends Component {
                 })
             }
         }
-
+    
         const height = this.state.plotHeight
         const width = this.state.plotWidth
 
@@ -108,33 +111,113 @@ class CompanionProvider extends Component {
             bottomRightCell = (cellBelow + 1)
         }
 
-        const beanSpan = `<span class='recommend'> B </span>`
-        const cornSpan = `<span class='recommend'> C </span>`
+        const asparagus = `<span> A </span>`
+        const bean = `<span> B </span>`
+        const basil = `<span> BA </span>`
+        const beat = `<span> BE </span>`
+        const broccoli = `<span> BR </span>`
+        const brusslesprout = `<span> BS </span>`
+        const corn = `<span> C </span>`
+        const carrot = `<span> CA </span>`
+        const cabbage = `<span> CB </span>`
+        const celery = `<span> CE </span>`
+        const cauliflower = `<span> CF </span>`
+        const cilantro = `<span> CL</span>`
+        const cucumber = `<span> CU </span>`
+        const dill = `<span> D </span>`
+        const eggplant = `<span> E </span>`
+        const garlic = `<span> G </span>`
+        const grape = `<span> GR </span>`
+        const herbs = `<span> H </span>`
+        const kale = `<span> K </span>`
+        const lettuce = `<span> L </span>`
+        const melon = `<span> M </span>`
+        const mint = `<span> MT </span>`
+        const onion = `<span> O </span>`
+        const okra = `<span> OK </span>`
+        const oregano = `<span> OR </span>`
+        const pea = `<span> P </span>`
+        const parsley = `<span> PA </span>`
+        const pepper = `<span> PE </span>`
+        const potato = `<span> PO </span>`
+        const pumpkin = `<span> PU </span>`
+        const rosemary = `<span> R </span>`
+        const raddish = `<span> RA </span>`
+        const strawberry = `<span> S </span>`
+        const sage = `<span> SA </span>`
+        const spinich = `<span> SP </span>`
+        const squash = `<span> SQ </span>`
+        const sunflower = `<span> SU </span>`
+        const thyme = `<span> TH </span>`
+        const tomato = `<span> TO </span>`
+        const turnip = `<span> TU </span>`
+
+        
 
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<div> ${beanSpan} ${cornSpan} <span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> </div> <div> <span class='notRecommend'> G, O, PE, SU </span><div>`
+                document.getElementById(cellAbove).innerHTML = `<div class='recommend' onhover=${this.testAlert}> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(cellBelow).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(cellToLeft).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(cellToRight).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(topLeftCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(topRightCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(bottomLeftCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>` 
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> BE, BR, C, CA, CF, CU, E, P, PO, RA, S, SQ, TO  </span> <span class='notRecommend'> G, O, PE, SU </span>`
+                document.getElementById(bottomRightCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
+                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
+                                                                                        ${squash} ${tomato} 
+                                                                </div> 
+                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
             }
         }
 
