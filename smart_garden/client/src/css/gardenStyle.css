@@ -6,15 +6,20 @@
   padding: .5%;
   justify-content: center;
   align-content: center;
-  margin-left: 10%;
+  margin-left: 1%;
   margin-top: 1%;
   background-color: #5ECC7B;
+  overflow: visible;
 }
 .titleHeading{
   margin-top: 0;
   padding-top: 0;
   text-align: center;
   margin-bottom: 10px;
+}
+.formWrapper{
+  display: flex;
+  justify-content: space-evenly;
 }
 .gardenGenerateForm{
   margin: 0px;
@@ -27,27 +32,32 @@
   border-radius: 5px;
   margin-right: 15px;
   margin-left: 5px;
+  height: 15px;
 }
 input{
   padding: 2px;
   border-radius: 5px;
   margin-right: 15px;
   margin-left: 5px;
+  height: 15px;
+}
+.gardenFormButtonContainer{
+  display: flex;
 }
 
-
 button{
-  padding: 2px 15px 4px 15px;
+  padding: 2px 5px 4px 5px;
   border-radius: 5px;
   font-weight: 700;
-  margin-top: 10px;
-  margin-left: 20%;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 140px;
+  margin-right: 2%;
 }
 button:hover{
   background-color: #F4F4BA;
   border: 1px solid black;
 }
-
 table, th, td {
   border-collapse: collapse;
   border: 1px solid black;
@@ -115,7 +125,11 @@ table, th, td {
   cursor: help;
   font-size: 14px;
 }
-
+.gardenGridWrapper{
+  overflow: visible;
+  margin-top: 7px;
+  margin-left: 1%;
+}
 
 
 

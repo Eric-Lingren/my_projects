@@ -1,0 +1,21 @@
+.plantListContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 4%;
+    margin-top: 1%;
+    background-color: #5ECC7B;
+    width: 180px;
+}
+.plantSelector{
+    margin-top: 10px;
+}
+.deleteButton{
+    margin-top: 7%;
+    margin-left: 0;
+}

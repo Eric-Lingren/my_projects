@@ -1,5 +1,6 @@
 import React from 'react';
 import {withPlants} from '../context/PlantProvider';
+import '../css/plantListStyle.css'
 
 class PlantList extends React.Component {
     constructor(props) {
@@ -30,13 +31,14 @@ class PlantList extends React.Component {
 
         return(
         
-            <div>
-                <select name = "selectedPlotColor" onChange = {this.handleChange}>
+            <div className='plantListContainer'>
+                <h4 className='titleHeader'>Add Plant to Garden: </h4>
+                <select className='plantSelector' name = "selectedPlotColor" onChange = {this.handleChange}>
                     <optgroup label = "Add Plant to Garden">
                     </optgroup>
                     {mappedPlants}
                 </select>
-                <button onClick={this.props.deletePlant}>Delete Plant</button>
+                <button className='deleteButton' onClick={this.props.deletePlant}>Delete from List</button>
             </div>
         )    
     }

@@ -90,14 +90,13 @@ class Garden extends Component {
 
     render() {
         return (
-            <div className='createGardenWrapper'>
-                <div className='title'>
-                    <h4 className='titleHeading'>
-                    Create New Garden:
-                    </h4>
-                </div>
-            
-                <form className='gardenGenerateForm' >
+            <div className='gardenComponentWrapper'>
+                <div className='createGardenWrapper'>
+                    
+                    <h4 className='titleHeading'> Create New Garden: </h4>
+                    
+                    <div className='formWrapper'>
+                    <form className='gardenGenerateForm' >
                        
                         Height: <input
                             name='plotHeight'
@@ -115,7 +114,7 @@ class Garden extends Component {
                             value={this.state.plotWidth}
                             onChange={this.handleChange}
                         />
-                        Garden Name:
+                        Name:
                             <input
                             name='gardenName'
                             value={this.state.gardenName}
@@ -124,7 +123,7 @@ class Garden extends Component {
                             onChange={this.handleChange}
                             required
                         />
-                        Garden Year:
+                        Year:
                             <input
                             name='gardenYear'
                             value={this.state.gardenYear}
@@ -135,12 +134,14 @@ class Garden extends Component {
                         />  
                 </form>
                 <div className='gardenFormButtonContainer'>
-                    <button onClick={this.createGarden}>Create Garden</button>
+                    <button className='createGardenButton' onClick={this.createGarden}>Create Garden</button>
                     <button onClick={this.handleSubmit}>Save to My Gardens</button>
                 </div>
+                </div>
+                
+                </div>
             
-            
-
+                <div className='gardenGridWrapper'>
             {
                 this.props.loadedGardenData.length === 0 ?
                     <div id='gardenbox'>
@@ -151,7 +152,7 @@ class Garden extends Component {
                         {this.props.loadedGardenData}
                     </div>
             }
-            
+            </div>
                 
 
                 

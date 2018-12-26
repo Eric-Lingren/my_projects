@@ -7,7 +7,7 @@
 }
 .navLinkContainer{
     display: flex;
-    width: 35%;
+    width: 40%;
     align-items: center;
 }
 .navLink{
@@ -36,7 +36,8 @@
 }
 .button{
     border-radius: 5px;
-  font-weight: 700;
+    font-weight: 700;
+    
 }
 .searchButton:hover{
     background-color: #F4F4BA;
@@ -45,14 +46,16 @@
   }
 .searchButton{
     margin: 5px;
-    width: 90px;
+    width: 100px;
     border-radius: 0px;
     padding: 3px;
-    
 }
 .gardenListContainer{
     display: flex;
     align-items: center;
     margin-left: 1%;
     
+}
+.gardenListDropdown{
+    margin-right: 3%;
 }
