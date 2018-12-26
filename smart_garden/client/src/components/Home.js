@@ -5,6 +5,7 @@ import AddPlantForm from './AddPlantForm';
 import Garden from './Garden';
 import '../css/homeStyle.css'
 import { withPlants } from '../context/PlantProvider'
+import Plant from './Plant'
 
 class Home extends Component {
     componentDidMount(){
@@ -23,6 +24,7 @@ class Home extends Component {
                     <div className='mainColumn'>
                         <Garden />
                     </div>
+                    <Plant />
                 </div>
             </div>
         )
