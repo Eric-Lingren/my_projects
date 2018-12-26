@@ -44,7 +44,8 @@ button{
   margin-left: 20%;
 }
 button:hover{
-  background-color: lightgreen;
+  background-color: #F4F4BA;
+  border: 1px solid black;
 }
 
 table, th, td {

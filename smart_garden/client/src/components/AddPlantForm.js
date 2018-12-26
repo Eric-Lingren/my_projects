@@ -35,20 +35,19 @@ import {withPlants} from '../context/PlantProvider';
 
     render(){
         return(
-            <div>
+            <div className='addPlantContainer'>
+                <h4 className='titleHeader'> Add Plant to List:</h4>
                 <form className='addPlantForm'>
-                <fieldset className='fieldSet'>
-                    <legend>Add New Plant</legend>
                     Type: <input 
                                 name='plantType' 
-                                className='newPlantInput' 
+                                className='newPlantInput1' 
                                 type='text' 
                                 placeholder='Pumpkin' 
                                 onChange={this.handleChange}
                                 required/>
                     Varitey: <input 
                                 name='varitey' 
-                                className='newPlantInput' 
+                                className='newPlantInput2' 
                                 type='text' placeholder='Jackolantern' 
                                 onChange={this.handleChange}/><br></br>
                     Plot Color: <input 
@@ -56,9 +55,8 @@ import {withPlants} from '../context/PlantProvider';
                                 className='newPlantColorInput' 
                                 type='color' 
                                 onChange={this.handleChange}/>
-                    Image:      
-                    <button onClick={this.handleSubmit}>Add</button>
-                    </fieldset>
+                    Image:    Add image url 
+                    <button className='addPlantButton' onClick={this.handleSubmit}>Add</button>
                 </form>
             </div>
         )

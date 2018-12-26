@@ -92,9 +92,9 @@ class Garden extends Component {
         return (
             <div className='createGardenWrapper'>
                 <div className='title'>
-                    <h3 className='titleHeading'>
-                    Create New Garden
-                    </h3>
+                    <h4 className='titleHeading'>
+                    Create New Garden:
+                    </h4>
                 </div>
             
                 <form className='gardenGenerateForm' >
