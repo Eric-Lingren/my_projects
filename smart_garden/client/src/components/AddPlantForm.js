@@ -56,7 +56,7 @@ import {withPlants} from '../context/PlantProvider';
                                 type='color' 
                                 onChange={this.handleChange}/>
                     Image:    Add image url 
-                    <button className='addPlantButton' onClick={this.handleSubmit}>Add</button>
+                    <button className='addPlantButton' onClick={this.handleSubmit}>Add to List</button>
                 </form>
             </div>
         )

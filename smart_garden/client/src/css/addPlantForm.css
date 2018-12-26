@@ -1,6 +1,6 @@
 
 .addPlantContainer{
-    border: 1px solid black;
+    border: 2px solid white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,9 @@
     margin-left: 5px;
     padding: 0;
     margin-bottom: 3%;
+    height: 20px;
 }
 .addPlantButton{
-    margin-left: 30%;
+    margin-left: 10%;
+    margin-top: 5%;
 }
