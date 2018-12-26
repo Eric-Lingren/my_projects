@@ -1,12 +1,14 @@
 .navbar{
-    background-color: #597334;
+    background-color: #219941;
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    border-bottom: 2px solid black
 }
 .navLinkContainer{
     display: flex;
-    width: 300px;
+    width: 35%;
+    align-items: center;
 }
 .navLink{
     padding-left: 3vw;
@@ -17,7 +19,7 @@
     height: 25px;
     margin-right: 15px;
     margin-left: 5px;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 .loginForm{
     display: flex;
@@ -30,7 +32,18 @@
 }
 .navbarText{
     color: white;
+    font-weight: bolder;
 }
 .searchButton{
-    margin: 0;
+    margin: 5px;
+    width: 90px;
+    border-radius: 0px;
+    padding: 3px;
+    
+}
+.gardenListContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+    
 }

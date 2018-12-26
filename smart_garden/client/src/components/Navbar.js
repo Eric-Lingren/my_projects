@@ -18,33 +18,34 @@ class Navbar extends Component {
             [name]: value
         })
     }
+    // {/* <a className='navLink' href='none'>Journal</a>
+    //                 <a className='navLink' href='none'>Adruino</a> */}
+// {/* <form className='loginForm'>
+//                     <span className='navbarText'> 
+//                         User Name: 
+//                     </span> 
 
+//                     <input className='newPlantInput' type='text' placeholder='User Name'/> 
+
+//                     <span className='navbarText'> 
+//                         Password: 
+//                     </span> 
+
+//                     <input className='newPlantInput' type='text' placeholder='Password'/> 
+
+//                     <button className='registrationButtons' >Sign In</button>
+//                     <button className='registrationButtons'>Register</button>
+//                 </form> */}
     render() {
         return(
             <div className='navbar'>
                 <div className='navLinkContainer'>
                     <span className='navbarText'>My Gardens: </span>
                     <GardenList />
-                    <a className='navLink' href='none'>Journal</a>
-                    <a className='navLink' href='none'>Adruino</a>
+                    
                 </div>
                 
-                <form className='loginForm'>
-                    <span className='navbarText'> 
-                        User Name: 
-                    </span> 
-
-                    <input className='newPlantInput' type='text' placeholder='User Name'/> 
-
-                    <span className='navbarText'> 
-                        Password: 
-                    </span> 
-
-                    <input className='newPlantInput' type='text' placeholder='Password'/> 
-
-                    <button className='registrationButtons' >Sign In</button>
-                    <button className='registrationButtons'>Register</button>
-                </form>
+                
             </div>
         )
     }

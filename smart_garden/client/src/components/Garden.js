@@ -90,10 +90,15 @@ class Garden extends Component {
 
     render() {
         return (
-            <div>
+            <div className='createGardenWrapper'>
+                <div className='title'>
+                    <h3 className='titleHeading'>
+                    Create New Garden
+                    </h3>
+                </div>
+            
                 <form className='gardenGenerateForm' >
-                    <fieldset className='fieldSetNewGarden'>
-                        <legend>Create New Garden</legend>
+                       
                         Height: <input
                             name='plotHeight'
                             type='number'
@@ -127,11 +132,12 @@ class Garden extends Component {
                             placeholder='2018'
                             onChange={this.handleChange}
                             required
-                        />   
-                    </fieldset>
+                        />  
                 </form>
-                <button onClick={this.createGarden}>Create Garden</button>
-                <button onClick={this.handleSubmit}>Save to My Gardens</button>
+                <div className='gardenFormButtonContainer'>
+                    <button onClick={this.createGarden}>Create Garden</button>
+                    <button onClick={this.handleSubmit}>Save to My Gardens</button>
+                </div>
             
             
 

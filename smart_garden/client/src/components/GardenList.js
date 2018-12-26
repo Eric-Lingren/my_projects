@@ -34,8 +34,8 @@ class GardenList extends React.Component {
 
         return(
         
-            <div>
-                <select name = "selectedGarden" onChange = {this.handleChange}>
+            <div className='gardenListContainer'>
+                <select className='gardenListDropdown' name = "selectedGarden" onChange = {this.handleChange}>
                     {mappedGardens}
                 </select>
                 <button className='searchButton' onClick = {() => this.props.getOneGarden(this.state.gardenID, this.props.cellClick)}> Get Garden </button>
