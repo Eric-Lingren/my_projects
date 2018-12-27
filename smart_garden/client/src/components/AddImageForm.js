@@ -19,10 +19,9 @@ import {withPlants} from '../context/PlantProvider';
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
         console.log(this.state)
         axios.post('/images', this.state ).then(res => {
-            this.props.getPlants()
+        //     this.props.getPlants()
         })
     }
 

@@ -13,6 +13,7 @@ app.use(morgan('dev'))
 //Routes
 app.use('/plants', require('./routes/plant'))
 app.use('/gardens', require('./routes/garden'))
+app.use('/images', require('./routes/image'))
 
 
 // Mongoose Connect
