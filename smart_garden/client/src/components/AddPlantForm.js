@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import '../css/addPlantForm.css';
 import axios from 'axios';
 import {withPlants} from '../context/PlantProvider';
+import ImagePicker from './ImagePicker';
 
  class AddPlantForm extends Component {
     constructor(){
@@ -9,7 +10,8 @@ import {withPlants} from '../context/PlantProvider';
         this.state = {
             plantType: '',
             varitey: '',
-            plotColor: ''
+            plotColor: '',
+            imageUrl: '',
         }
     }
 
@@ -48,14 +50,22 @@ import {withPlants} from '../context/PlantProvider';
                     Varitey: <input 
                                 name='varitey' 
                                 className='newPlantInput2' 
-                                type='text' placeholder='Jackolantern' 
+                                type='text' 
+                                placeholder='Jackolantern' 
                                 onChange={this.handleChange}/><br></br>
                     Plot Color: <input 
                                 name='plotColor' 
                                 className='newPlantColorInput' 
                                 type='color' 
+                                onChange={this.handleChange}/><br></br>
+                    New Image:   <input 
+                                name='imageUrl' 
+                                className='newPlantInput3' 
+                                type='text' 
+                                placeholder='imagelink.com' 
                                 onChange={this.handleChange}/>
-                    Image:    Add image url 
+                    Select Existing Image:
+                    <ImagePicker />
                     <button className='addPlantButton' onClick={this.handleSubmit}>Add to List</button>
                 </form>
             </div>
