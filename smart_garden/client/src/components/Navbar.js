@@ -44,6 +44,15 @@ class Navbar extends Component {
                     <GardenList />
                     
                 </div>
+
+                <div className='logoWrapper'>
+                
+                
+                <h1 className='pageTitle'> SmartGarden </h1> 
+                <h3 className='trademark'>™ </h3>
+                <div className='gifContianer'></div>
+                </div>
+                
                 
                 
             </div>
