@@ -27,7 +27,7 @@ class PlantImagePicker extends Component {
   }
  
   onSelect = () => {
-    console.log(this.state.image)
+    console.log(this.state.image.src)
     this.props.setImageToggle()
   }
 
