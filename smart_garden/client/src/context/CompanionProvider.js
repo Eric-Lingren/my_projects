@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withPlants } from '../context/PlantProvider';
 import { withGardens } from '../context/GardenProvider';
 import '../css/gardenStyle.css';
+import imageTest from '../css/plantGif.gif'
 
 const CompanionContext = React.createContext()
 
@@ -39,8 +40,10 @@ class CompanionProvider extends Component {
 
 
     cellClick = (e, callBack) => {
+
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
+        e.target.style.backgroundImage = `url(${this.props.selectedPlantUrl})`
 
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML

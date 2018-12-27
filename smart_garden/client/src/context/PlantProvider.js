@@ -23,6 +23,7 @@ class PlantProvider extends Component {
         selectedPlantType: plant.plantType,
         selectedPlantVaritey: plant.plantVaritey,
         selectedPlantID: plant._id,
+        selectedPlantUrl: plant.imageUrl,
        })
     }
 
