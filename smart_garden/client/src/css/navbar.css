@@ -51,8 +51,8 @@
 .searchButton{
     margin: 5px;
     width: 100px;
-    border-radius: 0px;
     padding: 3px;
+    border-radius: 5px;
 }
 .gardenListContainer{
     display: flex;
@@ -70,9 +70,9 @@
     background-image: url('../css/plantGif.gif');
     background-position: center;
     background-size: cover;
-    height: 50px;
-    width: 50px;
-    margin-top: -10px;
+    height: 70px;
+    width: 60px;
+    margin-top: -22px;
     margin-right: -15px;
 }
 .pageTitle{

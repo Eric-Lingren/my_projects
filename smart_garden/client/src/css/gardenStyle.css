@@ -16,15 +16,15 @@
   
 }
 .titleHeading{
-  margin-top: 0;
+  margin: 0;
   padding-top: 0;
   text-align: center;
-  margin-bottom: 10px;
 }
 .formWrapper{
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: .5%;
+  align-items: center;
+  
 }
 .gardenGenerateForm{
   margin: 0px;
@@ -58,6 +58,7 @@ button{
   margin-bottom: 1px;
   width: 140px;
   margin-right: 2%;
+  border: 1px solid black;
 }
 button:hover{
   background-color: #F4F4BA;
@@ -82,6 +83,7 @@ table, th, td {
   align-items: center;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .gardenBox{
@@ -102,6 +104,11 @@ table, th, td {
   /* grid-template-columns: 75px 75px 75px; */
 
 }
+.gardenGridWrapper{
+  overflow: visible;
+  margin-top: 7px;
+  margin-left: 1%;
+}
 
 .suggest{
   font-size: 90%;
@@ -110,9 +117,10 @@ table, th, td {
 }
 
 .recommend{
-  color: green;
+  background-color: green;
   font-size: 13px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .recommend:hover{
   font-weight: bold;
@@ -121,7 +129,8 @@ table, th, td {
 }
 
 .notRecommend{
-  color: red;
+  background-color: red;
+  opacity: .8;
   font-size: 13px;
   text-align: center
 }
@@ -131,11 +140,7 @@ table, th, td {
   cursor: help;
   font-size: 14px;
 }
-.gardenGridWrapper{
-  overflow: visible;
-  margin-top: 7px;
-  margin-left: 1%;
-}
+
 
 
 

@@ -32,9 +32,12 @@ class CompanionProvider extends Component {
         })
     }
 
+    
     testAlert = () => {
-        alert('test')
+        console.log('test mouseover')
     }
+
+
     cellClick = (e, callBack) => {
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
@@ -156,7 +159,7 @@ class CompanionProvider extends Component {
 
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<div class='recommend' onhover=${this.testAlert}> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
+                document.getElementById(cellAbove).innerHTML = `<div class='recommend' > ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
                                                                                         ${cauliflower} ${cucumber} ${eggplant} ${pea} 
                                                                                         ${potato} ${rosemary} ${raddish} ${strawberry} 
                                                                                         ${squash} ${tomato} 
@@ -164,12 +167,8 @@ class CompanionProvider extends Component {
                                                                 <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
+                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' onmouseover=${this.testAlert}> PLANT THESE </div> 
+                                                                <div class='notRecommend' onmouseover=${this.testAlert}> NOT THESE <div>`
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
                 document.getElementById(cellToLeft).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
@@ -628,6 +627,7 @@ class CompanionProvider extends Component {
     }
 
     render(){
+
         return (
             <CompanionContext.Provider 
                 value={{

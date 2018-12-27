@@ -93,9 +93,10 @@ class Garden extends Component {
             <div className='gardenComponentWrapper'>
                 <div className='createGardenWrapper'>
                     
-                    <h4 className='titleHeading'> Create New Garden: </h4>
+                    
                     
                     <div className='formWrapper'>
+                    <h4 className='titleHeading'> Create New Garden: </h4>
                     <form className='gardenGenerateForm' >
                        
                         Height: <input
@@ -126,6 +127,7 @@ class Garden extends Component {
                         Year:
                             <input
                             name='gardenYear'
+                            className='gardenSizeInput'
                             value={this.state.gardenYear}
                             type='text'
                             placeholder='2018'
