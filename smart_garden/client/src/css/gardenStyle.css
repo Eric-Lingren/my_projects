@@ -73,9 +73,10 @@ table, th, td {
 }
 
 .cell{
-  background-color: #F5C489;
   background-image: url(./dirt.jpg);
   background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
   border: 1px solid white;
   height: 100px;
   width: 100px;

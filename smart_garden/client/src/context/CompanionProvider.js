@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withPlants } from '../context/PlantProvider';
 import { withGardens } from '../context/GardenProvider';
 import '../css/gardenStyle.css';
-import imageTest from '../css/plantGif.gif'
 
 const CompanionContext = React.createContext()
 
@@ -14,6 +13,7 @@ class CompanionProvider extends Component {
             getGardenPlot: [],
             plotHeight: 0,
             plotWidth: 0,
+            showBeanRecommend: false,
         }
         this.otherGardenData = []
     }
@@ -34,8 +34,15 @@ class CompanionProvider extends Component {
     }
 
     
-    testAlert = () => {
-        console.log('test mouseover')
+    beanRecommend = () => {
+        console.log('test bean recomend mouseover')
+        console.log(this.state.showBeanRecommend)
+        if( this.state.showBeanRecommend){
+            this.setState({showBeanRecommend: false})
+        } else {
+            this.setState({showBeanRecommend: true})
+        }
+        
     }
 
 
@@ -44,6 +51,11 @@ class CompanionProvider extends Component {
         e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         e.target.style.backgroundImage = `url(${this.props.selectedPlantUrl})`
+        e.target.style.color = 'black'
+        e.target.style.fontWeight = 'bolder'
+        e.target.style.fontSize = '24px'
+        e.target.style.justifyContent = 'start'
+        e.target.style.alignItems = ''
 
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
@@ -162,16 +174,15 @@ class CompanionProvider extends Component {
 
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<div class='recommend' > ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
+                document.getElementById(cellAbove).innerHTML  = this.state.showDiv
+                document.getElementById(cellAbove).addEventListener('mouseover', this.testAlert)
+                                                                
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' onmouseover=${this.testAlert}> PLANT THESE </div> 
-                                                                <div class='notRecommend' onmouseover=${this.testAlert}> NOT THESE <div>`
+                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' > PLANT THESE </div> 
+                                                                <div id='beanNotRecommend'class='notRecommend'> NOT THESE <div>`
+                document.getElementById('beanRecommend').addEventListener('mouseover', this.beanRecommend)
+                document.getElementById('beanNotRecommend').addEventListener('mouseover', this.testAlert)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
                 document.getElementById(cellToLeft).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
@@ -637,7 +648,9 @@ class CompanionProvider extends Component {
                     cellClick: this.cellClick,
                     handleAddGardenData: this.handleAddGardenData,
                     tryingToGetGardenData: this.tryingToGetGardenData,
-                    handleAddGardenDimensions: this.handleAddGardenDimensions
+                    handleAddGardenDimensions: this.handleAddGardenDimensions,
+                    showBeanRecommend: this.state.showBeanRecommend,
+                    beanRecommend: this.beanRecommend,
                 }}>
                 { this.props.children }
             </CompanionContext.Provider>

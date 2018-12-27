@@ -5,6 +5,8 @@ import { withGardens } from '../context/GardenProvider'
 import axios from 'axios'
 import { withCompanion } from '../context/CompanionProvider'
 import ImagePicker from './ImagePicker'
+import BeanModal from './BeanModal'
+// import Plant from './Plant'
 
 class Garden extends Component {
     constructor(props) {
@@ -67,7 +69,7 @@ class Garden extends Component {
             const gardenColumns = width.map(myInd => {
                 index++
                 this.gardenData.push({ cell: index, contents: '', backgroundColor: 0 })
-                return <div className='cell' onClick={this.props.cellClick} id={index} key={index}>
+                return  <div className='cell' onClick={this.props.cellClick} id={index} key={index}>
                             {index}
                         </div>
             })
@@ -167,8 +169,8 @@ class Garden extends Component {
                 <div></div>
             }
 
-                
-
+               
+            <BeanModal />
             </div>
         )
     }
