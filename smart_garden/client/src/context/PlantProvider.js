@@ -12,6 +12,7 @@ class PlantProvider extends Component {
             selectedPlantType: '',
             selectedPlantVaritey: '',
             selectedPlantID: '',
+            toggleImagePicker: false,
         }
     }
 
@@ -49,6 +50,18 @@ class PlantProvider extends Component {
         }).catch(err => console.log(err.response.data.errMsg))
     }
 
+    setImageToggle = e => {
+        if (this.state.toggleImagePicker){
+            this.setState({
+                toggleImagePicker: false,
+            })
+        } else {
+            this.setState({
+                toggleImagePicker: true,
+            })
+        }
+    }
+    
     render(){
         return (
             <PlantContext.Provider 
@@ -62,6 +75,8 @@ class PlantProvider extends Component {
                     selectedPlantType: this.state.selectedPlantType,
                     selectedPlantVaritey: this.state.selectedPlantVaritey,
                     selectedPlantID: this.state.selectedPlantID,
+                    toggleImagePicker: this.state.toggleImagePicker,
+                    setImageToggle: this.setImageToggle,
                 }}>
                 { this.props.children }
             </PlantContext.Provider>

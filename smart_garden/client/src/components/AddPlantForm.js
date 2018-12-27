@@ -30,9 +30,9 @@ import ImagePicker from './ImagePicker';
         })
     }
 
-    handleDelete = (e) => {
+    handleToggle = e => {
         e.preventDefault()
-        console.log(this.state)
+        this.props.setImageToggle()
     }
 
     render(){
@@ -64,10 +64,13 @@ import ImagePicker from './ImagePicker';
                                 type='text' 
                                 placeholder='imagelink.com' 
                                 onChange={this.handleChange}/>
-                    Select Existing Image:
-                    <ImagePicker />
+                    <h4 className='or'> OR: </h4>
+                    Choose Existing Image:
+                    <button onClick={this.handleToggle}> Options Menu </button>
+                    
                     <button className='addPlantButton' onClick={this.handleSubmit}>Add to List</button>
                 </form>
+                <ImagePicker />
             </div>
         )
     }  
