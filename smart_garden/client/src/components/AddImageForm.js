@@ -30,11 +30,11 @@ import {withPlants} from '../context/PlantProvider';
             <div className='addPlantContainer'>
                 <h4 className='titleHeader'> Add Image to Choices:</h4>
                 <form className='addPlantForm'>
-                    New Image:   <input 
+                    URL:   <input 
                                 name='imageUrl' 
-                                className='newPlantInput3' 
+                                className='newPlantInput4' 
                                 type='text' 
-                                placeholder='imagelink.com' 
+                                placeholder='www.example.com' 
                                 onChange={this.handleChange}/>
                     <button className='addPlantButton' onClick={this.handleSubmit}>Add to Choices</button>
                 </form>

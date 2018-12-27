@@ -52,13 +52,12 @@ import {withPlants} from '../context/PlantProvider';
                                 type='text' 
                                 placeholder='Jackolantern' 
                                 onChange={this.handleChange}/><br></br>
-                    Plot Color: <input 
+                    {/* Plot Color: <input 
                                 name='plotColor' 
                                 className='newPlantColorInput' 
                                 type='color' 
-                                onChange={this.handleChange}/><br></br>
-                    Choose Image:
-                    <button className='addPlantButton' onClick={this.handleToggle}> Show Image Choices </button>
+                                onChange={this.handleChange}/><br></br> */}
+                    <button className='addPlantButton' onClick={this.handleToggle}> Choose An Image </button>
                     
                     <button className='addPlantButton' onClick={this.handleSubmit}>Add to List</button>
                 </form>
