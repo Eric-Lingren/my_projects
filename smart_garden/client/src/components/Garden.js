@@ -4,6 +4,7 @@ import { withPlants } from '../context/PlantProvider'
 import { withGardens } from '../context/GardenProvider'
 import axios from 'axios'
 import { withCompanion } from '../context/CompanionProvider'
+import ImagePicker from './ImagePicker'
 
 class Garden extends Component {
     constructor(props) {
@@ -154,8 +155,17 @@ class Garden extends Component {
                         {this.props.loadedGardenData}
                     </div>
             }
+            
             </div>
-                
+           
+            {
+                this.props.toggleImagePicker ? 
+                <div>
+                <ImagePicker />
+                </div>
+                :
+                <div></div>
+            }
 
                 
 

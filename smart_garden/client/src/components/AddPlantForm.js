@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import '../css/addPlantForm.css';
 import axios from 'axios';
 import {withPlants} from '../context/PlantProvider';
-import ImagePicker from './ImagePicker';
 
  class AddPlantForm extends Component {
     constructor(){
@@ -58,19 +57,12 @@ import ImagePicker from './ImagePicker';
                                 className='newPlantColorInput' 
                                 type='color' 
                                 onChange={this.handleChange}/><br></br>
-                    New Image:   <input 
-                                name='imageUrl' 
-                                className='newPlantInput3' 
-                                type='text' 
-                                placeholder='imagelink.com' 
-                                onChange={this.handleChange}/>
-                    <h4 className='or'> OR: </h4>
-                    Choose Existing Image:
-                    <button onClick={this.handleToggle}> Options Menu </button>
+                    Choose Image:
+                    <button className='addPlantButton' onClick={this.handleToggle}> Show Image Choices </button>
                     
                     <button className='addPlantButton' onClick={this.handleSubmit}>Add to List</button>
                 </form>
-                <ImagePicker />
+                
             </div>
         )
     }  

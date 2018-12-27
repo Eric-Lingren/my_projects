@@ -5,6 +5,7 @@ import AddPlantForm from './AddPlantForm';
 import Garden from './Garden';
 import '../css/homeStyle.css'
 import { withPlants } from '../context/PlantProvider'
+import AddImageForm from './AddImageForm'
 
 class Home extends Component {
     componentDidMount(){
@@ -17,6 +18,7 @@ class Home extends Component {
                 <Navbar />
                 <div className='pageWrapper'>
                     <div className='leftColumn'>
+                        <AddImageForm />
                         <AddPlantForm />
                         <PlantList currentPlants={this.props.currentPlants}/>
                     </div>
