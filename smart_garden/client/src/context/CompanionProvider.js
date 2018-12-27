@@ -179,10 +179,8 @@ class CompanionProvider extends Component {
                                                                 
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' > PLANT THESE </div> 
-                                                                <div id='beanNotRecommend'class='notRecommend'> NOT THESE <div>`
+                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' > SUGGESTED </div>`
                 document.getElementById('beanRecommend').addEventListener('mouseover', this.beanRecommend)
-                document.getElementById('beanNotRecommend').addEventListener('mouseover', this.testAlert)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
                 document.getElementById(cellToLeft).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 

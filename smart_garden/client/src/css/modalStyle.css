@@ -41,3 +41,26 @@
     cursor: pointer;
     
 }
+.modalTitle{
+    text-align: center;
+    margin: 0;
+}
+.modalSubTitle{
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+.suggestionWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+.suggestionContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.suggestionTitle{
+    text-align: center;
+    margin: 0;
+}
