@@ -13,6 +13,7 @@ class PlantProvider extends Component {
             selectedPlantVaritey: '',
             selectedPlantID: '',
             toggleImagePicker: false,
+            selectedPlantUrl: '',
         }
     }
 
@@ -61,6 +62,10 @@ class PlantProvider extends Component {
             })
         }
     }
+
+    setPlantUrl = url => {
+        this.setState({selectedPlantUrl: url.src})
+    }
     
     render(){
         return (
@@ -77,6 +82,8 @@ class PlantProvider extends Component {
                     selectedPlantID: this.state.selectedPlantID,
                     toggleImagePicker: this.state.toggleImagePicker,
                     setImageToggle: this.setImageToggle,
+                    setPlantUrl: this.setPlantUrl,
+                    selectedPlantUrl: this.state.selectedPlantUrl,
                 }}>
                 { this.props.children }
             </PlantContext.Provider>

@@ -12,7 +12,7 @@ const plantSchema = new Schema({
         required: false,
         lowercase: true
     },
-    plotColor:{
+    imageUrl:{
         type: String,
         required: true
     }

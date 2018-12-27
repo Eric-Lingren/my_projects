@@ -4,21 +4,25 @@ import axios from 'axios';
 import {withPlants} from '../context/PlantProvider';
 
  class AddPlantForm extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             plantType: '',
             varitey: '',
-            plotColor: '',
             imageUrl: '',
         }
     }
 
+    componentWillReceiveProps(nextProps){
+        // console.log(nextProps)
+        // console.log('props plant url is ' + nextProps.selectedPlantUrl)
+        this.setState({imageUrl: nextProps.selectedPlantUrl})
+    }
     handleChange = (e) => {
         const {name, value} = e.target;
         this.setState({
             [name]: value
-        })
+        }, () => console.log(this.state))
     }
 
     handleSubmit = (e) => {
@@ -34,7 +38,10 @@ import {withPlants} from '../context/PlantProvider';
         this.props.setImageToggle()
     }
 
+  
+
     render(){
+        // console.log(this.props.selectedPlantUrl)
         return(
             <div className='addPlantContainer'>
                 <h4 className='titleHeader'> Add Plant to List:</h4>
