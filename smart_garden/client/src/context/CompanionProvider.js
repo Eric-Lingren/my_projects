@@ -16,6 +16,7 @@ class CompanionProvider extends Component {
             showBeanRecommend: false,
             showCabbageRecommend: false,
             showCarrotRecommend: false,
+            showCornRecommend: false,
         }
         this.otherGardenData = []
     }
@@ -55,6 +56,13 @@ class CompanionProvider extends Component {
             this.setState({showCarrotRecommend: false})
         } else {
             this.setState({showCarrotRecommend: true})
+        }  
+    }
+    cornRecommend = () => {
+        if( this.state.showCornRecommend){
+            this.setState({showCornRecommend: false})
+        } else {
+            this.setState({showCornRecommend: true})
         }  
     }
 
@@ -250,28 +258,36 @@ class CompanionProvider extends Component {
 
         if (cellData === 'corn'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(cellAbove).innerHTML = `<div id='cornRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend1').addEventListener('mouseover', this.cornRecommend)
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(cellBelow).innerHTML = `<div id='cornRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend2').addEventListener('mouseover', this.cornRecommend)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(cellToLeft).innerHTML = `<div id='cornRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend3').addEventListener('mouseover', this.cornRecommend)
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(cellToRight).innerHTML = `<div id='cornRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend4').addEventListener('mouseover', this.cornRecommend)
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(topLeftCell).innerHTML = `<div id='cornRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend5').addEventListener('mouseover', this.cornRecommend)
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(topRightCell).innerHTML = `<div id='cornRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend6').addEventListener('mouseover', this.cornRecommend)
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='cornRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend7').addEventListener('mouseover', this.cornRecommend)
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> B, CU, L, M, P, PO, SQ, SU  </span> <span class='notRecommend'> TO </span>`
+                document.getElementById(bottomRightCell).innerHTML = `<div id='cornRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cornRecommend8').addEventListener('mouseover', this.cornRecommend)
             }
         }
 
@@ -615,6 +631,8 @@ class CompanionProvider extends Component {
                     showCabbageRecommend: this.state.showCabbageRecommend,
                     carrotRecommend: this.carrotRecommend,
                     showCarrotRecommend: this.state.showCarrotRecommend,
+                    cornRecommend: this.cornRecommend,
+                    showCornRecommend: this.state.showCornRecommend,
                 }}>
                 { this.props.children }
             </CompanionContext.Provider>

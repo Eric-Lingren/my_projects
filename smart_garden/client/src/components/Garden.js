@@ -8,6 +8,7 @@ import ImagePicker from './ImagePicker'
 import BeanModal from './modals/BeanModal'
 import CabbageModal from './modals/CabbageModal'
 import CarrotModal from './modals/CarrotModal'
+import CornModal from './modals/CornModal'
 // import Plant from './Plant'
 
 class Garden extends Component {
@@ -175,6 +176,7 @@ class Garden extends Component {
             <BeanModal />
             <CabbageModal />
             <CarrotModal />
+            <CornModal />
 
             </div>
         )
