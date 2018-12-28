@@ -14,6 +14,8 @@ class CompanionProvider extends Component {
             plotHeight: 0,
             plotWidth: 0,
             showBeanRecommend: false,
+            showCabbageRecommend: false,
+            showCarrotRecommend: false,
         }
         this.otherGardenData = []
     }
@@ -35,14 +37,25 @@ class CompanionProvider extends Component {
 
     
     beanRecommend = () => {
-        console.log('test bean recomend mouseover')
-        console.log(this.state.showBeanRecommend)
         if( this.state.showBeanRecommend){
             this.setState({showBeanRecommend: false})
         } else {
             this.setState({showBeanRecommend: true})
-        }
-        
+        } 
+    }
+    cabbageRecommend = () => {
+        if( this.state.showCabbageRecommend){
+            this.setState({showCabbageRecommend: false})
+        } else {
+            this.setState({showCabbageRecommend: true})
+        }  
+    }
+    carrotRecommend = () => {
+        if( this.state.showCarrotRecommend){
+            this.setState({showCarrotRecommend: false})
+        } else {
+            this.setState({showCarrotRecommend: true})
+        }  
     }
 
 
@@ -129,160 +142,109 @@ class CompanionProvider extends Component {
             bottomRightCell = (cellBelow + 1)
         }
 
-        const asparagus = `<span> A </span>`
-        const bean = `<span> B </span>`
-        const basil = `<span> BA </span>`
-        const beat = `<span> BE </span>`
-        const broccoli = `<span> BR </span>`
-        const brusslesprout = `<span> BS </span>`
-        const corn = `<span> C </span>`
-        const carrot = `<span> CA </span>`
-        const cabbage = `<span> CB </span>`
-        const celery = `<span> CE </span>`
-        const cauliflower = `<span> CF </span>`
-        const cilantro = `<span> CL</span>`
-        const cucumber = `<span> CU </span>`
-        const dill = `<span> D </span>`
-        const eggplant = `<span> E </span>`
-        const garlic = `<span> G </span>`
-        const grape = `<span> GR </span>`
-        const herbs = `<span> H </span>`
-        const kale = `<span> K </span>`
-        const lettuce = `<span> L </span>`
-        const melon = `<span> M </span>`
-        const mint = `<span> MT </span>`
-        const onion = `<span> O </span>`
-        const okra = `<span> OK </span>`
-        const oregano = `<span> OR </span>`
-        const pea = `<span> P </span>`
-        const parsley = `<span> PA </span>`
-        const pepper = `<span> PE </span>`
-        const potato = `<span> PO </span>`
-        const pumpkin = `<span> PU </span>`
-        const rosemary = `<span> R </span>`
-        const raddish = `<span> RA </span>`
-        const strawberry = `<span> S </span>`
-        const sage = `<span> SA </span>`
-        const spinich = `<span> SP </span>`
-        const squash = `<span> SQ </span>`
-        const sunflower = `<span> SU </span>`
-        const thyme = `<span> TH </span>`
-        const tomato = `<span> TO </span>`
-        const turnip = `<span> TU </span>`
-
-        
 
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML  = this.state.showDiv
-                document.getElementById(cellAbove).addEventListener('mouseover', this.testAlert)
-                                                                
+                document.getElementById(cellAbove).innerHTML  = `<div id='beanRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend1').addEventListener('mouseover', this.beanRecommend)                                                   
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend' class='recommend' > SUGGESTED </div>`
-                document.getElementById('beanRecommend').addEventListener('mouseover', this.beanRecommend)
+                document.getElementById(cellBelow).innerHTML = `<div id='beanRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend2').addEventListener('mouseover', this.beanRecommend)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`
+                document.getElementById(cellToLeft).innerHTML = `<div id='beanRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend3').addEventListener('mouseover', this.beanRecommend)
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
+                document.getElementById(cellToRight).innerHTML = `<div id='beanRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend4').addEventListener('mouseover', this.beanRecommend)
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
+                document.getElementById(topLeftCell).innerHTML = `<div id='beanRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend5').addEventListener('mouseover', this.beanRecommend)
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
+                document.getElementById(topRightCell).innerHTML = `<div id='beanRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend6').addEventListener('mouseover', this.beanRecommend)
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>` 
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='beanRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend7').addEventListener('mouseover', this.beanRecommend)
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<div class='recommend'> ${bean} ${beat} ${broccoli} ${corn} ${carrot} 
-                                                                                        ${cauliflower} ${cucumber} ${eggplant} ${pea} 
-                                                                                        ${potato} ${rosemary} ${raddish} ${strawberry} 
-                                                                                        ${squash} ${tomato} 
-                                                                </div> 
-                                                                <div class='notRecommend'> ${garlic} ${onion} ${pepper} ${sunflower} <div>`  
+                document.getElementById(bottomRightCell).innerHTML = `<div id='beanRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beanRecommend8').addEventListener('mouseover', this.beanRecommend)
             }
         }
 
         if (cellData === 'cabbage' || cellData === 'cabbages'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(cellAbove).innerHTML =  `<div id='cabbageRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend1').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(cellBelow).innerHTML = `<div id='cabbageRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend2').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(cellToLeft).innerHTML = `<div id='cabbageRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend3').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(cellToRight).innerHTML = `<div id='cabbageRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend4').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(topLeftCell).innerHTML = `<div id='cabbageRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend5').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(topRightCell).innerHTML = `<div id='cabbageRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend6').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='cabbageRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend7').addEventListener('mouseover', this.cabbageRecommend)
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> B, CE, CU, D, K, L, O, PO, SA, SP, TH </span> <span class='notRecommend'> BR, CF, S, TO </span>`
+                document.getElementById(bottomRightCell).innerHTML = `<div id='cabbageRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('cabbageRecommend8').addEventListener('mouseover', this.cabbageRecommend)
             }
         }
 
         if (cellData === 'carrots' || cellData === 'carrot'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(cellAbove).innerHTML = `<div id='carrotRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend1').addEventListener('mouseover', this.carrotRecommend)
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(cellBelow).innerHTML = `<div id='carrotRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend2').addEventListener('mouseover', this.carrotRecommend)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(cellToLeft).innerHTML = `<div id='carrotRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend3').addEventListener('mouseover', this.carrotRecommend)
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(cellToRight).innerHTML = `<div id='carrotRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend4').addEventListener('mouseover', this.carrotRecommend)
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(topLeftCell).innerHTML = `<div id='carrotRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend5').addEventListener('mouseover', this.carrotRecommend)
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(topRightCell).innerHTML = `<div id='carrotRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend6').addEventListener('mouseover', this.carrotRecommend)
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='carrotRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend7').addEventListener('mouseover', this.carrotRecommend)
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<span class='recommend'> B, L, O, P, RA, SA, TO  </span> <span class='notRecommend'> D, PA </span>`
+                document.getElementById(bottomRightCell).innerHTML = `<div id='carrotRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('carrotRecommend8').addEventListener('mouseover', this.carrotRecommend)
             }
         }
 
@@ -649,6 +611,10 @@ class CompanionProvider extends Component {
                     handleAddGardenDimensions: this.handleAddGardenDimensions,
                     showBeanRecommend: this.state.showBeanRecommend,
                     beanRecommend: this.beanRecommend,
+                    cabbageRecommend: this.cabbageRecommend,
+                    showCabbageRecommend: this.state.showCabbageRecommend,
+                    carrotRecommend: this.carrotRecommend,
+                    showCarrotRecommend: this.state.showCarrotRecommend,
                 }}>
                 { this.props.children }
             </CompanionContext.Provider>

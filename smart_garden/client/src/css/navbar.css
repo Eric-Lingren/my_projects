@@ -64,7 +64,7 @@
     display: flex;
 }
 .gifContianer{
-    background-image: url('../css/plantGif.gif');
+    background-image: url('../css/image/plantGif.gif');
     background-position: center;
     background-size: cover;
     height: 70px;

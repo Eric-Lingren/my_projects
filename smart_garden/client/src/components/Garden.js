@@ -5,7 +5,9 @@ import { withGardens } from '../context/GardenProvider'
 import axios from 'axios'
 import { withCompanion } from '../context/CompanionProvider'
 import ImagePicker from './ImagePicker'
-import BeanModal from './BeanModal'
+import BeanModal from './modals/BeanModal'
+import CabbageModal from './modals/CabbageModal'
+import CarrotModal from './modals/CarrotModal'
 // import Plant from './Plant'
 
 class Garden extends Component {
@@ -171,6 +173,9 @@ class Garden extends Component {
 
                
             <BeanModal />
+            <CabbageModal />
+            <CarrotModal />
+
             </div>
         )
     }

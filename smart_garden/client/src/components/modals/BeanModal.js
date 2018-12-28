@@ -1,6 +1,6 @@
 import React from 'react';
-import {withCompanion} from '../context/CompanionProvider';
-import '../css/modalStyle.css'
+import {withCompanion} from '../../context/CompanionProvider';
+import '../../css/modalStyle.css'
 
 const BeanModal = (props) => {
 
@@ -25,11 +25,10 @@ const BeanModal = (props) => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aspernatur deleniti recusandae repellat doloribus officia. Earum voluptatem delectus quas, asperiores eos nesciunt magnam, debitis optio illo adipisci cupiditate repellendus praesentium!</p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
-
-    )
-    
+    )  
 }
 
 export default withCompanion(BeanModal)
