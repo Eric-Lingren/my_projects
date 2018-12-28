@@ -1,0 +1,21 @@
+.title{
+    font-size: 1.5vw;
+    text-decoration: underline;
+    margin: 0;
+    margin-bottom: 1%;
+}
+.plantDescriptionWrapper{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 5%;
+}
+img{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid lightgreen;
+}
+ul{
+    margin: 0;
+    margin-left: -5%;
+}

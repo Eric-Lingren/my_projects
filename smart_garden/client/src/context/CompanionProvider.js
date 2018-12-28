@@ -13,6 +13,7 @@ class CompanionProvider extends Component {
             getGardenPlot: [],
             plotHeight: 0,
             plotWidth: 0,
+            showAsparagusRecommend: false,
             showBeanRecommend: false,
             showCabbageRecommend: false,
             showCarrotRecommend: false,
@@ -48,6 +49,13 @@ class CompanionProvider extends Component {
         })
     }
     
+    asparagusRecommend = () => {
+        if( this.state.showAsparagusRecommend){
+            this.setState({showAsparagusRecommend: false})
+        } else {
+            this.setState({showAsparagusRecommend: true})
+        } 
+    }
     beanRecommend = () => {
         if( this.state.showBeanRecommend){
             this.setState({showBeanRecommend: false})
@@ -245,6 +253,41 @@ class CompanionProvider extends Component {
             bottomRightCell = (cellBelow + 1)
         }
 
+
+        if (cellData === 'asparagus' ){
+            if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
+                document.getElementById(cellAbove).innerHTML  = `<div id='asparagusRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend1').addEventListener('mouseover', this.asparagusRecommend)                                                   
+            }
+            if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
+                document.getElementById(cellBelow).innerHTML = `<div id='asparagusRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend2').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
+                document.getElementById(cellToLeft).innerHTML = `<div id='asparagusRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend3').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
+                document.getElementById(cellToRight).innerHTML = `<div id='asparagusRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend4').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
+                document.getElementById(topLeftCell).innerHTML = `<div id='asparagusRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend5').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
+                document.getElementById(topRightCell).innerHTML = `<div id='asparagusRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend6').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='asparagusRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend7').addEventListener('mouseover', this.asparagusRecommend)
+            }
+            if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
+                document.getElementById(bottomRightCell).innerHTML = `<div id='asparagusRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('asparagusRecommend8').addEventListener('mouseover', this.asparagusRecommend)
+            }
+        }
 
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
@@ -816,6 +859,8 @@ class CompanionProvider extends Component {
                     handleAddGardenData: this.handleAddGardenData,
                     tryingToGetGardenData: this.tryingToGetGardenData,
                     handleAddGardenDimensions: this.handleAddGardenDimensions,
+                    showAsparagusRecommend: this.state.showAsparagusRecommend,
+                    asparagusRecommend: this.asparagusRecommend,
                     showBeanRecommend: this.state.showBeanRecommend,
                     beanRecommend: this.beanRecommend,
                     cabbageRecommend: this.cabbageRecommend,

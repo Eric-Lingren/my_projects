@@ -14,10 +14,9 @@ import {withPlants} from '../context/PlantProvider';
     }
 
     componentWillReceiveProps(nextProps){
-        // console.log(nextProps)
-        // console.log('props plant url is ' + nextProps.selectedPlantUrl)
         this.setState({imageUrl: nextProps.selectedPlantUrl})
     }
+
     handleChange = (e) => {
         const {name, value} = e.target;
         this.setState({
@@ -26,8 +25,10 @@ import {withPlants} from '../context/PlantProvider';
     }
 
     handleSubmit = (e) => {
+        e.preventDefault()
         axios.post('/plants', this.state ).then(res => {
             this.props.getPlants()
+            this.resetForm()
         })
     }
 
@@ -36,10 +37,15 @@ import {withPlants} from '../context/PlantProvider';
         this.props.setImageToggle()
     }
 
-  
+    resetForm = () => {
+        this.setState({
+            plantType: '',
+            varitey: '',
+            imageUrl: '',
+        })
+    }
 
     render(){
-        // console.log(this.props.selectedPlantUrl)
         return(
             <div className='addPlantContainer'>
                 <h4 className='titleHeader'> Add Plant to List:</h4>
