@@ -9,6 +9,18 @@ import BeanModal from './modals/BeanModal'
 import CabbageModal from './modals/CabbageModal'
 import CarrotModal from './modals/CarrotModal'
 import CornModal from './modals/CornModal'
+import CucumberModal from './modals/CucumberModal'
+import EggplantModal from './modals/EggplantModal'
+import LettuceModal from './modals/LettuceModal'
+import OnionModal from './modals/OnionModal'
+import PeaModal from './modals/PeaModal'
+import PepperModal from './modals/PepperModal'
+import PotatoModal from './modals/PotatoModal'
+import PumpkinModal from './modals/PumpkinModal'
+import RadishModal from './modals/RadishModal'
+import SpinichModal from './modals/SpinichModal'
+import SquashModal from './modals/SquashModal'
+import TomatoModal from './modals/TomatoModal'
 // import Plant from './Plant'
 
 class Garden extends Component {
@@ -177,6 +189,18 @@ class Garden extends Component {
             <CabbageModal />
             <CarrotModal />
             <CornModal />
+            <CucumberModal />
+            <EggplantModal />
+            <LettuceModal />
+            <OnionModal />
+            <PeaModal />
+            <PepperModal />
+            <PotatoModal />
+            <PumpkinModal />
+            <RadishModal />
+            <SpinichModal />
+            <SquashModal />
+            <TomatoModal />
 
             </div>
         )
