@@ -17,12 +17,16 @@ const RadishModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dicta quaerat culpa quibusdam eveniet doloremque corporis deleniti dolore quidem totam. Provident dignissimos labore rerum reiciendis minima magnam distinctio natus quod.</p>
+                            <p>
+                            squash eggplant cucumber lettuce peas beans basil cilantro onion spinich tomato
+                            </p>
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aspernatur deleniti recusandae repellat doloribus officia. Earum voluptatem delectus quas, asperiores eos nesciunt magnam, debitis optio illo adipisci cupiditate repellendus praesentium!</p>
+                            <p>
+                            grapes
+                            </p>
                         </div>
                     </div>
                     

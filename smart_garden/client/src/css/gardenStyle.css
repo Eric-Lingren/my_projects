@@ -9,7 +9,7 @@
   margin-left: 1%;
   margin-top: .8%;
   margin-bottom: 1%;
-  background-color: #5ECC7B;
+  background-color: #593622;
   overflow: visible;
   -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: white;
   
 }
 .gardenGenerateForm{

@@ -9,11 +9,12 @@
     align-items: center;
     margin-left: 4%;
     margin-top: 4%;
-    background-color: #5ECC7B;
+    background-color: #593622;
     width: 180px;
     -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
+    color: white;
 }
 .plantSelector{
     margin-top: 10px;
