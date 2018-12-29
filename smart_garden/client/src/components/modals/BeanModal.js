@@ -10,11 +10,18 @@ import CauliflowerDescription from '../plantDescriptions/CauliflowerDescription'
 import CeleryDescription from '../plantDescriptions/CeleryDescription';
 import CornDescription from '../plantDescriptions/CornDescription';
 import CucumberDescription from '../plantDescriptions/CucumberDescription';
-
+import EggplantDescription from '../plantDescriptions/EggplantDescription';
 import GarlicDescription from '../plantDescriptions/GarlicDescription';
+import LeekDescription from '../plantDescriptions/LeekDescription';
 import OnionDescription from '../plantDescriptions/OnionDescription';
-
+import PeaDescription from '../plantDescriptions/PeaDescription';
+import PepperDescription from '../plantDescriptions/PepperDescription';
 import PotatoDescription from '../plantDescriptions/PotatoDescription';
+import RadishDescription from '../plantDescriptions/RadishDescription';
+import ShallotDescription from '../plantDescriptions/ShallotDescription';
+import SquashDescription from '../plantDescriptions/SquashDescription';
+import StrawberryDescription from '../plantDescriptions/StrawberryDescription';
+import SunflowerDescription from '../plantDescriptions/SunflowerDescription';
 import TansyDescription from '../plantDescriptions/TansyDescription';
 import TomatoDescription from '../plantDescriptions/TomatoDescription';
 
@@ -43,20 +50,27 @@ const BeanModal = (props) => {
                             <CeleryDescription />
                             <CornDescription />
                             <CucumberDescription />
+                            <EggplantDescription />
+                            <PeaDescription />
                             <PotatoDescription />
+                            <RadishDescription />
+                            <SquashDescription />
+                            <StrawberryDescription />
                             <TansyDescription />
                             <TomatoDescription />
-                            
-                            <p>  cucumber eggplant peas raddish squash strawberry</p>
+                       
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
 
                             <GarlicDescription />
+                            <LeekDescription />
                             <OnionDescription />
+                            <PepperDescription />
+                            <SunflowerDescription />
+                            <ShallotDescription />
 
-                            <p>fennel Leeks pepper sunflower Shallot  </p>
                         </div>
                     </div>
                     
