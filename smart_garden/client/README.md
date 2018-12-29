@@ -62,8 +62,8 @@ PA parsley =
 PE pepper = okra tomato onions basil cilantro spinich
 PE pepper != beans kale brussle sprouts
 
-PO potato = beans corn peas cabbage cauliflower broccoli turnip
-PO potato != carrot cucumber pumpkin squash tomato
+PO potato = beans corn peas cabbage cauliflower broccoli turnip horseraddish
+PO potato != carrot cucumber pumpkin squash tomato asparagus, carrots, fennel, turnips, and onionsraspberries, sunflowers, pumpkins squash, and cucumbers.
 
 PU pumpkin = corn beans radish oregano
 PU pumpkin != potato
@@ -87,7 +87,7 @@ SU sunflower =
 
 TH thyme = 
 
-TO tomato =  asparagus basil beans carrots celery dill lettuce melons onion oregano parsley peppers raddish spinich                         thyme
+TO tomato =  asparagus basil beans carrots celery lettuce melons onion oregano parsley peppers raddish spinich thyme
 TO tomato != beet broccoli brusslesprouts corn cauliflower cabbage kale potato rosemary 
 
 TU turnip = peas broccoli

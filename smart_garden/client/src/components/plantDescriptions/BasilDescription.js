@@ -15,6 +15,7 @@ const BasilDescription = () => {
                     <ul>
                         <li>Repeals tomato hornworms, aphids, asparagus beetles, mosquitoes, and white flies</li>
                         <li>Attracts ladybugs and butterflies</li>
+                        <li>Increases tomato yields</li>
                     </ul>
                 </div>
             </div>

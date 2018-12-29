@@ -2,6 +2,18 @@ import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
 import BasilDescription from '../plantDescriptions/BasilDescription';
+import BeetDescription from '../plantDescriptions/BeetDescription';
+import CilantroDescription from '../plantDescriptions/CilantroDescription';
+import DillDescription from '../plantDescriptions/DillDescription';
+import LettuceDescription from '../plantDescriptions/LettuceDescription';
+import MarigoldDescription from '../plantDescriptions/MarigoldDescription';
+import ParsleyDescription from '../plantDescriptions/ParsleyDescription';
+import SpinichDescription from '../plantDescriptions/SpinichDescription';
+import TansyDescription from '../plantDescriptions/TansyDescription';
+import TomatoDescription from '../plantDescriptions/TomatoDescription';
+import GarlicDescription from '../plantDescriptions/GarlicDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
+import PotatoDescription from '../plantDescriptions/PotatoDescription';
 
 const AsparagusModal = (props) => {
 
@@ -18,23 +30,27 @@ const AsparagusModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
+
                             <BasilDescription />
-                            <p> Basil
-                                Beets
-                                Cilantro
-                                Comfrey
-                                Dill
-                                Lettuce
-                                Marigolds
-                                Parsley
-                                Spinich
-                                Tomatoes
-                            </p>
+                            <BeetDescription />
+                            <CilantroDescription />
+                            <DillDescription />
+                            <LettuceDescription />
+                            <MarigoldDescription />
+                            <ParsleyDescription />
+                            <SpinichDescription />
+                            <TansyDescription />
+                            <TomatoDescription />
+                           
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>garlic onion potato</p>
+
+                            <GarlicDescription />
+                            <OnionDescription />
+                            <PotatoDescription />
+
                         </div>
                     </div>
                     
