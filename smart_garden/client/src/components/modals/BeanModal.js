@@ -4,6 +4,13 @@ import '../../css/modalStyle.css'
 import BeetDescription from '../plantDescriptions/BeetDescription';
 import BroccoliDescription from '../plantDescriptions/BroccoliDescription';
 import CabbageDescription from '../plantDescriptions/CabbageDescription';
+import CarrotDescription from '../plantDescriptions/CarrotDescription';
+import CatnipDescription from '../plantDescriptions/CatnipDescription';
+import CauliflowerDescription from '../plantDescriptions/CauliflowerDescription';
+import CeleryDescription from '../plantDescriptions/CeleryDescription';
+import CornDescription from '../plantDescriptions/CornDescription';
+import CucumberDescription from '../plantDescriptions/CucumberDescription';
+
 import GarlicDescription from '../plantDescriptions/GarlicDescription';
 import OnionDescription from '../plantDescriptions/OnionDescription';
 
@@ -30,12 +37,17 @@ const BeanModal = (props) => {
                             <BeetDescription />
                             <BroccoliDescription />
                             <CabbageDescription />
+                            <CarrotDescription />
+                            <CatnipDescription />
+                            <CauliflowerDescription />
+                            <CeleryDescription />
+                            <CornDescription />
+                            <CucumberDescription />
                             <PotatoDescription />
                             <TansyDescription />
                             <TomatoDescription />
                             
-                            <p>  cabbage carrots Catnip repels flea beetles cauliflower celery corn cucumber eggplant peas 
-                                raddish squash strawberry</p>
+                            <p>  cucumber eggplant peas raddish squash strawberry</p>
                         </div>
 
                         <div className='suggestionContainer'>

@@ -5,7 +5,7 @@ B bean != garlic onion pepper sunflower
 
 BA basil = 
 
-BE beats = 
+BE beats = catnip
 
 BR broccoli = 
 
@@ -65,7 +65,7 @@ PE pepper != beans kale brussle sprouts
 PO potato = beans corn peas cabbage cauliflower broccoli turnip horseraddish
 PO potato != carrot cucumber pumpkin squash tomato asparagus, carrots, fennel, turnips, and onionsraspberries, sunflowers, pumpkins squash, and cucumbers.
 
-PU pumpkin = corn beans radish oregano
+PU pumpkin = corn catnip beans radish oregano
 PU pumpkin != potato
 
 R rosemary = 
@@ -79,7 +79,7 @@ SA sage =
 
 SP spinich = cabbage cauliflower broccoli turnip strawberries peas beans
 
-SQ squash = beans corn okra radish
+SQ squash = beans catnip corn okra radish
 
 <!-- SP sweet potato = okra -->
 
