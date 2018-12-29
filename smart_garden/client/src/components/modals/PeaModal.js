@@ -1,6 +1,21 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import CarrotDescription from '../plantDescriptions/CarrotDescription';
+import ChiveDescription from '../plantDescriptions/ChiveDescription';
+import CornDescription from '../plantDescriptions/CornDescription';
+import CucumberDescription from '../plantDescriptions/CucumberDescription';
+import EggplantDescription from '../plantDescriptions/EggplantDescription';
+import GarlicDescription from '../plantDescriptions/GarlicDescription';
+import LeekDescription from '../plantDescriptions/LeekDescription';
+import LettuceDescription from '../plantDescriptions/LettuceDescription';
+import MelonDescription from '../plantDescriptions/MelonDescription';
+import MintDescription from '../plantDescriptions/MintDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
+import RadishDescription from '../plantDescriptions/RadishDescription';
+import ShallotDescription from '../plantDescriptions/ShallotDescription';
+import SpinichDescription from '../plantDescriptions/SpinichDescription';
 
 const PeaModal = (props) => {
 
@@ -17,12 +32,29 @@ const PeaModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>turnip cauliflower garlic mint</p>
+
+                            <BeanDescription /> 
+                            <CarrotDescription /> 
+                            <CornDescription /> 
+                            <CucumberDescription /> 
+                            <EggplantDescription /> 
+                            <LettuceDescription /> 
+                            <MelonDescription /> 
+                            <MintDescription /> 
+                            <RadishDescription /> 
+                            <SpinichDescription /> 
+
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p> no negative plants</p>
+
+                            <ChiveDescription />
+                            <GarlicDescription /> 
+                            <LeekDescription /> 
+                            <OnionDescription /> 
+                            <ShallotDescription />
+
                         </div>
                     </div>
                     
