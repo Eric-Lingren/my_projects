@@ -14,7 +14,10 @@ class CompanionProvider extends Component {
             plotHeight: 0,
             plotWidth: 0,
             showAsparagusRecommend: false,
+            showBasilRecommend: false,
             showBeanRecommend: false,
+            showBeetRecommend: false,
+            showBroccoliRecommend: false,
             showCabbageRecommend: false,
             showCarrotRecommend: false,
             showCornRecommend: false,
@@ -56,11 +59,32 @@ class CompanionProvider extends Component {
             this.setState({showAsparagusRecommend: true})
         } 
     }
+    basilRecommend = () => {
+        if( this.state.showBasilRecommend){
+            this.setState({showBasilRecommend: false})
+        } else {
+            this.setState({showBasilRecommend: true})
+        } 
+    }
     beanRecommend = () => {
         if( this.state.showBeanRecommend){
             this.setState({showBeanRecommend: false})
         } else {
             this.setState({showBeanRecommend: true})
+        } 
+    }
+    beetRecommend = () => {
+        if( this.state.showBeetRecommend){
+            this.setState({showBeetRecommend: false})
+        } else {
+            this.setState({showBeetRecommend: true})
+        } 
+    }
+    broccoliRecommend = () => {
+        if( this.state.showBroccoliRecommend){
+            this.setState({showBroccoliRecommend: false})
+        } else {
+            this.setState({showBroccoliRecommend: true})
         } 
     }
     cabbageRecommend = () => {
@@ -148,7 +172,7 @@ class CompanionProvider extends Component {
         }  
     }
     spinachRecommend = () => {
-        if( this.state.showSpinichRecommend){
+        if( this.state.showSpinachRecommend){
             this.setState({showSpinachRecommend: false})
         } else {
             this.setState({showSpinachRecommend: true})
@@ -162,7 +186,6 @@ class CompanionProvider extends Component {
         }  
     }
     tomatoRecommend = () => {
-        console.log('squash function ran')
         if( this.state.showTomatoRecommend){
             this.setState({showTomatoRecommend: false})
         } else {
@@ -185,7 +208,6 @@ class CompanionProvider extends Component {
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
 
-        console.log(cellData)
 
         for (let i = 0; i < this.state.getGardenData.length; i++){
             if(this.state.getGardenData[i].cell === Number(clickedCell)){
@@ -255,7 +277,6 @@ class CompanionProvider extends Component {
             bottomRightCell = (cellBelow + 1)
         }
 
-
         if (cellData === 'asparagus' ){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
                 document.getElementById(cellAbove).innerHTML  = `<div id='asparagusRecommend1' class='recommend' > SUGGESTION? </div>`
@@ -291,6 +312,41 @@ class CompanionProvider extends Component {
             }
         }
 
+        if (cellData === 'basil' ){
+            if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
+                document.getElementById(cellAbove).innerHTML  = `<div id='basilRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend1').addEventListener('mouseover', this.basilRecommend)                                                   
+            }
+            if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
+                document.getElementById(cellBelow).innerHTML = `<div id='basilRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend2').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
+                document.getElementById(cellToLeft).innerHTML = `<div id='basilRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend3').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
+                document.getElementById(cellToRight).innerHTML = `<div id='basilRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend4').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
+                document.getElementById(topLeftCell).innerHTML = `<div id='basilRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend5').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
+                document.getElementById(topRightCell).innerHTML = `<div id='basilRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend6').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='basilRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend7').addEventListener('mouseover', this.basilRecommend)
+            }
+            if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
+                document.getElementById(bottomRightCell).innerHTML = `<div id='basilRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('basilRecommend8').addEventListener('mouseover', this.basilRecommend)
+            }
+        }
+
         if (cellData === 'beans' || cellData === 'bean'){
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
                 document.getElementById(cellAbove).innerHTML  = `<div id='beanRecommend1' class='recommend' > SUGGESTION? </div>`
@@ -323,6 +379,76 @@ class CompanionProvider extends Component {
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
                 document.getElementById(bottomRightCell).innerHTML = `<div id='beanRecommend8' class='recommend' > SUGGESTION? </div>`
                 document.getElementById('beanRecommend8').addEventListener('mouseover', this.beanRecommend)
+            }
+        }
+
+        if (cellData === 'beet' || cellData === 'beets'){
+            if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
+                document.getElementById(cellAbove).innerHTML  = `<div id='beetRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend1').addEventListener('mouseover', this.beetRecommend)                                                   
+            }
+            if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
+                document.getElementById(cellBelow).innerHTML = `<div id='beetRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend2').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
+                document.getElementById(cellToLeft).innerHTML = `<div id='beetRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend3').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
+                document.getElementById(cellToRight).innerHTML = `<div id='beetRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend4').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
+                document.getElementById(topLeftCell).innerHTML = `<div id='beetRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend5').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
+                document.getElementById(topRightCell).innerHTML = `<div id='beetRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend6').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='beetRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend7').addEventListener('mouseover', this.beetRecommend)
+            }
+            if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
+                document.getElementById(bottomRightCell).innerHTML = `<div id='beetRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('beetRecommend8').addEventListener('mouseover', this.beetRecommend)
+            }
+        }
+
+        if (cellData === 'broccoli'){
+            if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
+                document.getElementById(cellAbove).innerHTML  = `<div id='broccoliRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend1').addEventListener('mouseover', this.broccoliRecommend)                                                   
+            }
+            if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
+                document.getElementById(cellBelow).innerHTML = `<div id='broccoliRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend2').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
+                document.getElementById(cellToLeft).innerHTML = `<div id='broccoliRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend3').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
+                document.getElementById(cellToRight).innerHTML = `<div id='broccoliRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend4').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
+                document.getElementById(topLeftCell).innerHTML = `<div id='broccoliRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend5').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
+                document.getElementById(topRightCell).innerHTML = `<div id='broccoliRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend6').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='broccoliRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend7').addEventListener('mouseover', this.broccoliRecommend)
+            }
+            if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
+                document.getElementById(bottomRightCell).innerHTML = `<div id='broccoliRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('broccoliRecommend8').addEventListener('mouseover', this.broccoliRecommend)
             }
         }
 
@@ -747,7 +873,6 @@ class CompanionProvider extends Component {
         }
 
         if (cellData === 'spinach'){
-            console.log('its spinach')
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
                 document.getElementById(cellAbove).innerHTML = `<div id='spinachRecommend1' class='recommend' > SUGGESTION? </div>`
                 document.getElementById('spinachRecommend1').addEventListener('mouseover', this.spinachRecommend)
@@ -864,8 +989,14 @@ class CompanionProvider extends Component {
                     handleAddGardenDimensions: this.handleAddGardenDimensions,
                     showAsparagusRecommend: this.state.showAsparagusRecommend,
                     asparagusRecommend: this.asparagusRecommend,
+                    showBasilRecommend: this.state.showBasilRecommend,
+                    basilRecommend: this.basilRecommend,
                     showBeanRecommend: this.state.showBeanRecommend,
                     beanRecommend: this.beanRecommend,
+                    showBeetRecommend: this.state.showBeetRecommend,
+                    beetRecommend: this.beetRecommend,
+                    showBroccoliRecommend: this.state.showBroccoliRecommend,
+                    broccoliRecommend: this.broccoliRecommend,
                     cabbageRecommend: this.cabbageRecommend,
                     showCabbageRecommend: this.state.showCabbageRecommend,
                     carrotRecommend: this.carrotRecommend,

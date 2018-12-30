@@ -1,42 +1,43 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import AsparagusDescription from '../plantDescriptions/AsparagusDescription';
 import BeanDescription from '../plantDescriptions/BeanDescription';
 import BroccoliDescription from '../plantDescriptions/BroccoliDescription';
-import CabbageDescription from '../plantDescriptions/CabbageDescription';
+import BrusselsproutDescription from '../plantDescriptions/BrusselsproutDescription';
 import CauliflowerDescription from '../plantDescriptions/CauliflowerDescription';
-import PeaDescription from '../plantDescriptions/PeaDescription';
-import StrawberryDescription from '../plantDescriptions/StrawberryDescription';
+import LettuceDescription from '../plantDescriptions/LettuceDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
 
-const SpinachModal = (props) => {
+const BeetModal = (props) => {
 
-    const show = props.showSpinachRecommend
+    const show = props.showBeetRecommend
 
     return(
 
         <div id="simpleModal" className= {show ? 'modalShow' : 'modalHide'} >
             <div class="modal-content">
-                <span class="closeBtn" onClick={props.spinachRecommend}>&times;</span>
-                <h1 className='modalTitle'> Spinach </h1>
+                <span class="closeBtn" onClick={props.beetRecommend}>&times;</span>
+                <h1 className='modalTitle'> Beet </h1>
                 <h2 className='modalSubTitle'> Companion Planting Guide: </h2>
 
                 <div className='suggestionWrapper'>
                     <div className='suggestionContainer'>
                         <h3 className='suggestionTitle'>Recommended:</h3>
 
-                        <BeanDescription /> 
+                        <AsparagusDescription /> 
                         <BroccoliDescription /> 
-                        <CabbageDescription /> 
+                        <BrusselsproutDescription /> 
                         <CauliflowerDescription /> 
-                        <PeaDescription /> 
-                        <StrawberryDescription /> 
+                        <LettuceDescription /> 
+                        <OnionDescription /> 
                         
                     </div>
 
                     <div className='suggestionContainer'>
                         <h3 className='suggestionTitle'>Not Recommended:</h3>
                         
-                        <p> No detrimental plants. Able to grow anything next to spinich. </p>
+                        <BeanDescription /> 
 
                     </div>
                 </div>
@@ -46,4 +47,4 @@ const SpinachModal = (props) => {
     )  
 }
 
-export default withCompanion(SpinachModal)
+export default withCompanion(BeetModal)

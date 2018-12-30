@@ -6,7 +6,10 @@ import axios from 'axios'
 import { withCompanion } from '../context/CompanionProvider'
 import ImagePicker from './ImagePicker'
 import AsparagusModal from './modals/AsparagusModal'
+import BasilModal from './modals/BasilModal'
 import BeanModal from './modals/BeanModal'
+import BeetModal from './modals/BeetModal'
+import BroccoliModal from './modals/BroccoliModal'
 import CabbageModal from './modals/CabbageModal'
 import CarrotModal from './modals/CarrotModal'
 import CornModal from './modals/CornModal'
@@ -187,7 +190,10 @@ class Garden extends Component {
 
                
             <AsparagusModal />
+            <BasilModal />
             <BeanModal />
+            <BeetModal />
+            <BroccoliModal />
             <CabbageModal />
             <CarrotModal />
             <CornModal />
