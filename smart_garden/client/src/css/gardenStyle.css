@@ -9,8 +9,8 @@
   margin-left: 1%;
   margin-top: .8%;
   margin-bottom: 1%;
-  /* background-color: #593622; */
-  background-image: url('./image/wood.jpg');
+  background-color: #856245;
+  /* background-image: url('./image/wood.jpg'); */
   overflow: visible;
   -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.75);
@@ -89,6 +89,20 @@ table, th, td {
   flex-direction: column;
   color: white;
 }
+.cellLoaded{
+  background-image: url(./image/dirt.jpg);
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  border: 1px solid white;
+  height: 100px;
+  width: 100px;
+  margin: 1px;
+  color : black;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
 
 .gardenBox{
   display: flex;
@@ -105,7 +119,7 @@ table, th, td {
 #gardenbox2{
   width: auto;
   display: grid;
-  /* grid-template-columns: 75px 75px 75px; */
+  grid-column-gap: 4px;
 
 }
 .gardenGridWrapper{

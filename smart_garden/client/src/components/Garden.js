@@ -52,6 +52,8 @@ class Garden extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        console.log(this.state.gardenData)
+        console.log(this.gardenData)
         if (this.state.gardenName === '' || this.state.gardenYear === 0) {
             alert('You must give a name and a year before submitting')
         } else {
@@ -87,7 +89,7 @@ class Garden extends Component {
         this.gardenPlot = height.map(ind => {
             const gardenColumns = width.map(myInd => {
                 index++
-                this.gardenData.push({ cell: index, contents: '', backgroundColor: 0 })
+                this.gardenData.push({ cell: index, contents: '', imageUrl: null })
                 return  <div className='cell' onClick={this.props.cellClick} id={index} key={index}>
                             {index}
                         </div>

@@ -5,6 +5,7 @@ import '../css/imageSelector.css'
 import {withPlants} from '../context/PlantProvider';
 import axios from 'axios'
 
+
 class PlantImagePicker extends Component {
   constructor(props) {
     super(props)
@@ -17,6 +18,7 @@ class PlantImagePicker extends Component {
 
   componentDidMount(){
     this.getImages()
+    
   }
  
   getImages = () => {
@@ -27,6 +29,7 @@ class PlantImagePicker extends Component {
           imageUrl: [...prevState.imageUrl, image.imageUrl]
         }))
       });
+      
     })
   }
 

@@ -16,7 +16,7 @@ const ThymeDescription = () => {
                     <li>Attracts hoverflies which eat aphids</li>
                     <li>Repels cabbage worm, cabbage weevil, cabbage looper and whitefly</li>
                     <li>Good for all crops</li>
-                    <li>Only succeptible to gray mod and root rot</li>
+                    <li>Only succeptible to gray mold and root rot</li>
                     
                 </ul>
             </div>

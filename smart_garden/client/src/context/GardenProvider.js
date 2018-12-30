@@ -46,17 +46,17 @@ class GardenProvider extends Component {
     }
 
     loadSavedGarden = (callback) => {
-        console.log(this.state.selectedGardenPlotHeight)
-        console.log(this.state.selectedGardenPlotWidth)
-
+        console.log(this.state.selectedGardenData)
         this.setState(prevState => {
             return {
                 loadedGardenData: prevState.selectedGardenData.map(plot => {
-                    const rgbColor = plot.backgroundColor
+                    // const rgbColor = plot.backgroundColor
+                    console.log(plot.imageUrl)
+                    const image = plot.imageUrl
                     return (
-                        <div className='cell' 
+                        <div className='cellLoaded' 
                              id={plot.cell} 
-                             style={{ backgroundColor: rgbColor }} 
+                             style={{ backgroundImage: image }} 
                              onClick={callback} > 
                                 {plot.contents} 
                         </div>
@@ -78,15 +78,6 @@ class GardenProvider extends Component {
             this.getGardens()
             this.clearLoadedGardenData()
         }).catch(err => console.log(err.response.data.errMsg))
-    }
-
-    toggleModals = () => {
-        this.setState({
-            isToggled: true
-        })
-        if(this.state.isToggled){
-        } else {
-        }
     }
 
     render(){

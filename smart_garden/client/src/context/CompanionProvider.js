@@ -195,7 +195,6 @@ class CompanionProvider extends Component {
 
     cellClick = (e, callBack) => {
 
-        e.target.style.backgroundColor = this.props.selectedPlotColor
         e.target.textContent=`${this.props.selectedPlantType}`
         e.target.style.backgroundImage = `url(${this.props.selectedPlantUrl})`
         e.target.style.color = 'black'
@@ -206,13 +205,14 @@ class CompanionProvider extends Component {
 
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
-        const cellColor = e.target.style.backgroundColor
+        const cellImage = e.target.style.backgroundImage
 
+        console.log(cellImage)
 
         for (let i = 0; i < this.state.getGardenData.length; i++){
             if(this.state.getGardenData[i].cell === Number(clickedCell)){
                 this.otherGardenData[i].contents = cellData
-                this.otherGardenData[i].backgroundColor = cellColor
+                this.otherGardenData[i].imageUrl = cellImage
                 let newPlot = this.otherGardenData[i]
                 this.setState(prevState => {
                     return {
