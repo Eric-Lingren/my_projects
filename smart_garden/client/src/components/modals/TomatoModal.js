@@ -1,6 +1,30 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import AsparagusDescription from '../plantDescriptions/AsparagusDescription';
+import BasilDescription from '../plantDescriptions/BasilDescription';
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import BeetDescription from '../plantDescriptions/BeetDescription';
+import BroccoliDescription from '../plantDescriptions/BroccoliDescription';
+import BrusselsproutDescription from '../plantDescriptions/BrusselsproutDescription';
+import CabbageDescription from '../plantDescriptions/CabbageDescription';
+import CarrotDescription from '../plantDescriptions/CarrotDescription';
+import CauliflowerDescription from '../plantDescriptions/CauliflowerDescription';
+import CeleryDescription from '../plantDescriptions/CeleryDescription';
+import CornDescription from '../plantDescriptions/CornDescription';
+import DillDescription from '../plantDescriptions/DillDescription';
+import KaleDescription from '../plantDescriptions/KaleDescription';
+import LettuceDescription from '../plantDescriptions/LettuceDescription';
+import MelonDescription from '../plantDescriptions/MelonDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
+import OreganoDescription from '../plantDescriptions/OreganoDescription';
+import ParsleyDescription from '../plantDescriptions/ParsleyDescription';
+import PepperDescription from '../plantDescriptions/PepperDescription';
+import PotatoDescription from '../plantDescriptions/PotatoDescription';
+import RadishDescription from '../plantDescriptions/RadishDescription';
+import RosemaryDescription from '../plantDescriptions/RosemaryDescription';
+import SpinichDescription from '../plantDescriptions/SpinichDescription';
+import ThymeDescription from '../plantDescriptions/ThymeDescription';
 
 const TomatoModal = (props) => {
 
@@ -17,16 +41,38 @@ const TomatoModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>
-                            asparagus basil beans carrots celery dill lettuce melons onion oregano parsley peppers raddish spinich thyme
-                            </p>
+                           
+                            <AsparagusDescription /> 
+                            <BasilDescription /> 
+                            <BeanDescription /> 
+                            <CarrotDescription /> 
+                            <CeleryDescription /> 
+                            <DillDescription /> 
+                            <LettuceDescription /> 
+                            <MelonDescription /> 
+                            <OnionDescription /> 
+                            <OreganoDescription /> 
+                            <ParsleyDescription /> 
+                            <PepperDescription /> 
+                            <RadishDescription /> 
+                            <SpinichDescription /> 
+                            <ThymeDescription /> 
+                           
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>
-                            beet broccoli brusslesprouts corn cauliflower cabbage kale potato rosemary
-                            </p>
+
+                            <BeetDescription />
+                            <BroccoliDescription />
+                            <BrusselsproutDescription />
+                            <CornDescription />
+                            <CabbageDescription />
+                            <CauliflowerDescription />
+                            <KaleDescription />
+                            <PotatoDescription />
+                            <RosemaryDescription />
+
                         </div>
                     </div>
                     

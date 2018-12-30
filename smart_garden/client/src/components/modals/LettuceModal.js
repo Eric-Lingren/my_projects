@@ -9,6 +9,7 @@ import BrusselsproutDescription from '../plantDescriptions/BrusselsproutDescript
 import CarrotDescription from '../plantDescriptions/CarrotDescription';
 import CeleryDescription from '../plantDescriptions/CeleryDescription';
 import EggplantDescription from '../plantDescriptions/EggplantDescription';
+import GrapeDescription from '../plantDescriptions/GrapeDescription';
 import OkraDescription from '../plantDescriptions/OkraDescription';
 import OnionDescription from '../plantDescriptions/OnionDescription';
 import PeaDescription from '../plantDescriptions/PeaDescription';
@@ -50,6 +51,7 @@ const LettuceModal = (props) => {
 
                             <BroccoliDescription />
                             <CeleryDescription />
+                            <GrapeDescription />
                                
                         </div>
                     </div>

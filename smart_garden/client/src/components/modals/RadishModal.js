@@ -1,6 +1,18 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import BasilDescription from '../plantDescriptions/BasilDescription';
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import CilantroDescription from '../plantDescriptions/CilantroDescription';
+import CucumberDescription from '../plantDescriptions/CucumberDescription';
+import EggplantDescription from '../plantDescriptions/EggplantDescription';
+import GrapeDescription from '../plantDescriptions/GrapeDescription';
+import LettuceDescription from '../plantDescriptions/LettuceDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
+import PeaDescription from '../plantDescriptions/PeaDescription';
+import SpinichDescription from '../plantDescriptions/SpinichDescription';
+import SquashDescription from '../plantDescriptions/SquashDescription';
+import TomatoDescription from '../plantDescriptions/TomatoDescription';
 
 const RadishModal = (props) => {
 
@@ -17,16 +29,26 @@ const RadishModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>
-                            squash eggplant cucumber lettuce peas beans basil cilantro onion spinich tomato
-                            </p>
+
+                            <BasilDescription />
+                            <BeanDescription />
+                            <CilantroDescription />
+                            <CucumberDescription />
+                            <EggplantDescription />
+                            <LettuceDescription />
+                            <OnionDescription />
+                            <PeaDescription />
+                            <SpinichDescription />
+                            <SquashDescription />
+                            <TomatoDescription />
+                            
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>
-                            grapes
-                            </p>
+                            
+                            <GrapeDescription />
+                            
                         </div>
                     </div>
                     

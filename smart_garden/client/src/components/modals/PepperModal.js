@@ -1,6 +1,15 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import BasilDescription from '../plantDescriptions/BasilDescription';
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import BrusselsproutDescription from '../plantDescriptions/BrusselsproutDescription';
+import CilantroDescription from '../plantDescriptions/CilantroDescription';
+import KaleDescription from '../plantDescriptions/KaleDescription';
+import OkraDescription from '../plantDescriptions/OkraDescription';
+import OnionDescription from '../plantDescriptions/OnionDescription';
+import SpinichDescription from '../plantDescriptions/SpinichDescription';
+import TomatoDescription from '../plantDescriptions/TomatoDescription';
 
 const PepperModal = (props) => {
 
@@ -17,16 +26,23 @@ const PepperModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>
-                                okra tomato onions basil cilantro spinich
-                            </p>
+
+                            <BasilDescription />
+                            <CilantroDescription />
+                            <OkraDescription />
+                            <OnionDescription />
+                            <SpinichDescription />
+                            <TomatoDescription />
+
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>
-                            beans kale brussle sprouts
-                            </p>
+
+                            <BeanDescription />
+                            <BrusselsproutDescription />
+                            <KaleDescription />
+
                         </div>
                     </div>
                     

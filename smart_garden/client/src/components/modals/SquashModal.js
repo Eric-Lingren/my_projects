@@ -1,6 +1,16 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import CornDescription from '../plantDescriptions/CornDescription';
+import MarigoldDescription from '../plantDescriptions/MarigoldDescription';
+import MelonDescription from '../plantDescriptions/MelonDescription';
+import OkraDescription from '../plantDescriptions/OkraDescription';
+import OreganoDescription from '../plantDescriptions/OreganoDescription';
+import PotatoDescription from '../plantDescriptions/PotatoDescription';
+import PumpkinDescription from '../plantDescriptions/PumpkinDescription';
+import RadishDescription from '../plantDescriptions/RadishDescription';
+import TansyDescription from '../plantDescriptions/TansyDescription';
 
 const SquashModal = (props) => {
 
@@ -17,16 +27,24 @@ const SquashModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>
-                            beans corn okra radish
-                            </p>
+
+                            <BeanDescription /> 
+                            <CornDescription /> 
+                            <MarigoldDescription /> 
+                            <MelonDescription /> 
+                            <OkraDescription /> 
+                            <OreganoDescription /> 
+                            <PumpkinDescription /> 
+                            <RadishDescription /> 
+                            <TansyDescription /> 
+
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>
-                                no negative plants
-                            </p>
+
+                            <PotatoDescription /> 
+                            
                         </div>
                     </div>
                     

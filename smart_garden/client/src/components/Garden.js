@@ -19,7 +19,7 @@ import PepperModal from './modals/PepperModal'
 import PotatoModal from './modals/PotatoModal'
 import PumpkinModal from './modals/PumpkinModal'
 import RadishModal from './modals/RadishModal'
-import SpinichModal from './modals/SpinichModal'
+import SpinachModal from './modals/SpinachModal'
 import SquashModal from './modals/SquashModal'
 import TomatoModal from './modals/TomatoModal'
 // import Plant from './Plant'
@@ -200,7 +200,7 @@ class Garden extends Component {
             <PotatoModal />
             <PumpkinModal />
             <RadishModal />
-            <SpinichModal />
+            <SpinachModal />
             <SquashModal />
             <TomatoModal />
 

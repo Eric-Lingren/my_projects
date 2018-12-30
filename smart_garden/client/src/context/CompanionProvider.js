@@ -27,7 +27,7 @@ class CompanionProvider extends Component {
             showPotatoRecommend: false,
             showPumpkinRecommend: false,
             showRadishRecommend: false,
-            showSpinichRecommend: false,
+            showSpinachRecommend: false,
             showSquashRecommend: false,
             showTomatoRecommend: false,
         }
@@ -147,11 +147,11 @@ class CompanionProvider extends Component {
             this.setState({showRadishRecommend: true})
         }  
     }
-    spinichRecommend = () => {
+    spinachRecommend = () => {
         if( this.state.showSpinichRecommend){
-            this.setState({showSpinichRecommend: false})
+            this.setState({showSpinachRecommend: false})
         } else {
-            this.setState({showSpinichRecommend: true})
+            this.setState({showSpinachRecommend: true})
         }  
     }
     squashRecommend = () => {
@@ -184,6 +184,8 @@ class CompanionProvider extends Component {
         const clickedCell = e.target.id
         const cellData = e.target.innerHTML
         const cellColor = e.target.style.backgroundColor
+
+        console.log(cellData)
 
         for (let i = 0; i < this.state.getGardenData.length; i++){
             if(this.state.getGardenData[i].cell === Number(clickedCell)){
@@ -744,38 +746,39 @@ class CompanionProvider extends Component {
             }
         }
 
-        if (cellData === 'spinich'){
+        if (cellData === 'spinach'){
+            console.log('its spinach')
             if (cellAbove !== 0 && document.getElementById(cellAbove).innerHTML === cellAbove.toString() ) {
-                document.getElementById(cellAbove).innerHTML = `<div id='spinichRecommend1' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend1').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(cellAbove).innerHTML = `<div id='spinachRecommend1' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend1').addEventListener('mouseover', this.spinachRecommend)
             }
             if (cellBelow !== 0 && document.getElementById(cellBelow).innerHTML === cellBelow.toString() ) {
-                document.getElementById(cellBelow).innerHTML = `<div id='spinichRecommend2' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend2').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(cellBelow).innerHTML = `<div id='spinachRecommend2' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend2').addEventListener('mouseover', this.spinachRecommend)
             }
             if (cellToLeft !== 0 && document.getElementById(cellToLeft).innerHTML === cellToLeft.toString() ) {
-                document.getElementById(cellToLeft).innerHTML = `<div id='spinichRecommend3' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend3').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(cellToLeft).innerHTML = `<div id='spinachRecommend3' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend3').addEventListener('mouseover', this.spinachRecommend)
             }
             if (cellToRight !== 0 && document.getElementById(cellToRight).innerHTML === cellToRight.toString() ) {
-                document.getElementById(cellToRight).innerHTML = `<div id='spinichRecommend4' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend4').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(cellToRight).innerHTML = `<div id='spinachRecommend4' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend4').addEventListener('mouseover', this.spinachRecommend)
             }
             if (topLeftCell !== 0 && document.getElementById(topLeftCell).innerHTML === topLeftCell.toString() ) {
-                document.getElementById(topLeftCell).innerHTML = `<div id='spinichRecommend5' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend5').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(topLeftCell).innerHTML = `<div id='spinachRecommend5' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend5').addEventListener('mouseover', this.spinachRecommend)
             }
             if (topRightCell !== 0 && document.getElementById(topRightCell).innerHTML === topRightCell.toString() ) {
-                document.getElementById(topRightCell).innerHTML = `<div id='spinichRecommend6' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend6').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(topRightCell).innerHTML = `<div id='spinachRecommend6' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend6').addEventListener('mouseover', this.spinachRecommend)
             }
             if (bottomLeftCell !== 0 && document.getElementById(bottomLeftCell).innerHTML === bottomLeftCell.toString() ) {
-                document.getElementById(bottomLeftCell).innerHTML = `<div id='spinichRecommend7' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend7').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(bottomLeftCell).innerHTML = `<div id='spinachRecommend7' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend7').addEventListener('mouseover', this.spinachRecommend)
             }
             if (bottomRightCell !== 0 && document.getElementById(bottomRightCell).innerHTML === bottomRightCell.toString() ) {
-                document.getElementById(bottomRightCell).innerHTML = `<div id='spinichRecommend8' class='recommend' > SUGGESTION? </div>`
-                document.getElementById('spinichRecommend8').addEventListener('mouseover', this.spinichRecommend)
+                document.getElementById(bottomRightCell).innerHTML = `<div id='spinachRecommend8' class='recommend' > SUGGESTION? </div>`
+                document.getElementById('spinachRecommend8').addEventListener('mouseover', this.spinachRecommend)
             }
         }
 
@@ -887,8 +890,8 @@ class CompanionProvider extends Component {
                     showPumpkinRecommend: this.state.showPumpkinRecommend,
                     radishRecommend: this.radishRecommend,
                     showRadishRecommend: this.state.showRadishRecommend,
-                    spinichRecommend: this.spinichRecommend,
-                    showSpinichRecommend: this.state.showSquashRecommend,
+                    spinachRecommend: this.spinachRecommend,
+                    showSpinachRecommend: this.state.showSpinachRecommend,
                     squashRecommend: this.squashRecommend,
                     showSquashRecommend: this.state.showSquashRecommend,
                     tomatoRecommend: this.tomatoRecommend,

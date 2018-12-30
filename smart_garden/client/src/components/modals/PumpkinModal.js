@@ -1,6 +1,12 @@
 import React from 'react';
 import {withCompanion} from '../../context/CompanionProvider';
 import '../../css/modalStyle.css'
+import BeanDescription from '../plantDescriptions/BeanDescription';
+import CornDescription from '../plantDescriptions/CornDescription';
+import MarigoldDescription from '../plantDescriptions/MarigoldDescription';
+import OreganoDescription from '../plantDescriptions/OreganoDescription';
+import PotatoDescription from '../plantDescriptions/PotatoDescription';
+import RadishDescription from '../plantDescriptions/RadishDescription';
 
 const PumpkinModal = (props) => {
 
@@ -17,16 +23,20 @@ const PumpkinModal = (props) => {
                     <div className='suggestionWrapper'>
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Recommended:</h3>
-                            <p>
-                            corn beans radish oregano
-                            </p>
+
+                            <BeanDescription />
+                            <CornDescription />
+                            <MarigoldDescription />
+                            <OreganoDescription />
+                            <RadishDescription  />
+
                         </div>
 
                         <div className='suggestionContainer'>
                             <h3 className='suggestionTitle'>Not Recommended:</h3>
-                            <p>
-                            potato
-                            </p>
+                            
+                            <PotatoDescription />
+
                         </div>
                     </div>
                     

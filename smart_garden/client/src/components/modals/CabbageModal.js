@@ -7,6 +7,7 @@ import CauliflowerDescription from '../plantDescriptions/CauliflowerDescription'
 import CeleryDescription from '../plantDescriptions/CeleryDescription';
 import CucumberDescription from '../plantDescriptions/CucumberDescription';
 import DillDescription from '../plantDescriptions/DillDescription';
+import GrapeDescription from '../plantDescriptions/GrapeDescription';
 import LettuceDescription from '../plantDescriptions/LettuceDescription';
 import OnionDescription from '../plantDescriptions/OnionDescription';
 import PotatoDescription from '../plantDescriptions/PotatoDescription';
@@ -50,6 +51,7 @@ const CabbageModal = (props) => {
 
                         <BroccoliDescription />
                         <CauliflowerDescription />
+                        <GrapeDescription />
                         <StrawberryDescription />
                         <TomatoDescription />
 
