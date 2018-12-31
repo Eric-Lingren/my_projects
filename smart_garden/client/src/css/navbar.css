@@ -60,6 +60,28 @@
 .gardenListDropdown{
     margin-right: 3%;
 }
+.helpLink{
+    align-items: center;
+    margin-left: -10%;
+    width: 20%;
+    justify-content: center;
+    align-content: center;
+    margin-top: .5%;
+}
+
+.navbarTextLink{
+    color: white;
+    font-weight: bolder;
+    margin: 5%;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+.navbarTextLink:hover{
+   border-bottom: 2px solid white;
+}
+
 .logoWrapper{
     display: flex;
 }

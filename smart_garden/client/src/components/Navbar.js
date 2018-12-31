@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../css/navbar.css';
 import GardenList from './GardenList';
 import {withGardens} from '../context/GardenProvider'
+import {Link} from 'react-router-dom'
 
 class Navbar extends Component {
     constructor(props){
@@ -45,12 +46,16 @@ class Navbar extends Component {
                     
                 </div>
 
+                <div className='helpLink'>
+                    <Link className='navbarTextLink' to="/"> Home </Link>
+                    <Link className='navbarTextLink' to="/help"> Help? </Link>
+                    <Link className='navbarTextLink' to="/help"> Arduino </Link>
+                </div>
+
                 <div className='logoWrapper'>
-                
-                
-                <h1 className='pageTitle'> SmartGarden </h1> 
-                <h3 className='trademark'>™ </h3>
-                <div className='gifContianer'></div>
+                    <h1 className='pageTitle'> SmartGarden </h1> 
+                    <h3 className='trademark'>™ </h3>
+                    <div className='gifContianer'></div>
                 </div>
                 
                 
