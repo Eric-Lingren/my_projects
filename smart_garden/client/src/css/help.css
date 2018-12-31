@@ -3,7 +3,7 @@ body{
 
 }
 .helpWrapper{
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     height: 100%;
     width: 80%;
     display: flex;
@@ -15,6 +15,15 @@ body{
     margin-bottom: 2%;
     border-radius: 20px;
 }
+.helpTitle{
+    margin: 0;
+    padding: 0;
+    margin-top: 1%;
+}
+.helpSubtitle{
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
 .textContent{
     margin-left: 10%;
     margin-right: 10%;
@@ -25,4 +34,21 @@ body{
 .step{
     margin-left: 10%;
     margin-bottom: 0;
+}
+.checkItOut{
+    text-align: center;
+    margin-bottom: 0;
+}
+.arduinoLinkContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.ArduinoLink{
+    font-size: 2em;
+    color: blue;
+    margin: 0;
+    margin-bottom: 2%;
 }

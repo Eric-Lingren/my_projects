@@ -48,8 +48,8 @@ class Navbar extends Component {
 
                 <div className='helpLink'>
                     <Link className='navbarTextLink' to="/"> Home </Link>
-                    <Link className='navbarTextLink' to="/help"> Help? </Link>
-                    <Link className='navbarTextLink' to="/help"> Arduino </Link>
+                    <Link className='navbarTextLink' to="/help"> Help </Link>
+                    <Link className='navbarTextLink' to="/arduino"> Arduino </Link>
                 </div>
 
                 <div className='logoWrapper'>

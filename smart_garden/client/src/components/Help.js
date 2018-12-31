@@ -10,8 +10,8 @@ const Help = () => {
 
             <div className='helpWrapper'>
                 
-                <h1>Help</h1>
-                <h2>
+                <h1 className='helpTitle'>Need Some Help?</h1>
+                <h2 className='helpSubtitle'>
                     Welcome to the worlds most innovative and flexible garden planning tool!
                 </h2>
                 
@@ -29,7 +29,7 @@ const Help = () => {
                     <h3 className='step'>Step 2:</h3>
                     <p className='textContent'>
                         Select a plant from the "Add Plant To Garden" dropdown.  Click a plot in your garden to plant.  You will have customized suggestions appear 
-                        for neighbor plants which you can hover over to get more information.
+                        for neighbor plants which you can hover over to get more info.
                     </p>
 
                     <h3 className='step'>Step 3:</h3>
