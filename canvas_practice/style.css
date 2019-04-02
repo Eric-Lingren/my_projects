@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ACCDEF;
+}
+.navbar{
+    height: 50px;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    border-bottom: 4px solid black;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    color : black;
+}
