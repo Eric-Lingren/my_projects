@@ -3,8 +3,8 @@
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var mouse = {
     x: innerWidth / 2,
