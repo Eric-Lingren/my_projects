@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Webcam from './Webcam'
+import LiveVideo from './LiveVideo'
+import Canvas from './Canvas'
 
 class App extends Component {
   render() {
     return (
       <div>
-        This is the app component
-        <Webcam />
+        <LiveVideo />
+        <Canvas />
       </div>
     );
   }
