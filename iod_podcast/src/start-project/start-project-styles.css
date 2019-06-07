@@ -1,0 +1,59 @@
+.start-project-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+.start-project-heading{
+    font-size: 26px;
+    margin: 0;
+}
+
+.start-project-bullets{
+    font-size: 22px;
+    line-height: 28px;
+}
+.form-pdf-builder{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+}
+.input-title{
+    margin: 0;
+    color: #346094;
+}
+input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #346094;
+    font-size: 16px;
+}
+textarea{
+    height: 60px;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #346094;
+}
+
+@media only screen and (max-width: 430px) {
+    .start-project-heading{
+        font-size: 5vw;
+    }
+    .start-project-bullets{
+        margin: 0;
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+}

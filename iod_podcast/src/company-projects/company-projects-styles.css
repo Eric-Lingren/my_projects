@@ -1,0 +1,43 @@
+.company-projects-wrapper{
+    width: 100vw;
+    padding-bottom: 100px;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox]:checked ~ label > div {
+    transform: scale(1.5);
+    cursor: zoom-out;
+  }
+.company-projects-image-1{
+    background-image: url('./images/company-projects-1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40.5vw;
+    width: 100%;
+    margin-top: 25px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+
+.company-projects-image-2{
+    background-image: url('./images/company-projects-2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40vw;
+    width: 100%;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}
+.company-projects-image-3{
+    background-image: url('./images/company-projects-3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 6.15vw;
+    width: 100%;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+}

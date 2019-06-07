@@ -1,0 +1,83 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+}
+
+.logos-wrapper{
+    display: flex;
+}
+.company-logo-horizontal{
+    background-image: url('./logo.png');
+    width: 350px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.company-motto{
+    background-image: url('../assets/img_moto.png');
+    width: 150px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.links-wrapper{
+    background-color: #346094;
+    height: 70px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    padding-bottom: 3px;
+    padding: 7px 28px 7px 28px;
+    font-size: 14px;
+    text-align: center;
+    margin: 2px;
+}
+
+.link:hover, .active{
+    background-color: #fff;
+    color: #346596;
+}
+
+
+
+@media only screen and (max-width: 430px) {
+    .link{
+        padding: 3px 5px 3px 5px;
+        font-size: 3vw;
+        font-weight: 500;
+    }
+    .company-logo-horizontal{
+        width: 60vw;
+        /* height: 60px; */
+    }
+    
+    .company-motto{
+        width: 30vw;
+        /* height: 60px; */
+    }
+    .link:hover, .active{
+        background-color: #346596;
+        color: #fff;
+    }
+}

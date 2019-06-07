@@ -1,0 +1,341 @@
+.resources-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+.image-project-management-lifecycle{
+    background-image: url('./images/project-management-lifecycle.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 40px;
+
+}
+.image-smart-goals{
+    background-image: url('./images/smart-goals.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 500px;
+}
+.phases-of-project-management-wrapper{
+    width: 400px;
+}
+.project-management-main-header{
+    margin: 0;
+}
+.project-management-phase-section{
+    margin: 0;
+}
+
+
+
+
+
+.page-wrapper {
+overflow: hidden
+}
+
+
+.sticky, .sticky2 {
+    height: 100vh;
+    background: linear-gradient(160deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+    width: 100%;
+}
+.animation, .animation2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.heading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.pm-phases-header {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+}
+.section-heading-1 {
+    font-size: 25px;
+    position: relative;
+    top: 50%;
+    left: 30%;
+    margin: 0;
+}
+.section-heading-2 {
+    font-size: 25px;
+    position: relative;
+    top: 55%;
+    left: 32%;
+    margin: 0;
+}
+.section-heading-3 {
+    font-size: 25px;
+    position: relative;
+    top: 60%;
+    left: 34%;
+    margin: 0;
+}
+.section-heading-4 {
+    font-size: 25px;
+    position: relative;
+    top: 65%;
+    left: 36%;
+    margin: 0;
+}
+.section-heading-5 {
+    font-size: 25px;
+    position: relative;
+    top: 70%;
+    left: 38%;
+    margin: 0;
+}
+
+.detailed-project-management-wrapper{
+    padding-top: 130px;
+}
+.section {
+    height: 100vh;
+    background: linear-gradient(20deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+.stagger {
+    left: 400px;
+    position: relative;
+}
+.project-management-main-header{
+    font-size: 30px;
+}
+.section-heading{
+    margin-bottom: 3px;
+    margin-top: 6px;
+}
+.section-bullet-point{
+    list-style: none;
+    padding-left: 25px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.project-description-1-wrapper{
+    height: 100vh;
+    background: linear-gradient(200deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+.project-descriptions-wrapper{
+    padding: 10%;
+    width: 75%;
+}
+.project-descriptions-header{
+    font-size: 26px;
+    border-bottom: 3px solid black;
+    padding-top: 5%;
+}
+.project-descriptions-text-1{
+    font-size: 22px;
+    line-height: 28px;
+    padding-top: 12%;
+}
+.project-descriptions-text-2{
+    font-size: 22px;
+    line-height: 28px;
+    padding-top: 0%;
+}
+
+.project-description-2-wrapper{
+    height: 220vh;
+    background: linear-gradient(200deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+.project-description-3-wrapper{
+    height: 120vh;
+    background: linear-gradient(200deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+.project-description-4-wrapper{
+    height: 100vh;
+    background: linear-gradient(200deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+.project-description-5-wrapper{
+    height: 100vh;
+    background: linear-gradient(200deg, #e4f5fc 0%,#bfe8f9 26%,#9fd8ef 59%,#0068f2 100%);
+}
+
+
+.list{
+    font-size: 22px;
+    line-height: 28px;
+}
+
+
+@media only screen and (max-width: 770px){
+    .pm-phases-header {
+        font-size: 30px;
+        left: 2%;
+    }
+    .image-project-management-lifecycle{
+        height: 250px;
+        width: 350px;
+        margin-top: 20px;
+    }
+    .project-descriptions-header{
+        font-size: 22px;
+    }
+    .project-descriptions-text-1{
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 15%;
+    }
+    .project-descriptions-text-2{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .list{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .project-description-2-wrapper{
+        height: 280vh;
+    }
+    .project-description-4-wrapper{
+        height: 120vh;
+    }
+    .project-description-5-wrapper{
+        height: 110vh;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .pm-phases-header {
+        font-size: 5vw;
+        left: 0%;
+    }
+    .image-project-management-lifecycle{
+        height: 250px;
+        width: 350px;
+        margin-top: 20px;
+    }
+    .section-heading-1 {
+        font-size: 4.5vw;
+        left: 15%;
+    }
+    .section-heading-2 {
+        font-size: 4.5vw;
+        left: 20%;
+    }
+    .section-heading-3 {
+        font-size: 4.5vw;
+        left: 25%;
+    }
+    .section-heading-4 {
+        font-size: 4.5vw;
+        left: 30%;
+    }
+    .section-heading-5 {
+        font-size: 4.5vw;
+        left: 35%;
+    }
+    .stagger {
+        left: 40px;
+    }
+    .project-management-main-header{
+        font-size: 5vw;
+        margin-left: -5%;
+    }
+    .section-heading{
+        font-size: 4vw;
+        margin-left: -5%;
+    }
+    .section-bullet-point{
+        padding-left: 25px;
+        font-size: 4vw;
+        margin-left: -5%;
+    }
+    .project-descriptions-header{
+        padding-top: 50px;
+        font-size: 5vw;
+    }
+    .project-descriptions-text-1{
+        font-size: 4vw;
+        line-height: 5.5vw;
+        padding-top: 45%;
+    }
+    .project-descriptions-text-2{
+        font-size: 4vw;
+        line-height: 5.5vw;
+    }
+    .list{
+        font-size: 4vw;
+        line-height: 5.5vw;
+    }
+    .image-smart-goals{
+        height: 100px;
+        width: 80vw;
+    }
+    .project-description-2-wrapper{
+        height: 400vh;
+    }
+    .project-description-3-wrapper{
+        height: 120vh;
+    }
+    .project-description-4-wrapper{
+        height: 160vh;
+    }
+    .project-description-5-wrapper{
+        height: 140vh;
+        padding-bottom: 150px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .project-description-2-wrapper{
+        height: 370vh;
+    }
+    .project-description-3-wrapper{
+        height: 120vh;
+    }
+    .project-description-4-wrapper{
+        height: 160vh;
+    }
+    .project-description-5-wrapper{
+        height: 140vh;
+        padding-bottom: 150px;
+    }
+}
+
+@media only screen and (max-width: 325px){
+    .project-description-2-wrapper{
+        height: 320vh;
+    }
+    .project-description-3-wrapper{
+        height: 100vh;
+    }
+    .project-description-4-wrapper{
+        height: 130vh;
+    }
+    .project-description-5-wrapper{
+        height: 120vh;
+        padding-bottom: 150px;
+    }
+    .project-descriptions-header{
+        padding-top: 70px;
+    }
+    .project-descriptions-text-1{
+        padding-top: 50%;
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "episodes": [ 
+        {   "number": "1",
+            "title": "The Kickoff with Alan Fine",
+            "description": "There are many ways to do task and project management.  Alan and Adam discuss the reasons why project management is so important and Alan reviews some of his favorite methods for task and project management: ",
+            "bullets": ["Toodledo", "FastTrack Schedule"],
+            "url": "https://www.dropbox.com/s/sboq5g2n9di0ptu/A2B_001_AlanFine%20copy.mp3?dl=0"
+        },
+        {   "number": "2",
+            "title": "Interview with Greg Pyper",
+            "description": "Greg covers why he believes being fluid with your task management and daily activities works for him, and the benefits of getting time management training early in your career.",
+            "bullets": [],
+            "url": "https://www.dropbox.com/preview/IT%20Team/A2B/A2B_002_GregPyper%20copy.mp3?role=work"
+        },
+        {   "number": "3",
+            "title": "Interview with Nancy Smith",
+            "description": "Episide coming soon",
+            "bullets": [],
+            "url": ""
+        },
+        {   "number": "4",
+            "title": "Interview with Eric Frankel",
+            "description": "Episide coming soon",
+            "bullets": [],
+            "url": ""
+        },
+        {   "number": "5",
+            "title": "Interview with Bill Bennett",
+            "description": "Episide coming soon",
+            "bullets": [],
+            "url": ""
+        },
+        {   "number": "6",
+            "title": "Interview with Adam Cole",
+            "description": "Episide coming soon",
+            "bullets": [],
+            "url": ""
+        },
+        {   "number": "7",
+            "title": "Interview with an Intern",
+            "description": "Episide coming soon",
+            "bullets": [],
+            "url": ""
+        }
+            
+    ]
+    
+}
